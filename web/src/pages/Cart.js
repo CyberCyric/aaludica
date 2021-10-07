@@ -6,6 +6,7 @@ import {
   BsFillDashCircleFill,
 } from "react-icons/bs";
 import Swal from "sweetalert2";
+import axios from "axios";
 
 const SHIPPING_METHOD_CORREO_ARGENTINO = 2;
 
@@ -109,28 +110,33 @@ const PageCart = () => {
     setSelectedShippingMethod(e.target.value);
   };
 
-  const sendPurchaseOrder = () => {
+  const sendPurchaseOrder = async () => {
     const data = {
       name: name,
       address: address,
       email: email,
     };
 
-    console.log("data:", data);
-
-    fetch("http://localhost:8000/api/purchase_order", {
-      method: "POST",
-      body: JSON.stringify(data),
-    }).then((response) => {
-      if (!response.ok) {
-        Swal.fire({
-          title: "Error",
-          text: "Hubo un error en el envío:" + response.statusText,
-          icon: "error",
-          confirmButtonText: "Aceptar",
-        });
-      }
-    });
+    const res = await axios.post(
+      "http://localhost:8000/api/purchase_order",
+      data
+    );
+    if (res.status === 200) {
+      Swal.fire({
+        title: "Pedido enviado",
+        text: "Nos comunicaremos con vos a la brevedad.",
+        icon: "info",
+        confirmButtonText: "Aceptar",
+      });
+      cart.empty();
+    } else {
+      Swal.fire({
+        title: "Error",
+        text: "Hubo un error en el envío:" + res.statusText,
+        icon: "error",
+        confirmButtonText: "Aceptar",
+      });
+    }
   };
 
   const handleFormSubmit = (e) => {
@@ -144,12 +150,16 @@ const PageCart = () => {
       });
     } else {
       Swal.fire({
+        showDenyButton: true,
         title: "Confirmación",
         text: "¿Enviar el pedido?",
-        icon: "info",
+        icon: "warning",
         confirmButtonText: "Enviar",
-      }).then(function () {
-        sendPurchaseOrder();
+        denyButtonText: "No",
+      }).then((result) => {
+        if (result.isConfirmed) {
+          sendPurchaseOrder();
+        }
       });
     }
   };

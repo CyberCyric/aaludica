@@ -45,12 +45,16 @@ function CartProvider({ children }) {
     }
   }
 
+  function empty() {
+    setItems([]);
+  }
+
   useEffect(() => {
     localStorage.setItem("cart", JSON.stringify(items));
   }, [items]);
 
   return (
-    <CartContext.Provider value={{ items, add, remove }}>
+    <CartContext.Provider value={{ items, add, remove, empty }}>
       {children}
     </CartContext.Provider>
   );
