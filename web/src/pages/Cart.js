@@ -109,6 +109,30 @@ const PageCart = () => {
     setSelectedShippingMethod(e.target.value);
   };
 
+  const sendPurchaseOrder = () => {
+    const data = {
+      name: name,
+      address: address,
+      email: email,
+    };
+
+    console.log("data:", data);
+
+    fetch("http://localhost:8000/api/purchase_order", {
+      method: "POST",
+      body: JSON.stringify(data),
+    }).then((response) => {
+      if (!response.ok) {
+        Swal.fire({
+          title: "Error",
+          text: "Hubo un error en el envío:" + response.statusText,
+          icon: "error",
+          confirmButtonText: "Aceptar",
+        });
+      }
+    });
+  };
+
   const handleFormSubmit = (e) => {
     // eslint-disable-next-line eqeqeq
     if (name == "" || address == "" || email == "") {
@@ -125,7 +149,7 @@ const PageCart = () => {
         icon: "info",
         confirmButtonText: "Enviar",
       }).then(function () {
-        window.location = "http://www.google.com";
+        sendPurchaseOrder();
       });
     }
   };
