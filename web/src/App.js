@@ -19,14 +19,13 @@ import SucesosLanding from "./pages/SucesosLanding";
 
 function App() {
   let cart = useContext(CartContext);
-  console.log(cart);
   return (
     <CartProvider>
       <Router>
         <header>
           <Navbar bg="dark" variant="dark" expand="lg" fixed="top">
             <Container>
-              <Navbar.Brand href="#home">
+              <Navbar.Brand href="/aboutus">
                 <Link to="/">
                   <img
                     src="/images/logonavbar.png"
@@ -39,17 +38,17 @@ function App() {
               <Navbar.Toggle aria-controls="basic-navbar-nav" />
               <Navbar.Collapse id="basic-navbar-nav">
                 <Nav className="me-auto">
-                  <Nav.Link href="#home">Sobre nosotros</Nav.Link>
-                  <NavDropdown title="Nuestros Juegos" id="basic-nav-dropdown">
-                    <NavDropdown.Item href="#action/3.1">
+                  <Nav.Link href="/aboutus">Sobre nosotros</Nav.Link>
+                  <NavDropdown title="Nuestros juegos" id="basic-nav-dropdown">
+                    <NavDropdown.Item href="/sucesosargentinos">
                       Sucesos Argentinos
                     </NavDropdown.Item>
                     <NavDropdown.Divider />
-                    <NavDropdown.Item href="#action/3.2">
+                    <NavDropdown.Item href="/arsdomino">
                       Ars Domino
                     </NavDropdown.Item>
                     <NavDropdown.Divider />
-                    <NavDropdown.Item href="#action/3.3">
+                    <NavDropdown.Item href="/nomnoms">
                       Nom Noms
                     </NavDropdown.Item>
                   </NavDropdown>

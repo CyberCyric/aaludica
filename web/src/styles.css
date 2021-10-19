@@ -86,8 +86,8 @@ nav.navbar-default div.navbar-brand {
   float: left;
 }
 a.nav-link{
-  color: #CCC !important;
-  font-size: 24px;
+  color: #FFF !important;
+  font-size: 22px;
   margin-right: 20px;
 }
 nav.fixed-top {
@@ -145,6 +145,7 @@ div.team-member img {
 }
 
 div.gameBox {
+  padding-top: 50px;
   margin-left: 25px;
   margin-right: 25px;
   max-width: 30%;
