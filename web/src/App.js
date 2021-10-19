@@ -7,6 +7,7 @@ import {
   Route,
   Switch,
 } from "react-router-dom";
+import { Navbar, Container, Nav, NavDropdown } from "react-bootstrap";
 import PageAboutUs from "./pages/AboutUs";
 import PageCatalog from "./pages/Catalog";
 import PageDetail from "./pages/Detail";
@@ -17,58 +18,46 @@ import { CartContext } from "./contexts/CartContext";
 
 function App() {
   let cart = useContext(CartContext);
+  console.log(cart);
   return (
     <CartProvider>
       <Router>
         <header>
-          <nav className="navbar-default stuckMenu is-primary fixed-top">
-            <div className="container">
-              <div className="navbar-brand">
-                <span className="navbar-item">
-                  <Link to="/">
-                    <img
-                      src="/images/logonavbar.png"
-                      className="img-responsive navbar-logo"
-                      data-original-title=""
-                      alt="logo"
-                    />
-                  </Link>
-                </span>
-              </div>
-              <div className="navbar-menu">
-                <div className="navbar-start">
-                  <NavLink
-                    className="navbar-item"
-                    to="/aboutus"
-                    activeClassName="is-active"
-                  >
-                    <button>Nosotros</button>
-                  </NavLink>
-                  <NavLink
-                    className="navbar-item"
-                    to="/catalog"
-                    activeClassName="is-active"
-                  >
-                    <button>Catalogo</button>
-                  </NavLink>
-                  <NavLink
-                    className="navbar-item"
-                    to="/cart"
-                    activeClassName="is-active"
-                  >
-                    <button>
-                      Carrito
-                      <span className="position-absolute top-0 start-100 translate-middle p-2 bg-danger border border-light rounded-circle cart-count">
-                        <span className="cart-total-badge">
-                          {cart.items.length}
-                        </span>
-                      </span>
-                    </button>
-                  </NavLink>
-                </div>
-              </div>
-            </div>
-          </nav>
+          <Navbar bg="dark" variant="dark" expand="lg" fixed="top">
+            <Container>
+              <Navbar.Brand href="#home">
+                <Link to="/">
+                  <img
+                    src="/images/logonavbar.png"
+                    className="img-responsive navbar-logo"
+                    data-original-title=""
+                    alt="logo"
+                  />
+                </Link>
+              </Navbar.Brand>
+              <Navbar.Toggle aria-controls="basic-navbar-nav" />
+              <Navbar.Collapse id="basic-navbar-nav">
+                <Nav className="me-auto">
+                  <Nav.Link href="#home">Sobre nosotros</Nav.Link>
+                  <NavDropdown title="Nuestros Juegos" id="basic-nav-dropdown">
+                    <NavDropdown.Item href="#action/3.1">
+                      Sucesos Argentinos
+                    </NavDropdown.Item>
+                    <NavDropdown.Divider />
+                    <NavDropdown.Item href="#action/3.2">
+                      Ars Domino
+                    </NavDropdown.Item>
+                    <NavDropdown.Divider />
+                    <NavDropdown.Item href="#action/3.3">
+                      Nom Noms
+                    </NavDropdown.Item>
+                  </NavDropdown>
+                  <Nav.Link href="#link">Contacto</Nav.Link>
+                  <Nav.Link href="#link">Carrito</Nav.Link>
+                </Nav>
+              </Navbar.Collapse>
+            </Container>
+          </Navbar>
         </header>
         <div className="section">
           <div className="">
