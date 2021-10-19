@@ -1,7 +1,9 @@
 import React from "react";
 import Carousel from "react-bootstrap/Carousel";
+import { useHistory } from "react-router-dom";
 
 const PageAboutUs = () => {
+  const history = useHistory();
   const backgroundImageStyle = {
     /*
     backgroundImage: `url(images/bkg-fade.jpg)`,
@@ -18,6 +20,11 @@ const PageAboutUs = () => {
   };
   const boxNomNomsStyle = {
     backgroundImage: `url(images/bkg-noms.jpg)`,
+  };
+
+  const routeChange = () => {
+    let path = "sucesosargentinos";
+    history.push(path);
   };
 
   return (
@@ -130,7 +137,7 @@ const PageAboutUs = () => {
           </div>
         </div>
         <div className="container-fluid">
-          <div className="row box-juegos">
+          <div className="row box-juegos" onClick={routeChange}>
             <div className="col-md-4 gameBox" style={boxSucesosStyle}>
               <div className="logo-sucesos" align="center">
                 <img

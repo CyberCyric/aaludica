@@ -15,6 +15,7 @@ import PageCart from "./pages/Cart";
 import PageAdmProducts from "./pages/AdmProducts";
 import CartProvider from "./contexts/CartContext";
 import { CartContext } from "./contexts/CartContext";
+import SucesosLanding from "./pages/SucesosLanding";
 
 function App() {
   let cart = useContext(CartContext);
@@ -77,6 +78,9 @@ function App() {
                 </Route>
                 <Route exact path="/admin/products">
                   <PageAdmProducts />
+                </Route>
+                <Route exact path="/sucesosargentinos">
+                  <SucesosLanding />
                 </Route>
 
                 <Redirect to="/aboutus" />
