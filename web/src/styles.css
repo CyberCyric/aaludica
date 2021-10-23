@@ -29,8 +29,9 @@ body {
 }
 div#CatalogPage,
 div#AboutUsPage,
-div#CartPage {
-  margin-top: 100px;
+div#CartPage,
+div#LandingPage {
+  margin-top: 88px;
   margin-bottom: 50px;
 }
 img.cartThumbnail{
@@ -339,5 +340,55 @@ div.product_item span.stats {
   color: yellow;
 }
 
-/*** Grillas ***/
-
+/*** Landing Sucesos ***/
+header.masthead {
+  text-align: center;
+  color: white;
+  background-repeat: repeat;
+  background-position: top center;
+  background-size: contain;
+  min-height: -webkit-fill-available;
+  border-bottom-width: 20px;
+  border-bottom-style: solid;
+  border-bottom-color: #352f31;
+  min-height: 880px;
+}
+.topbar {
+  margin-top: 85px;
+  background-color: #352f31;
+}
+div.logosucesos{
+  margin-top: 5px;
+  margin-bottom: 10px;
+}
+.fjalla {
+  font-family: 'Fjalla One', sans-serif!important;
+}
+div.landing-sucesos-section-header{
+  background-color: #352f31;
+  color: #FFF;
+  font-size: 1.25rem;
+}
+div.landing-sucesos-section-header img{
+  position: relative;
+  top:5px;
+  height: 130%;
+  width: auto;
+} 
+img.pack{
+  position: relative;
+  top:5px;
+  height: 600px;
+  width: auto;
+} 
+div.frase h1{
+  padding-top: 50px;
+  color: #212529;
+  font-size: 55px;
+}
+.copete{
+  font-family: Montserrat, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-size: 24px;
+  color: #212529;
+  line-height: 30px
+}
