@@ -22,8 +22,13 @@ const PageAboutUs = () => {
     backgroundImage: `url(images/bkg-noms.jpg)`,
   };
 
-  const routeChange = () => {
+  const routeChangeSucesos = () => {
     let path = "sucesosargentinos";
+    history.push(path);
+  };
+
+  const routeChangeNoms = () => {
+    let path = "nomnoms";
     history.push(path);
   };
 
@@ -138,7 +143,11 @@ const PageAboutUs = () => {
         </div>
         <div className="container-fluid">
           <div className="row box-juegos">
-            <div className="col-md-4 gameBox" style={boxSucesosStyle}>
+            <div
+              className="col-md-4 gameBox"
+              style={boxSucesosStyle}
+              onClick={routeChangeSucesos}
+            >
               <div className="logo-sucesos" align="center">
                 <img
                   alt=""
@@ -178,7 +187,11 @@ const PageAboutUs = () => {
               />
             </div>
 
-            <div className="col-md-4 gameBox" style={boxNomNomsStyle}>
+            <div
+              className="col-md-4 gameBox"
+              style={boxNomNomsStyle}
+              onClick={routeChangeNoms}
+            >
               <div className="logo-nomnoms" align="center">
                 <img
                   alt=""

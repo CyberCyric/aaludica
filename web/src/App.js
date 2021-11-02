@@ -16,6 +16,7 @@ import PageAdmProducts from "./pages/AdmProducts";
 import CartProvider from "./contexts/CartContext";
 import { CartContext } from "./contexts/CartContext";
 import SucesosLanding from "./pages/SucesosLanding";
+import NomsLanding from "./pages/NomsLanding";
 import { HiShoppingCart, HiMail } from "react-icons/hi";
 import PageContact from "./pages/Contact";
 
@@ -89,6 +90,9 @@ function App() {
                 </Route>
                 <Route exact path="/sucesosargentinos">
                   <SucesosLanding />
+                </Route>
+                <Route exact path="/nomnoms">
+                  <NomsLanding />
                 </Route>
                 <Route exact path="/contact">
                   <PageContact />

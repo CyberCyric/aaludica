@@ -155,7 +155,6 @@ div.gameBox {
   max-width: 30%;
   border: solid 3px #999;
 }
-/*
 div.gameBox:hover {
   cursor: pointer;
   -moz-box-shadow: 0 0 20px #ff0000;
@@ -163,7 +162,6 @@ div.gameBox:hover {
   box-shadow: 0 0 20px #ff0000;
   border: solid 3px #ff0000;
 }
-*/
 
 img.about-game {
   position: relative;
@@ -402,6 +400,41 @@ div.frase h1 {
 div.landing-sucesos-section-stats {
   background-color: #978766;
 }
+
+div.landing-noms-section-header {
+  background-color: #352f31;
+  color: #fff;
+  font-size: 1.25rem;
+  max-height: 100px;
+}
+div.landing-noms-section-header img.logo-noms{
+  position: relative;
+  max-height:200px;
+  width: auto;
+}
+div.landing-noms-section-header .texto-header-noms{
+  color:#f0f453;
+  font-family: "Lato", Helvetica, Arial, sans-serif;
+  font-size: 24px;
+}
+div.landing-noms-section-stats {
+  background-color:  #51d4de;
+  color: #000;
+}
+div.landing-noms-section-como{
+  background-color: #28b7c7;
+}
+
+div.landing-noms-section-stats .stat-icon {
+  font-size: 100px;
+  color: #333;
+}
+div.landing-noms-section-stats div.stat-text {
+  font-size: 110px;
+  color: #333;
+  margin-top: 40px;
+}
+
 .copyico {
   padding-top: 17px;
 }
@@ -414,11 +447,11 @@ div.landing-sucesos-section-stats {
   color: #ebd9b3;
   font-size: 1rem;
 }
-span.stat-icon {
+div.landing-sucesos-section-stats span.stat-icon {
   font-size: 100px;
   color: #ebd9b3;
 }
-div.stat-text {
+div.landing-sucesos-section-stats div.stat-text {
   font-size: 110px;
   color: #ebd9b3;
   margin-top: 40px;
@@ -426,11 +459,15 @@ div.stat-text {
 }
 .stat-subtext {
   font-size: 25px;
-  color: #ebd9b3;
   margin-top: 55px;
 }
 div.landing-sucesos-section-como {
   background-color: #ebd9b4;
+}
+div.landing-noms-section-como img.noms-diagrama{
+  max-width: 600px;
+  height: auto;
+  float: right;
 }
 .redondeado {
   border-radius: 12px;
