@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react";
-import ReactDataGrid from "react-data-grid";
 
 const PageAdmProducts = () => {
   return (
