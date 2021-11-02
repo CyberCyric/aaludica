@@ -97,21 +97,17 @@ const NomsLanding = () => {
               <br />
               <br />
               <div className="row">
-                <div
-                  className="col-md-12 cursor"
-                  align="center"
-                  onclick="window.open('downloads/sucesos_reglamento.pdf','_blank')"
-                >
+                <a href="pdf/reglamento-nom-noms.pdf" target="_blank">
                   <h5 className="">
                     <img
                       src="images/pdf.jpg"
                       align="absmiddle"
                       className=""
                       alt="PDF"
-                    />{" "}
-                    Descargá el reglamento{" "}
-                  </h5>{" "}
-                </div>
+                    />
+                    <br /> Descargá el reglamento{" "}
+                  </h5>
+                </a>{" "}
               </div>
             </div>
           </div>

@@ -106,20 +106,21 @@ const SucesosLanding = () => {
               <br />
               <br />
               <div className="row">
-                <div
-                  className="col-md-12 cursor"
-                  align="center"
-                  onclick="window.open('downloads/sucesos_reglamento.pdf','_blank')"
-                >
-                  <h5 className="">
-                    <img
-                      src="images/pdf.jpg"
-                      align="absmiddle"
-                      className=""
-                      alt="PDF"
-                    />{" "}
-                    Descargá el reglamento{" "}
-                  </h5>{" "}
+                <div className="col-md-12 cursor" align="center">
+                  <a
+                    href="pdf/reglamento-sucesos-argentinos-3ed.pdf"
+                    target="_blank"
+                  >
+                    <h5 className="">
+                      <img
+                        src="images/pdf.jpg"
+                        align="absmiddle"
+                        className=""
+                        alt="PDF"
+                      />
+                      <br /> Descargá el reglamento{" "}
+                    </h5>
+                  </a>{" "}
                 </div>
               </div>
             </div>
@@ -156,7 +157,7 @@ const SucesosLanding = () => {
               </td>
               <td>
                 <img
-                  src="images/caja03.jpg"
+                  src="images/caja04.jpg"
                   className="img-responsive"
                   alt="Vol4"
                 />
@@ -209,11 +210,6 @@ const SucesosLanding = () => {
               Podés combinar dos o más Volúmenes para agregar variedad al juego
               y ampliar la cantidad de jugadores hasta 6.
             </div>
-          </div>
-          <div className="d-flex justify-content-center pt-3">
-            <Button variant="primary" size="lg">
-              Conseguílos en nuestro Catálogo
-            </Button>{" "}
           </div>
         </div>
         <div className="landing-sucesos-section-docentes pt-5 pb-5">

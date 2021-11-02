@@ -540,3 +540,8 @@ div.landing-sucesos-section-app a.app-download-link{
 .carousel-item img{
   border-radius: 25px;
 }
+.carousel-caption{
+  color: #white;
+  text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;
+  text-align: right;
+}

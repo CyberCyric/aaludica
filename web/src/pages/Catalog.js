@@ -21,9 +21,7 @@ const PageCatalog = () => {
             <h4>Catálogo de Juegos</h4>
           </div>
         </div>
-        <div className="col-lg-9 col-md-9">
-          <ProductCategoryMenu />
-        </div>
+        <div className="col-lg-9 col-md-9">{/* <ProductCategoryMenu /> */}</div>
       </div>
       <div className="row">
         {results.length > 0 ? (

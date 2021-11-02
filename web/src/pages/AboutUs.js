@@ -59,6 +59,9 @@ const PageAboutUs = () => {
                     src="images/slider/01.png"
                     alt="First slide"
                   />
+                  <Carousel.Caption>
+                    <h4>Sucesos Argentinos Vol I</h4>
+                  </Carousel.Caption>
                 </Carousel.Item>
                 <Carousel.Item>
                   <img
@@ -66,13 +69,9 @@ const PageAboutUs = () => {
                     src="images/slider/02.png"
                     alt="Second slide"
                   />
-                </Carousel.Item>
-                <Carousel.Item>
-                  <img
-                    className="d-block w-100"
-                    src="images/slider/03.png"
-                    alt="Second slide"
-                  />
+                  <Carousel.Caption>
+                    <h4>Ars Domino</h4>
+                  </Carousel.Caption>
                 </Carousel.Item>
               </Carousel>
             </div>
@@ -128,7 +127,9 @@ const PageAboutUs = () => {
                 bien, adquieran conocimientos, o refuercen los conocimientos
                 previos.{" "}
               </div>
-              <div className="highlight  hidden-xs">yada yada yada </div>
+              <div className="highlight  hidden-xs">
+                Porque jugar preexiste a la cultura.{" "}
+              </div>
             </div>
           </div>
         </div>
