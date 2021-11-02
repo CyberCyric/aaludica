@@ -137,7 +137,7 @@ const PageAboutUs = () => {
           </div>
         </div>
         <div className="container-fluid">
-          <div className="row box-juegos" onClick={routeChange}>
+          <div className="row box-juegos">
             <div className="col-md-4 gameBox" style={boxSucesosStyle}>
               <div className="logo-sucesos" align="center">
                 <img

@@ -16,6 +16,8 @@ import PageAdmProducts from "./pages/AdmProducts";
 import CartProvider from "./contexts/CartContext";
 import { CartContext } from "./contexts/CartContext";
 import SucesosLanding from "./pages/SucesosLanding";
+import { HiShoppingCart, HiMail } from "react-icons/hi";
+import PageContact from "./pages/Contact";
 
 function App() {
   let cart = useContext(CartContext);
@@ -52,8 +54,15 @@ function App() {
                       Nom Noms
                     </NavDropdown.Item>
                   </NavDropdown>
-                  <Nav.Link href="#link">Contacto</Nav.Link>
-                  <Nav.Link href="#link">Carrito</Nav.Link>
+                  <Nav.Link href="/catalog">Catálogo</Nav.Link>
+                </Nav>
+                <Nav>
+                  <Nav.Link href="/cart">
+                    <HiShoppingCart />
+                  </Nav.Link>
+                  <Nav.Link href="/contact">
+                    <HiMail />
+                  </Nav.Link>
                 </Nav>
               </Navbar.Collapse>
             </Container>
@@ -80,6 +89,9 @@ function App() {
                 </Route>
                 <Route exact path="/sucesosargentinos">
                   <SucesosLanding />
+                </Route>
+                <Route exact path="/contact">
+                  <PageContact />
                 </Route>
 
                 <Redirect to="/aboutus" />
