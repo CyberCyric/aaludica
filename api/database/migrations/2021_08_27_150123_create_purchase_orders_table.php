@@ -15,11 +15,15 @@ class CreatePurchaseOrdersTable extends Migration
     {
         Schema::create('purchase_orders', function (Blueprint $table) {
             $table->id();
-            $table->text('session_id');
+            $table->text('session_id')->default('');
             $table->string('name');
             $table->string('email');
             $table->string('address');
             $table->string('phone')->default('');
+            $table->string('zone')->default('');
+            $table->string('shippingMethod')->default('');
+            $table->string('paymentMethod')->default('');
+            $table->string('province')->default('');
             $table->timestamps();
         });
     }

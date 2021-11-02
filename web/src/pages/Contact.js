@@ -7,6 +7,7 @@ const PageContact = () => {
   const [name, setName] = useState([]);
   const [email, setEmail] = useState([]);
   const [phone, setPhone] = useState([]);
+  const [selectedProvince, setSelectedProvince] = useState([]);
   const [provinces, setProvinces] = useState([]);
   const [message, setMessage] = useState([]);
 
@@ -27,6 +28,9 @@ const PageContact = () => {
   const handlePhoneChange = (e) => {
     setPhone(e.target.value);
   };
+  const handleProvinceChange = (e) => {
+    setSelectedProvince(e.target.value);
+  };
   const handleMessageChange = (e) => {
     setMessage(e.target.value);
   };
@@ -35,16 +39,16 @@ const PageContact = () => {
     const data = {
       name: name,
       email: email,
+      phone: phone,
+      province: selectedProvince,
+      message: message,
     };
 
-    const res = await axios.post(
-      "http://localhost:8000/api/purchase_order",
-      data
-    );
+    const res = await axios.post("http://localhost:8000/api/message", data);
     if (res.status === 200) {
       Swal.fire({
-        title: "Pedido enviado",
-        text: "Nos comunicaremos con vos a la brevedad.",
+        title: "Mensaje enviado",
+        text: "¡Muchas gracias!",
         icon: "info",
         confirmButtonText: "Aceptar",
       });
@@ -60,7 +64,7 @@ const PageContact = () => {
 
   const handleFormSubmit = (e) => {
     // eslint-disable-next-line eqeqeq
-    if (name == "" || email == "") {
+    if (name == "" || email == "" || message == "") {
       Swal.fire({
         title: "Error",
         text: "Por favor, complete los datos faltantes",
@@ -131,7 +135,7 @@ const PageContact = () => {
               </div>
               <div className="col-sm-6">
                 <h5>Provincia (opcional)</h5>
-                <select className="form-select">
+                <select className="form-select" onChange={handleProvinceChange}>
                   <option value="" />
                   {provinces.length > 0
                     ? provinces.map((province) => (

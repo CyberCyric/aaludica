@@ -29,7 +29,7 @@ class PurchaseOrderNotification extends Mailable
     public function build()
     {
         return $this
-            ->from('info@aaludicacom.ar', 'AA Lúdica -  Juegos de Mesa')
+            ->from('info@aaludica.com.ar', 'AA Lúdica -  Juegos de Mesa')
             ->with([
                 'name' => $this->po->name,
                 'address' => $this->po->address,

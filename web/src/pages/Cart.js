@@ -17,6 +17,7 @@ const PageCart = () => {
   const [email, setEmail] = useState([]);
   const [phone, setPhone] = useState([]);
   const [provinces, setProvinces] = useState([]);
+  const [selectedProvince, setSelectedProvince] = useState("1");
   const [selectedZone, setSelectedZone] = useState("2");
   const [selectedShippingMethod, setSelectedShippingMethod] = useState(1);
   const [selectedPaymentMethod, setSelectedPaymentMethod] = useState(1);
@@ -111,11 +112,20 @@ const PageCart = () => {
   };
 
   const sendPurchaseOrder = async () => {
-    const data = {
+    let data = {
       name: name,
       address: address,
       email: email,
+      phone: phone,
+      province: selectedProvince,
+      zone: selectedZone,
+      paymentMethod: selectedPaymentMethod,
+      shippingMethod: selectedShippingMethod,
     };
+
+    data.items = cart.items;
+
+    console.log("mando:", data);
 
     const res = await axios.post(
       "http://localhost:8000/api/purchase_order",

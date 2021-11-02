@@ -17,8 +17,8 @@ class CreateMessagesTable extends Migration
             $table->id();
             $table->string('name');
             $table->string('email');
-            $table->string('phone');
-            $table->string('province');
+            $table->string('phone')->nullable()->default('');;
+            $table->string('province')->nullable()->default('');;
             $table->longText('message');
             $table->timestamps();
         });
