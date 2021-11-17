@@ -4,26 +4,23 @@ import { useHistory } from "react-router-dom";
 
 const PageAboutUs = () => {
   const history = useHistory();
-  const backgroundImageStyle = {
-    /*
-    backgroundImage: `url(images/bkg-fade.jpg)`,
-    backgroundRepeat: "no-repeat",
-    backgroundSize: "cover",
-    backgroundPosition: "center",
-    */
-  };
   const boxSucesosStyle = {
-    backgroundImage: `url(images/bkg-sucesos.jpg)`,
+    backgroundImage: `url(images/sucesos/bkg-sucesos.jpg)`,
   };
   const boxArsDominoStyle = {
-    backgroundImage: `url(images/bkg-domino.jpg)`,
+    backgroundImage: `url(images/ars/bkg-domino.jpg)`,
   };
   const boxNomNomsStyle = {
-    backgroundImage: `url(images/bkg-noms.jpg)`,
+    backgroundImage: `url(images/noms/bkg-noms.jpg)`,
   };
 
   const routeChangeSucesos = () => {
     let path = "sucesosargentinos";
+    history.push(path);
+  };
+
+  const routeChangeArsDomino = () => {
+    let path = "arsdomino";
     history.push(path);
   };
 
@@ -34,7 +31,7 @@ const PageAboutUs = () => {
 
   return (
     <>
-      <div id="AboutUsPage" style={backgroundImageStyle}>
+      <div id="AboutUsPage">
         <div className="container-fluid second text-center">
           <div className="row mt-5  text-center">
             <div className="main-txt">
@@ -83,7 +80,7 @@ const PageAboutUs = () => {
                 <img
                   alt=""
                   className="mx-auto rounded-circle"
-                  src="images/guido.jpg"
+                  src="images/aa-guido.jpg"
                 />
                 <p className="text-muted">Guido D. Cegarra</p>
               </div>
@@ -93,7 +90,7 @@ const PageAboutUs = () => {
                 <img
                   alt=""
                   className="mx-auto rounded-circle"
-                  src="images/santiago.jpg"
+                  src="images/aa-santiago.jpg"
                 />
                 <p className="text-muted">Santiago Rodríguez</p>
               </div>
@@ -103,7 +100,7 @@ const PageAboutUs = () => {
                 <img
                   alt=""
                   className="mx-auto rounded-circle"
-                  src="images/juan.jpg"
+                  src="images/aa-juan.jpg"
                 />
                 <p className="text-muted">Juan Manuel Domínguez</p>
               </div>
@@ -128,7 +125,7 @@ const PageAboutUs = () => {
                 previos.{" "}
               </div>
               <div className="highlight  hidden-xs">
-                Porque jugar preexiste a la cultura.{" "}
+                Porque... ¡jugar preexiste a la cultura!{" "}
               </div>
             </div>
           </div>
@@ -152,7 +149,7 @@ const PageAboutUs = () => {
               <div className="logo-sucesos" align="center">
                 <img
                   alt=""
-                  src="images/logo-sucesos.png"
+                  src="images/sucesos/logo-sucesos-negro.png"
                   className="img-responsive"
                 />
               </div>
@@ -164,15 +161,19 @@ const PageAboutUs = () => {
               </div>
               <img
                 alt=""
-                src="images/caja-sucesos.png"
+                src="images/sucesos/caja-sucesos.png"
                 className="img-responsive about-game"
               />
             </div>
-            <div className="col-md-4 gameBox" style={boxArsDominoStyle}>
+            <div
+              className="col-md-4 gameBox"
+              style={boxArsDominoStyle}
+              onClick={routeChangeArsDomino}
+            >
               <div className="logo-arsdomino" align="center">
                 <img
                   alt=""
-                  src="images/logo-arsdomino.png"
+                  src="images/ars/logo-arsdomino.png"
                   className="img-responsive"
                 />
               </div>
@@ -183,7 +184,7 @@ const PageAboutUs = () => {
               </div>
               <img
                 alt=""
-                src="images/caja-arsdomino.png"
+                src="images/ars/caja-arsdomino.png"
                 className="img-responsive about-game"
               />
             </div>
@@ -196,7 +197,7 @@ const PageAboutUs = () => {
               <div className="logo-nomnoms" align="center">
                 <img
                   alt=""
-                  src="images/logo-nomnoms.png"
+                  src="images/noms/logo-nomnoms.png"
                   className="img-responsive"
                 />
               </div>
@@ -208,7 +209,7 @@ const PageAboutUs = () => {
               </div>
               <img
                 alt=""
-                src="images/caja-nomnoms.png"
+                src="images/noms/caja-nomnoms.png"
                 className="img-responsive about-game"
               />
             </div>

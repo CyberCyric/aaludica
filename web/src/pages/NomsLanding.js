@@ -3,14 +3,14 @@ import { BsFillPeopleFill, BsFillClockFill } from "react-icons/bs";
 import { Button } from "react-bootstrap";
 
 const NomsLanding = () => {
-  const backgroundNoms = { backgroundImage: `url(images/bkg-noms.jpg)` };
+  const backgroundNoms = { backgroundImage: `url(images/noms/bkg-noms.jpg)` };
   return (
     <>
       <div id="LandingPage">
         <div className="d-flex justify-content-evenly landing-noms-section-header">
           <div className="">
             <img
-              src="images/logo-nomnoms.png"
+              src="images/noms/logo-nomnoms.png"
               hspace="5"
               className="logo-noms"
               alt="Logo"
@@ -37,7 +37,7 @@ const NomsLanding = () => {
           </div>
           <div>
             <img
-              src="images/pack_nomnoms.png"
+              src="images/noms/roedores.png"
               className="img-responsive pack"
               alt="Pack"
             />{" "}
@@ -67,13 +67,13 @@ const NomsLanding = () => {
             <div className="col-md-12 box-text-juega">
               <br />
               <br />
-              <h1 className="">Cómo se juega? </h1>
+              <h1 className="">¿Cómo se juega? </h1>
               <h3 className="copete">
                 Construí la línea de tiempo más extensa que puedas y ganá.
               </h3>
               <br />
               <img
-                src="images/nom-cartas.png"
+                src="images/noms/cartas.png"
                 align="absmiddle"
                 className="noms-diagrama"
                 alt="Noms Cartas"

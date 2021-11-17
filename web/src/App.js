@@ -16,6 +16,7 @@ import PageAdmProducts from "./pages/AdmProducts";
 import CartProvider from "./contexts/CartContext";
 import { CartContext } from "./contexts/CartContext";
 import SucesosLanding from "./pages/SucesosLanding";
+import ArsLanding from "./pages/ArsLanding";
 import NomsLanding from "./pages/NomsLanding";
 import { HiShoppingCart, HiMail } from "react-icons/hi";
 import PageContact from "./pages/Contact";
@@ -31,7 +32,7 @@ function App() {
               <Navbar.Brand href="/aboutus">
                 <Link to="/">
                   <img
-                    src="/images/logonavbar.png"
+                    src="/images/aa-logo-navbar.png"
                     className="img-responsive navbar-logo"
                     data-original-title=""
                     alt="logo"
@@ -90,6 +91,9 @@ function App() {
                 </Route>
                 <Route exact path="/sucesosargentinos">
                   <SucesosLanding />
+                </Route>
+                <Route exact path="/arsdomino">
+                  <ArsLanding />
                 </Route>
                 <Route exact path="/nomnoms">
                   <NomsLanding />

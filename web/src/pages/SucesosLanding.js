@@ -3,17 +3,23 @@ import { BsFillPeopleFill, BsFillClockFill } from "react-icons/bs";
 import { Button } from "react-bootstrap";
 
 const SucesosLanding = () => {
-  const backgroundSucesos = { backgroundImage: `url(images/bkg-sucesos.jpg)` };
-  const backgroundCartas = { backgroundImage: `url(images/cartas1.jpg)` };
-  const backgroundPoncho = { backgroundImage: `url(images/bkg_poncho.jpg)` };
-  const backgroundApp = { backgroundImage: `url(images/jugando.jpg)` };
+  const backgroundSucesos = {
+    backgroundImage: `url(images/sucesos/bkg-sucesos.jpg)`,
+  };
+  const backgroundCartas = {
+    backgroundImage: `url(images/sucesos/cartas1.jpg)`,
+  };
+  const backgroundPoncho = {
+    backgroundImage: `url(images/sucesos/bkg_poncho.jpg)`,
+  };
+  const backgroundApp = { backgroundImage: `url(images/sucesos/jugando.jpg)` };
   return (
     <>
       <div id="LandingPage">
         <div className="d-flex justify-content-evenly landing-sucesos-section-header">
           <div className="">
             <img
-              src="images/logosucesos.png"
+              src="images/sucesos/logo-sucesos-blanco.png"
               hspace="5"
               className=""
               alt="Logo"
@@ -44,7 +50,7 @@ const SucesosLanding = () => {
           </div>
           <div>
             <img
-              src="images/pack_defense.png"
+              src="images/sucesos/combo-123.png"
               className="img-responsive pack"
               alt="Pack"
             />{" "}
@@ -81,7 +87,7 @@ const SucesosLanding = () => {
             <div className="col-md-9 box-text-juega">
               <br />
               <br />
-              <h1 className="fjalla">Cómo se juega? </h1>
+              <h1 className="fjalla">¿Cómo se juega? </h1>
               <h3 className="copete">
                 Construí la línea de tiempo más extensa que puedas y ganá.
               </h3>
@@ -136,28 +142,28 @@ const SucesosLanding = () => {
             <tr>
               <td>
                 <img
-                  src="images/caja01.jpg"
+                  src="images/sucesos/vol01.jpg"
                   className="img-responsive"
                   alt="Vol1"
                 />
               </td>
               <td>
                 <img
-                  src="images/caja02.jpg"
+                  src="images/sucesos/vol02.jpg"
                   className="img-responsive"
                   alt="Vol2"
                 />
               </td>
               <td>
                 <img
-                  src="images/caja03.jpg"
+                  src="images/sucesos/vol03.jpg"
                   className="img-responsive"
                   alt="Vol3"
                 />
               </td>
               <td>
                 <img
-                  src="images/caja04.jpg"
+                  src="images/sucesos/vol04.jpg"
                   className="img-responsive"
                   alt="Vol4"
                 />
@@ -223,7 +229,11 @@ const SucesosLanding = () => {
           <hr className="" />
           <br />
           <p className="">
-            <img src="images/mate.png" className="img-mate" alt="Mate" />
+            <img
+              src="images/sucesos/mate.png"
+              className="img-mate"
+              alt="Mate"
+            />
             Pueden trabajarse la temporalidad, la historia comparada y la
             seriación, además de aportar otros aprendizajes asociados a los
             distintos soportes documentales tales como cuadros, fotografías a
@@ -239,7 +249,7 @@ const SucesosLanding = () => {
           className="landing-sucesos-section-poncho pt-4 pb-1 d-flex justify-content-center"
           style={backgroundPoncho}
         >
-          <img src="images/poncho.jpg" alt="poncho" />
+          <img src="images/sucesos/poncho.jpg" alt="poncho" />
         </div>
         <div
           className="landing-sucesos-section-app pt-1 pb-1 d-flex justify-content-center"
@@ -266,7 +276,7 @@ const SucesosLanding = () => {
                       rel="noreferrer"
                     >
                       <img
-                        src="images/img01.png"
+                        src="images/sucesos/app01.png"
                         hspace="5"
                         className="img-responsive"
                         alt=""
@@ -280,7 +290,7 @@ const SucesosLanding = () => {
                       rel="noreferrer"
                     >
                       <img
-                        src="images/img02.png"
+                        src="images/sucesos/app02.png"
                         hspace="5"
                         className="img-responsive"
                         alt=""
@@ -296,7 +306,7 @@ const SucesosLanding = () => {
                         rel="noreferrer"
                       >
                         <img
-                          src="images/googleplay.jpg"
+                          src="images/sucesos/googleplay.jpg"
                           className="img-responsive redondeado"
                           alt=""
                         />

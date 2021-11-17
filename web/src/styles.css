@@ -3,6 +3,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Fjalla+One&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Montserrat&family=Roboto+Condensed:ital,wght@0,300;0,400;1,700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Anton&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Abril+Fatface");
 
 .noto {
   font-family: "Noto Sans", sans-serif;
@@ -367,6 +368,7 @@ div.logosucesos {
 .fjalla {
   font-family: "Fjalla One", sans-serif !important;
 }
+/** LANDING SUCESOS **/
 div.landing-sucesos-section-header {
   background-color: #352f31;
   color: #fff;
@@ -378,29 +380,70 @@ div.landing-sucesos-section-header img {
   height: 130%;
   width: auto;
 }
-img.pack {
-  position: relative;
-  top: 5px;
-  height: 600px;
-  width: auto;
-}
-div.frase h1 {
-  padding-top: 50px;
-  color: #212529;
-  font-size: 55px;
-}
-.copete {
-  font-family: Montserrat, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-    "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
-    "Segoe UI Symbol", "Noto Color Emoji";
-  font-size: 24px;
-  color: #212529;
-  line-height: 30px;
-}
 div.landing-sucesos-section-stats {
   background-color: #978766;
 }
+div.landing-sucesos-section-stats span.stat-icon {
+  font-size: 100px;
+  color: #ebd9b3;
+}
+div.landing-sucesos-section-stats div.stat-text {
+  font-size: 110px;
+  color: #ebd9b3;
+  margin-top: 40px;
+  font-family: "Fjalla One", sans-serif !important;
+}
+div.landing-sucesos-section-como {
+  background-color: #ebd9b4;
+}
+div.landing-sucesos-section-como .texto {
+  font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI",
+    Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji",
+    "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  color: #212529;
+  font-size: 22px;
+  font-weight: 400;
+}
+div.landing-sucesos-section-volumenes {
+  padding: 100px;
+}
+table.tabla-sucesos-volumenes img {
+  width: 200px;
+  height: auto;
+}
+div.landing-sucesos-section-docentes {
+  background-color: #d4d4d4;
+  padding: 100px;
+}
+div.landing-sucesos-section-docentes p {
+  font-size: 20px;
+  line-height: 30px;
+  font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI",
+    Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji",
+    "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  color: #212529;
+  font-size: 1.5rem;
+  font-weight: 400;
+}
+div.landing-sucesos-section-poncho{
+  background-repeat: repeat-x;
+  width: 100%;
+}
+div.landing-sucesos-section-app{
+  color: #000;
+  background-repeat: round;
+}
+div.landing-sucesos-section-app section{
+  margin-top: 100px;
+  margin-bottom: 50px;
+}
+div.landing-sucesos-section-app a.app-download-link{
+  color:#FFF;
+  font-size: 28px;
+}
+/** FIN LANDING SUCESOS **/
 
+/** LANDING NOMS **/
 div.landing-noms-section-header {
   background-color: #352f31;
   color: #fff;
@@ -434,6 +477,77 @@ div.landing-noms-section-stats div.stat-text {
   color: #333;
   margin-top: 40px;
 }
+div.landing-noms-section-como img.noms-diagrama{
+  max-width: 600px;
+  height: auto;
+  float: right;
+}
+/** FIN LANDING NOMS **/
+
+/** LANDING ARS **/
+div.landing-ars-section-main{
+  background-color: #000;
+  background-repeat: repeat-x;
+  width: 100%;
+}
+div.landing-ars-section-stats{
+  background-color: #333;
+}
+h5.texto-header-ars{
+  font-family: 'Abril Fatface', cursive;
+  color: white;
+  font-size: 32px;
+}
+div.landing-ars-section-stats div.stat-text-age{
+  color: white;
+  font-size: 100px;
+  padding-top: 20px;
+  padding-bottom: 40px;
+}
+div.landing-ars-section-stats span.stat-icon {
+  font-size: 100px;
+  color: #EEE;
+}
+div.landing-ars-section-stats .stat-text{
+  color: #EEE;
+}
+div.landing-ars-section-como img.ars-fichas{
+  float:right;
+}
+div.landing-ars-section-como div.ars-periodos{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+div.landing-ars-section-como div.ars-periodos div.periodo-box{
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+/** FIN LANDING ARS **/
+
+img.pack {
+  position: relative;
+  top: 5px;
+  height: 600px;
+  width: auto;
+}
+div.frase h1 {
+  padding-top: 50px;
+  color: #212529;
+  font-size: 55px;
+}
+.copete {
+  font-family: Montserrat, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
+    "Segoe UI Symbol", "Noto Color Emoji";
+  font-size: 24px;
+  color: #212529;
+  line-height: 30px;
+}
 
 .copyico {
   padding-top: 17px;
@@ -447,28 +561,12 @@ div.landing-noms-section-stats div.stat-text {
   color: #ebd9b3;
   font-size: 1rem;
 }
-div.landing-sucesos-section-stats span.stat-icon {
-  font-size: 100px;
-  color: #ebd9b3;
-}
-div.landing-sucesos-section-stats div.stat-text {
-  font-size: 110px;
-  color: #ebd9b3;
-  margin-top: 40px;
-  font-family: "Fjalla One", sans-serif !important;
-}
+
 .stat-subtext {
   font-size: 25px;
   margin-top: 55px;
 }
-div.landing-sucesos-section-como {
-  background-color: #ebd9b4;
-}
-div.landing-noms-section-como img.noms-diagrama{
-  max-width: 600px;
-  height: auto;
-  float: right;
-}
+
 .redondeado {
   border-radius: 12px;
 }
@@ -477,31 +575,13 @@ div.landing-noms-section-como img.noms-diagrama{
   margin: 50px;
   padding: 20px;
 }
-div.landing-sucesos-section-como .texto {
-  font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI",
-    Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji",
-    "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-  color: #212529;
-  font-size: 22px;
-  font-weight: 400;
-}
+
 div.backgroundCartas {
   background-repeat: no-repeat;
   background-size: contain;
   background-position: top right;
-  height: 670px;
 }
-div.landing-sucesos-section-volumenes {
-  padding: 100px;
-}
-table.tabla-sucesos-volumenes img {
-  width: 200px;
-  height: auto;
-}
-div.landing-sucesos-section-docentes {
-  background-color: #d4d4d4;
-  padding: 100px;
-}
+
 .img-responsive {
   width: 100%;
   height: auto;
@@ -511,37 +591,13 @@ img.img-mate {
   height: auto;
   float: right;
 }
-div.landing-sucesos-section-docentes p {
-  font-size: 20px;
-  line-height: 30px;
-  font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI",
-    Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji",
-    "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-  color: #212529;
-  font-size: 1.5rem;
-  font-weight: 400;
-}
-div.landing-sucesos-section-poncho{
-  background-repeat: repeat-x;
-  width: 100%;
-}
-div.landing-sucesos-section-app{
-  color: #000;
-  background-repeat: round;
-}
-div.landing-sucesos-section-app section{
-  margin-top: 100px;
-  margin-bottom: 50px;
-}
-div.landing-sucesos-section-app a.app-download-link{
-  color:#FFF;
-  font-size: 28px;
-}
+
+
 .carousel-item img{
   border-radius: 25px;
 }
 .carousel-caption{
-  color: #white;
+  color: white;
   text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;
   text-align: right;
 }
