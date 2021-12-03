@@ -47,32 +47,58 @@ const PageAboutUs = () => {
             </div>
           </div>
           <div className="row mt-5">
-            <div className="col-md-2"></div>
-            <div className="col-md-8">
+            <div className="carousel-container">
               <Carousel fade controls={false} interval={4000} pause={false}>
                 <Carousel.Item>
                   <img
                     className="d-block w-100"
-                    src="images/slider/01.png"
+                    src="images/slider/01.jpg"
                     alt="First slide"
+                    width={900}
+                    height={500}
                   />
                   <Carousel.Caption>
-                    <h4>Sucesos Argentinos Vol I</h4>
+                    <h4></h4>
                   </Carousel.Caption>
                 </Carousel.Item>
                 <Carousel.Item>
                   <img
                     className="d-block w-100"
-                    src="images/slider/02.png"
-                    alt="Second slide"
+                    src="images/slider/02.jpg"
+                    alt="First slide"
+                    width={900}
+                    height={500}
                   />
                   <Carousel.Caption>
-                    <h4>Ars Domino</h4>
+                    <h4></h4>
+                  </Carousel.Caption>
+                </Carousel.Item>
+                <Carousel.Item>
+                  <img
+                    className="d-block w-100"
+                    src="images/slider/03.jpg"
+                    alt="First slide"
+                    width={900}
+                    height={500}
+                  />
+                  <Carousel.Caption>
+                    <h4></h4>
+                  </Carousel.Caption>
+                </Carousel.Item>
+                <Carousel.Item>
+                  <img
+                    className="d-block w-100"
+                    src="images/slider/04.jpg"
+                    alt="First slide"
+                    width={900}
+                    height={500}
+                  />
+                  <Carousel.Caption>
+                    <h4></h4>
                   </Carousel.Caption>
                 </Carousel.Item>
               </Carousel>
             </div>
-            <div className="col-md-2"></div>
           </div>
           <div className="row mt-5">
             <div className="col-md-4" align="center">

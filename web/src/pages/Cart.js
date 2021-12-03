@@ -8,6 +8,7 @@ import {
 import Swal from "sweetalert2";
 import axios from "axios";
 
+const PAYMENT_METHOD_MERCADOPAGO = 3;
 const SHIPPING_METHOD_CORREO_ARGENTINO = 2;
 
 const PageCart = () => {
@@ -77,7 +78,9 @@ const PageCart = () => {
 
   useEffect(() => {
     (async () => {
-      const response = await fetch("http://localhost:8000/api/provinces");
+      const response = await fetch(
+        "http://www.aaludica.com.ar:8000/api/provinces"
+      );
       const results = await response.json();
       setProvinces(results);
     })();
@@ -85,7 +88,9 @@ const PageCart = () => {
 
   useEffect(() => {
     (async () => {
-      const response = await fetch("http://localhost:8000/api/shipping_costs");
+      const response = await fetch(
+        "http://www.aaludica.com.ar:8000/api/shipping_costs"
+      );
       const result = await response.json();
       setShippingCosts(result);
     })();
@@ -110,6 +115,9 @@ const PageCart = () => {
   const handleShippingMethodChange = (e) => {
     setSelectedShippingMethod(e.target.value);
   };
+  const handlePaymentMethodChange = (e) => {
+    setSelectedPaymentMethod(e.target.value);
+  };
 
   const sendPurchaseOrder = async () => {
     let data = {
@@ -126,11 +134,15 @@ const PageCart = () => {
     data.items = cart.items;
 
     console.log("mando:", data);
-
-    const res = await axios.post(
-      "http://localhost:8000/api/purchase_order",
-      data
-    );
+    let url = "";
+    if (selectedPaymentMethod === PAYMENT_METHOD_MERCADOPAGO) {
+      url = "http://localhost:8000/api/checkOutMercadoPago";
+    } else {
+      url = "http://localhost:8000/api/checkOut";
+    }
+    const res = await axios.post(url, data);
+    console.log("res.status: ", res.status);
+    /*
     if (res.status === 200) {
       Swal.fire({
         title: "Pedido enviado",
@@ -147,6 +159,7 @@ const PageCart = () => {
         confirmButtonText: "Aceptar",
       });
     }
+    */
   };
 
   const handleFormSubmit = (e) => {
@@ -308,10 +321,14 @@ const PageCart = () => {
                 <div className="row">
                   <div className="col-sm-6">
                     <h5>Forma de pago</h5>
-                    <select className="form-select">
-                      <option value="">Efectivo</option>
-                      <option value="">Transferencia bancaria</option>
-                      <option value="">Mercado Pago</option>
+                    <select
+                      className="form-select"
+                      value={selectedPaymentMethod}
+                      onChange={handlePaymentMethodChange}
+                    >
+                      <option value="1">Efectivo</option>
+                      <option value="2">Transferencia bancaria</option>
+                      <option value="3">Mercado Pago</option>
                     </select>
                   </div>
                   <div className="col-sm-6">
