@@ -16,18 +16,14 @@
 
     # Handle API requests
     RewriteCond %{REQUEST_URI} ^/api/ [NC]
-    # RewriteCond %{REQUEST_FILENAME} !-d
-    # RewriteCond %{REQUEST_FILENAME} !-f
     RewriteRule ^ index.php [L]
 
     # Handle API requests
     RewriteCond %{REQUEST_URI} ^/ [NC]
-    # RewriteCond %{REQUEST_FILENAME} !-d
-    # RewriteCond %{REQUEST_FILENAME} !-f
     RewriteRule ^ index.html [L]
 
     # Handle Front Controller...
-    # RewriteCond %{REQUEST_FILENAME} !-f
-    # RewriteCond %{REQUEST_FILENAME} !-d
-    # RewriteRule ^(public) - [NC,L,QSA]
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteRule ^(public) - [NC,L,QSA]
 </IfModule>

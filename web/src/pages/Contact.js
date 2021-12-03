@@ -13,9 +13,7 @@ const PageContact = () => {
 
   useEffect(() => {
     (async () => {
-      const response = await fetch(
-        "http://www.aaludica.com.ar:8000/api/provinces"
-      );
+      const response = await fetch("http://www.aaludica.com.ar/api/provinces");
       const results = await response.json();
       setProvinces(results);
     })();

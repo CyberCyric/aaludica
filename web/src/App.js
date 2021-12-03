@@ -29,6 +29,7 @@ function App() {
       <Router>
         {
           <header>
+            {/* 
             <Navbar bg="dark" variant="dark" expand="lg" fixed="top">
               <Container>
                 <Navbar.Brand href="/aboutus">
@@ -76,6 +77,7 @@ function App() {
                 }
               </Container>
             </Navbar>
+            */}
           </header>
         }
         <div className="section">
@@ -113,7 +115,7 @@ function App() {
                   <PageManteinance />
                 </Route>
 
-                <Redirect to="/aboutus" />
+                <Redirect to="/manteinance" />
               </Switch>
             </main>
           </div>

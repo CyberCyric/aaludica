@@ -7,7 +7,7 @@ const PageDetail = (props) => {
     let id = props.id;
     (async (id) => {
       const response = await fetch(
-        "http://www.aaludica.com.ar:8000/api/product/" + id
+        "http://www.aaludica.com.ar/api/product/" + id
       );
       const results = await response.json();
       setResults(results);
