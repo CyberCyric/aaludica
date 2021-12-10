@@ -5,28 +5,27 @@ namespace App\Http\Controllers;
 use App\Models\Message;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Mail;
-use App\Mail\MessagerNotification;
+use App\Mail\MessageNotification;
+use App\Models\Province;
 
 class MessageController extends Controller
 {
     //
     public function store(Request $request)
     {
+        $provinceName = Province::find($request->province)->name;
         // Store in Database
         $msg = Message::create([
             'name' => $request->name,
             'email' => $request->email,
             'phone' => $request->phone,
-            'province' => $request->province,
-            'message' => $request->message
+            'province' => $provinceName,
+            'content' => $request->content
         ]);
-        if ($msg) {
-            return response()->json(["status" => 200]);
-        }
+
+
         // Send email
-        Mail::mailer('postmark')
-            ->to('santiagojrodriguez@gmail.com')
-            ->send(new MessagerNotification($msg));
+        Mail::to('info@aaludica.com.ar')->send(new MessageNotification($msg));
         return response()->json($request);
     }
 }

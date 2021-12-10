@@ -6,7 +6,9 @@ const ProductCategoryMenu = () => {
 
   useEffect(() => {
     (async () => {
-      const response = await fetch("http://www.aaludica.com.ar/api/categories");
+      const response = await fetch(
+        "https://www.aaludica.com.ar/api/categories"
+      );
       const results = await response.json();
       setResults(results);
     })();

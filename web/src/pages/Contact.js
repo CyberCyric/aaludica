@@ -4,16 +4,17 @@ import axios from "axios";
 import { FaRegLaughWink } from "react-icons/fa";
 
 const PageContact = () => {
-  const [name, setName] = useState([]);
-  const [email, setEmail] = useState([]);
-  const [phone, setPhone] = useState([]);
-  const [selectedProvince, setSelectedProvince] = useState([]);
+  const d = new Date();
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [phone, setPhone] = useState("");
+  const [selectedProvince, setSelectedProvince] = useState("");
   const [provinces, setProvinces] = useState([]);
-  const [message, setMessage] = useState([]);
+  const [content, setContent] = useState("");
 
   useEffect(() => {
     (async () => {
-      const response = await fetch("http://www.aaludica.com.ar/api/provinces");
+      const response = await fetch("https://www.aaludica.com.ar/api/provinces");
       const results = await response.json();
       setProvinces(results);
     })();
@@ -31,8 +32,8 @@ const PageContact = () => {
   const handleProvinceChange = (e) => {
     setSelectedProvince(e.target.value);
   };
-  const handleMessageChange = (e) => {
-    setMessage(e.target.value);
+  const handleContentChange = (e) => {
+    setContent(e.target.value);
   };
 
   const sendMessage = async () => {
@@ -41,10 +42,13 @@ const PageContact = () => {
       email: email,
       phone: phone,
       province: selectedProvince,
-      message: message,
+      content: content,
     };
 
-    const res = await axios.post("http://localhost:8000/api/message", data);
+    const res = await axios.post(
+      "https://www.aaludica.com.ar/api/message",
+      data
+    );
     if (res.status === 200) {
       Swal.fire({
         title: "Mensaje enviado",
@@ -64,7 +68,7 @@ const PageContact = () => {
 
   const handleFormSubmit = (e) => {
     // eslint-disable-next-line eqeqeq
-    if (name == "" || email == "" || message == "") {
+    if (name == "" || email == "" || content == "") {
       Swal.fire({
         title: "Error",
         text: "Por favor, complete los datos faltantes",
@@ -103,7 +107,7 @@ const PageContact = () => {
         <div className="row" id="formDatosEnvio">
           <div className="col-sm-12">
             <div>
-              <h5>Nombre y apellido</h5>
+              <h5>Nombre y apellido (*)</h5>
               <input
                 type="text"
                 className="form-control"
@@ -113,7 +117,7 @@ const PageContact = () => {
               />
             </div>
             <div>
-              <h5>E-Mail</h5>
+              <h5>E-Mail (*)</h5>
               <input
                 type="text"
                 className="form-control"
@@ -124,7 +128,7 @@ const PageContact = () => {
             </div>
             <div className="row">
               <div className="col-sm-6">
-                <h5>Teléfono (opcional)</h5>
+                <h5>Teléfono</h5>
                 <input
                   type="text"
                   className="form-control"
@@ -134,12 +138,11 @@ const PageContact = () => {
                 />
               </div>
               <div className="col-sm-6">
-                <h5>Provincia (opcional)</h5>
+                <h5>Provincia</h5>
                 <select className="form-select" onChange={handleProvinceChange}>
-                  <option value="" />
                   {provinces.length > 0
                     ? provinces.map((province) => (
-                        <option value={province.zone} key={province.id}>
+                        <option value={province.id} key={province.id}>
                           {province.name}
                         </option>
                       ))
@@ -149,11 +152,11 @@ const PageContact = () => {
             </div>
             <div className="row">
               <div className="col-sm-12">
-                <h5>Tu mensaje</h5>
+                <h5>Tu mensaje (*)</h5>
                 <textarea
                   className="form-select"
-                  name="message"
-                  onChange={handleMessageChange}
+                  name="content"
+                  onChange={handleContentChange}
                 ></textarea>
               </div>
             </div>

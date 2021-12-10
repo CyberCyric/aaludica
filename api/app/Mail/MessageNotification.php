@@ -29,13 +29,14 @@ class MessageNotification extends Mailable
     public function build()
     {
         return $this
-            ->from('info@aaludica.com.ar', 'AA Lúdica -  Juegos de Mesa')
+            ->from('info@aaludica.com.ar', 'AA Lúdica Juegos de mesa')
+            ->subject('AA Lúdica - Contacto desde el sitio')
             ->with([
                 'name' => $this->msg->name,
                 'phone' => $this->msg->phone,
                 'email' => $this->msg->email,
                 'province' => $this->msg->province,
-                'message' => $this->msg->message,
+                'content' => $this->msg->content,
             ])
             ->view('emails.message_notification');
     }
