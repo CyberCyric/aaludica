@@ -2,7 +2,6 @@
 
 namespace App\Mail;
 
-use App\Models\Message;
 use App\Models\PurchaseOrder;
 use Illuminate\Bus\Queueable;
 use Illuminate\Contracts\Queue\ShouldQueue;
@@ -35,12 +34,13 @@ class PurchaseOrderNotification extends Mailable
             ->from('info@aaludica.com.ar', 'AA Lúdica Juegos de mesa')
             ->subject('AA Lúdica - Compra desde el sitio')
             ->with([
-                'name' => $this->msg->name,
-                'phone' => $this->msg->phone,
-                'email' => $this->msg->email,
-                'province' => $this->msg->province,
-                'content' => $this->msg->content,
+                'name' => $this->po->name,
+                'phone' => $this->po->phone,
+                'email' => $this->po->email,
+                'province' => $this->po->province,
+                'content' => $this->po->content,
+                'items' => $this->items,
             ])
-            ->view('emails.message_notification');
+            ->view('emails.purchase_order_notification');
     }
 }

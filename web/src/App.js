@@ -28,8 +28,7 @@ function App() {
     <CartProvider>
       <Router>
         {
-          <header>
-            {/* 
+          <header> 
             <Navbar bg="dark" variant="dark" expand="lg" fixed="top">
               <Container>
                 <Navbar.Brand href="/aboutus">
@@ -77,7 +76,6 @@ function App() {
                 }
               </Container>
             </Navbar>
-            */}
           </header>
         }
         <div className="section">

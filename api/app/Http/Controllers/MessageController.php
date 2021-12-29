@@ -16,13 +16,12 @@ class MessageController extends Controller
         $provinceName = Province::find($request->province)->name;
         // Store in Database
         $msg = Message::create([
-            'name' => $request->name,
             'email' => $request->email,
+            'name' => $request->name,
             'phone' => $request->phone,
             'province' => $provinceName,
             'content' => $request->content
         ]);
-
 
         // Send email
         Mail::to('info@aaludica.com.ar')->send(new MessageNotification($msg));

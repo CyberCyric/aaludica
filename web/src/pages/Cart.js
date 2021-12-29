@@ -25,9 +25,6 @@ const PageCart = () => {
   const [shippingCosts, setShippingCosts] = useState([]);
 
   const checkoutInfo = useMemo(() => {
-    const currencyFormat = (num) => {
-      return num.toFixed(2).replace(/(\d)(?=(\d{3})+(?!\d))/g, "$1,");
-    };
 
     /* Calculate cart subtotal and items weight */
     let subtotal = 0;
@@ -70,9 +67,9 @@ const PageCart = () => {
 
     return {
       cartWeight: cartWeight.toFixed(2),
-      subtotal: currencyFormat(subtotal),
-      shippingCost: currencyFormat(cartShippingCost),
-      total: currencyFormat(total),
+      subtotal: subtotal,
+      shippingCost: cartShippingCost,
+      total: total,
     };
   }, [cart.items, shippingCosts, selectedShippingMethod, selectedZone]);
 
@@ -117,6 +114,10 @@ const PageCart = () => {
     setSelectedPaymentMethod(e.target.value);
   };
 
+  const currencyFormat = (num) => {
+    return num.toFixed(2).replace(/(\d)(?=(\d{3})+(?!\d))/g, "$1,");
+  };
+
   const sendPurchaseOrder = async () => {
     let data = {
       name: name,
@@ -127,6 +128,10 @@ const PageCart = () => {
       zone: selectedZone,
       paymentMethod: selectedPaymentMethod,
       shippingMethod: selectedShippingMethod,
+      subtotal: checkoutInfo.subtotal,
+      shippingCost: checkoutInfo.shippingCost,
+      cartWeight: checkoutInfo.cartWeight,
+      total: checkoutInfo.total
     };
 
     data.items = cart.items;
@@ -346,24 +351,18 @@ const PageCart = () => {
                 <h4>RESUMEN</h4>
                 <div className="clearfix">
                   <div className="float-start">Subtotal</div>
-                  <div className="float-end">$ {checkoutInfo.subtotal}</div>
+                  <div className="float-end">$ {currencyFormat(checkoutInfo.subtotal)}</div>
                 </div>
                 <hr />
-                <div className="clearfix">
-                  <div className="float-start">Peso Total</div>
-                  <div className="float-end">
-                    {" "}
-                    {checkoutInfo.cartWeight} kgs
-                  </div>
-                </div>
+
                 <div className="clearfix">
                   <div className="float-start">Costo de Envío</div>
-                  <div className="float-end">$ {checkoutInfo.shippingCost}</div>
+                  <div className="float-end">$ {currencyFormat(checkoutInfo.shippingCost)}</div>
                 </div>
                 <hr />
                 <div className="clearfix">
                   <div className="float-start">Total</div>
-                  <div className="float-end">$ {checkoutInfo.total}</div>
+                  <div className="float-end">$ {currencyFormat(checkoutInfo.total)}</div>
                 </div>
                 <hr />
                 <button

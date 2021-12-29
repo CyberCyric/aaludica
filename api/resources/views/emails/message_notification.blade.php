@@ -372,7 +372,7 @@
                                 <table role="presentation" border="0" cellpadding="0" cellspacing="0">
                                     <tr>
                                         <td>
-                                            <h3>Mensaje recibido:</h3>
+                                            <h2>Mensaje recibido</h2>
                                             <p><strong>Nombre: </strong>{{ $name }}</p>
                                             <p><strong>E-mail: </strong>{{ $email }}</p>
                                             <p><strong>Teléfono: </strong>{{ $phone }}</p>

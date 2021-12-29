@@ -372,13 +372,28 @@
                                 <table role="presentation" border="0" cellpadding="0" cellspacing="0">
                                     <tr>
                                         <td>
-                                            <h3>Compra:</h3>
+                                            <h2>Compra</h2>
                                             <p><strong>Nombre: </strong>{{ $name }}</p>
                                             <p><strong>E-mail: </strong>{{ $email }}</p>
                                             <p><strong>Teléfono: </strong>{{ $phone }}</p>
                                             <p><strong>Provincia: </strong>{{ $province }}</p>
-                                            <p><strong>Mensaje: </strong></p>
+                                            <p><strong>Forma de Pago: </strong>{{ $paymentMethod }}</p>
+                                            <p><strong>Forma de Envío: </strong>{{ $shippingMethod }}</p>
+                                            <p><strong>Observaciones: </strong></p>
                                             <p>{{ $content }}</p>
+                                        </td>
+                                    </tr>
+                                    <tr><td><hr /><td></tr>
+                                    <tr><td>
+                                    @foreach ($items as $item)
+                                        $item->quantity x 
+                                    @endforeach
+                                    </td></tr>
+                                    <tr>
+                                        <td>
+                                            <p><strong>Subototal: </strong>{{ $subtotal }}</p>
+                                            <p><strong>Costo de Envío: </strong>{{ $shippingCost }}</p>
+                                            <p><strong>Total del pedido: </strong>{{ $total }}</p>
                                         </td>
                                     </tr>
                                 </table>
