@@ -376,24 +376,25 @@
                                             <p><strong>Nombre: </strong>{{ $name }}</p>
                                             <p><strong>E-mail: </strong>{{ $email }}</p>
                                             <p><strong>Teléfono: </strong>{{ $phone }}</p>
-                                            <p><strong>Provincia: </strong>{{ $province }}</p>
-                                            <p><strong>Forma de Pago: </strong>{{ $paymentMethod }}</p>
-                                            <p><strong>Forma de Envío: </strong>{{ $shippingMethod }}</p>
-                                            <p><strong>Observaciones: </strong></p>
-                                            <p>{{ $content }}</p>
+                                            <p><strong>Dirección: </strong>{{ $address }}</p>
+                                            <p><strong>Provincia: </strong>{{ $provinceName }}</p>
+                                            <p><strong>Forma de Pago: </strong>{{ $paymentMethodName }}</p>
+                                            <p><strong>Forma de Envío: </strong>{{ $shippingMethodName }}</p>
                                         </td>
                                     </tr>
                                     <tr><td><hr /><td></tr>
                                     <tr><td>
+                                    <h3>Contenido del pedido</h3>
                                     @foreach ($items as $item)
-                                        $item->quantity x 
+                                        <div>{{ $item->quantity }} x {{ $item->product_name }} ($ {{ number_format($item->unit_price,2) }})</div>
                                     @endforeach
                                     </td></tr>
+                                    <tr><td><hr /><td></tr>
                                     <tr>
                                         <td>
-                                            <p><strong>Subototal: </strong>{{ $subtotal }}</p>
-                                            <p><strong>Costo de Envío: </strong>{{ $shippingCost }}</p>
-                                            <p><strong>Total del pedido: </strong>{{ $total }}</p>
+                                            <p><strong>Subototal: </strong>$ {{ number_format($subtotal, 2) }}</p>
+                                            <p><strong>Costo de Envío: </strong>$ {{ number_format($shippingCost, 2) }}</p>
+                                            <p><strong>Total del pedido: </strong>$ {{ number_format($total, 2) }}</p>
                                         </td>
                                     </tr>
                                 </table>

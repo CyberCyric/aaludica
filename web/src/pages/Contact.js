@@ -8,7 +8,7 @@ const PageContact = () => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [phone, setPhone] = useState("");
-  const [selectedProvince, setSelectedProvince] = useState("");
+  const [selectedProvince, setSelectedProvince] = useState(1);
   const [provinces, setProvinces] = useState([]);
   const [content, setContent] = useState("");
 
@@ -44,6 +44,8 @@ const PageContact = () => {
       province: selectedProvince,
       content: content,
     };
+
+    console.log("Envio el mensaje: ", data);
 
     const res = await axios.post(
       "https://www.aaludica.com.ar/api/message",

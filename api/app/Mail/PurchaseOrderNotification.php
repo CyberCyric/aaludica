@@ -18,10 +18,13 @@ class PurchaseOrderNotification extends Mailable
      *
      * @return void
      */
-    public function __construct(PurchaseOrder $po, array $items)
+    public function __construct(PurchaseOrder $po, array $items, string $provinceName, string $shippingMethodName, string $paymentMethodName)
     {
         $this->po = $po;
         $this->items = $items;
+        $this->provinceName = $provinceName;
+        $this->shippingMethodName = $shippingMethodName;
+        $this->paymentMethodName = $paymentMethodName;
     }
     /**
      * Build the message.
@@ -35,11 +38,20 @@ class PurchaseOrderNotification extends Mailable
             ->subject('AA Lúdica - Compra desde el sitio')
             ->with([
                 'name' => $this->po->name,
+                'address' => $this->po->address,
                 'phone' => $this->po->phone,
                 'email' => $this->po->email,
                 'province' => $this->po->province,
                 'content' => $this->po->content,
+                'paymentMethod' => $this->po->paymentMethod,
+                'shippingMethod' => $this->po->shippingMethod,
+                'subtotal' => $this->po->subtotal,
+                'shippingCost' => $this->po->shippingCost,
+                'total' => $this->po->total,
                 'items' => $this->items,
+                'provinceName' => $this->provinceName,
+                'paymentMethodName' => $this->paymentMethodName,
+                'shippingMethodName' => $this->shippingMethodName,                
             ])
             ->view('emails.purchase_order_notification');
     }

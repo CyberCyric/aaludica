@@ -9,6 +9,8 @@ use App\Mail\PurchaseOrderNotification;
 use App\Models\PurchaseItem;
 use MercadoPago;
 use App\Models\Province;
+use App\Models\ShippingMethod;
+use App\Models\PaymentMethod;
 
 
 class PurchaseOrderController extends Controller
@@ -27,21 +29,24 @@ class PurchaseOrderController extends Controller
      */
     public function checkOut(Request $request)
     {
-        // Store in Database
-        $provinceName = Province::find($request->province)->name;
         $po = PurchaseOrder::create([
             'name' => $request->name,
             'email' => $request->email,
             'address' => $request->address,
+            'phone' => $request->phone,
             'zone' => $request->zone,
-            'province' => $provinceName,
-            'shippingMethod' => $request->province,
+            'province' => $request->province,
+            'shippingMethod' => $request->shippingMethod,
             'paymentMethod' => $request->paymentMethod,
             'subtotal' => $request->subtotal,
             'shippingCost' => $request->shippingCost,
             'cartWeight'=> $request->cartWeight,
-            'total' => $request->total,
+            'total' => $request->total
         ]);
+
+        $provinceName = Province::find($request->province)->name;
+        $shippingMethodName = ShippingMethod::find($request->shippingMethod)->name;
+        $paymentMethodName = PaymentMethod::find($request->paymentMethod)->name;
 
         foreach ($request->items as $item) {
             $pi = PurchaseItem::create([
@@ -56,7 +61,7 @@ class PurchaseOrderController extends Controller
         }
 
         // Send email
-        Mail::to('info@aaludica.com.ar')->send(new PurchaseOrderNotification($po,  $items));
+        Mail::to('info@aaludica.com.ar')->send(new PurchaseOrderNotification($po,  $items, $provinceName, $shippingMethodName, $paymentMethodName));
         return response()->json($request);
     }
 }

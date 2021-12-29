@@ -18,8 +18,8 @@ const PageCart = () => {
   const [email, setEmail] = useState([]);
   const [phone, setPhone] = useState([]);
   const [provinces, setProvinces] = useState([]);
-  const [selectedProvince, setSelectedProvince] = useState("1");
-  const [selectedZone, setSelectedZone] = useState("2");
+  const [selectedProvince, setSelectedProvince] = useState(2);
+  const [selectedZone, setSelectedZone] = useState(2);
   const [selectedShippingMethod, setSelectedShippingMethod] = useState(1);
   const [selectedPaymentMethod, setSelectedPaymentMethod] = useState(1);
   const [shippingCosts, setShippingCosts] = useState([]);
@@ -35,23 +35,23 @@ const PageCart = () => {
         cartWeight += item.weight * item.quantity;
       });
     }
-
+    console.log("mi zone es " + selectedZone);
     let cartShippingCost = 0;
     // eslint-disable-next-line eqeqeq
     if (selectedShippingMethod == SHIPPING_METHOD_CORREO_ARGENTINO) {
       shippingCosts.forEach((s) => {
         if (s.from < cartWeight && s.to >= cartWeight) {
           switch (selectedZone) {
-            case "1":
+            case 1:
               cartShippingCost = s.cost_zone_1;
               break;
-            case "2":
+            case 2:
               cartShippingCost = s.cost_zone_2;
               break;
-            case "3":
+            case 3:
               cartShippingCost = s.cost_zone_3;
               break;
-            case "4":
+            case 4:
               cartShippingCost = s.cost_zone_4;
               break;
             default:
@@ -66,12 +66,12 @@ const PageCart = () => {
     let total = subtotal + cartShippingCost;
 
     return {
-      cartWeight: cartWeight.toFixed(2),
+      cartWeight: cartWeight,
       subtotal: subtotal,
       shippingCost: cartShippingCost,
       total: total,
     };
-  }, [cart.items, shippingCosts, selectedShippingMethod, selectedZone]);
+  }, [cart.items, shippingCosts, selectedShippingMethod, selectedProvince, selectedZone]);
 
   useEffect(() => {
     (async () => {
@@ -104,9 +104,9 @@ const PageCart = () => {
     setPhone(e.target.value);
   };
   const handleProvinceChange = (e) => {
-    setSelectedZone(e.target.value);
+    setSelectedProvince(e.target.value);
+    setSelectedZone(getZone(e.target.value));
   };
-
   const handleShippingMethodChange = (e) => {
     setSelectedShippingMethod(e.target.value);
   };
@@ -117,6 +117,11 @@ const PageCart = () => {
   const currencyFormat = (num) => {
     return num.toFixed(2).replace(/(\d)(?=(\d{3})+(?!\d))/g, "$1,");
   };
+
+  const getZone = (provinceId) => {
+    let i = eval(provinceId) -1;
+    return provinces[i].zone;
+  }
 
   const sendPurchaseOrder = async () => {
     let data = {
@@ -144,8 +149,7 @@ const PageCart = () => {
       url = "http://localhost:8000/api/checkOut";
     }
     const res = await axios.post(url, data);
-    console.log("res.status: ", res.status);
-    /*
+    
     if (res.status === 200) {
       Swal.fire({
         title: "Pedido enviado",
@@ -162,7 +166,7 @@ const PageCart = () => {
         confirmButtonText: "Aceptar",
       });
     }
-    */
+    
   };
 
   const handleFormSubmit = (e) => {
@@ -313,7 +317,7 @@ const PageCart = () => {
                     >
                       {provinces.length > 0
                         ? provinces.map((province) => (
-                            <option value={province.zone} key={province.id}>
+                            <option value={province.id} key={province.id}>
                               {province.name}
                             </option>
                           ))
