@@ -31,7 +31,8 @@ return [
     ],
 
     'mercadopago' => [
-        'access_token' => env('MERCADOPAGO_ACCESS_TOKEN')
+        'key' => env('MP_PUBLIC_KEY'),
+        'token' => env('MP_ACCESS_TOKEN'),
     ],
 
 ];

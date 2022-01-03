@@ -20,6 +20,7 @@ class CreatePurchaseOrdersTable extends Migration
             $table->string('email');
             $table->string('address');
             $table->string('phone')->default('');
+            $table->string('status')->default('P');
             $table->string('zone')->default('');
             $table->string('shippingMethod')->default('');
             $table->string('paymentMethod')->default('');

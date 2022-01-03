@@ -23,3 +23,6 @@ web/build/static/js/2.4bd6ff5f.chunk.js.map
 web/build/static/js/3.3b779f2b.chunk.js
 web/node_modules/.cache/.eslintcache
 api/composer.lock
+composer.json
+.gitignore
+composer.phar
