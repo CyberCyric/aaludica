@@ -26,3 +26,7 @@ api/composer.lock
 composer.json
 .gitignore
 composer.phar
+vendor/
+vendor/
+composer.lock
+web/node_modules/.cache/.eslintcache

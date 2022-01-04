@@ -141,23 +141,29 @@ const PageCart = () => {
 
     data.items = cart.items;
 
-    console.log("mando:", data);
-    let url = "";
-    if (selectedPaymentMethod === PAYMENT_METHOD_MERCADOPAGO) {
-      url = "http://localhost:8000/api/checkOutMercadoPago";
-    } else {
-      url = "http://localhost:8000/api/checkOut";
-    }
+    const url = "http://localhost:8000/api/checkOut";
     const res = await axios.post(url, data);
     
     if (res.status === 200) {
-      Swal.fire({
-        title: "Pedido enviado",
-        text: "Nos comunicaremos con vos a la brevedad.",
-        icon: "info",
-        confirmButtonText: "Aceptar",
-      });
-      cart.empty();
+
+      if(res.data.mercado_pago){
+
+        const checkout = mp.checkout({
+          preference: {
+              id: res.data.preference_id
+          },
+          autoOpen: true, // Allow the Checkout Pro to open automatically
+        });
+
+      } else {
+        Swal.fire({
+          title: "Pedido enviado",
+          text: "Nos comunicaremos con vos a la brevedad.",
+          icon: "info",
+          confirmButtonText: "Aceptar",
+        });
+        cart.empty();
+      }
     } else {
       Swal.fire({
         title: "Error",
@@ -195,6 +201,8 @@ const PageCart = () => {
   };
 
   return (
+    <>
+    <script src="https://sdk.mercadopago.com/js/v2"></script>
     <div className="container" id="CartPage">
       <div className="row">
         <div className="section-title">
@@ -345,8 +353,8 @@ const PageCart = () => {
                       value={selectedShippingMethod}
                       onChange={handleShippingMethodChange}
                     >
-                      <option value="1">Retiro en el local</option>
-                      <option value="2">Correo Argentino</option>
+                      <option value="1">Retiro personalmente</option>
+                      <option value="2">Envío por Correo Argentino</option>
                     </select>
                   </div>
                 </div>
@@ -383,6 +391,7 @@ const PageCart = () => {
         )}
       </div>
     </div>
+    </>
   );
 };
 

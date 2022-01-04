@@ -64,38 +64,44 @@ class PurchaseOrderController extends Controller
             $items[] = $pi;
         }
 
+    $USE_MERCADO_PAGO = true;
+
         if ($USE_MERCADO_PAGO){
             // Crea un objeto de preferencia
             $preference = new MercadoPago\Preference();
-            $preference->items = array();
+            $MPitems = array();
             // Crea un ítem en la preferencia
-            // $item = new MercadoPago\Item();
-            // $item->title = 'Mi producto';
-            // $item->quantity = 1;
-            // $item->unit_price = 75.56;
-            // $preference->items = array($item);
+            foreach ($request->items as $item) {
+                $MPitem = new MercadoPago\Item();
+                $MPitem->title = $item["name"];
+                $MPitem->quantity = $item["quantity"];
+                $MPitem->unit_price = $item["price"];
+                $MPitems[] = $MPitem;
+            }
+            $preference->items = $MPitems;   
             $preference->save();
             $preference_id = $preference->id;
 
             return response()->json([
                 'mercado_pago' => true,
-                //'id' => $po->id,
+                'id' => $po->id,
                 'preference_id' => $preference_id,
             ]);
         } else {
+            //Send Mail
+            Mail::to('info@aaludica.com.ar')->send(new PurchaseOrderNotification($po,  $items, $provinceName, $shippingMethodName, $paymentMethodName));
+
             return response()->json([
                 'mercado_pago' => false,
                 'id' => $po->id,
             ]);
         }
 
-        // Send email
-        // Mail::to('info@aaludica.com.ar')->send(new PurchaseOrderNotification($po,  $items, $provinceName, $shippingMethodName, $paymentMethodName));
     }
 
-    public function completeCheckOut(Request $request)
+    public function completeMPCheckOut(Request $request)
     {
-
+            // Mail::to('info@aaludica.com.ar')->send(new PurchaseOrderNotification($po,  $items, $provinceName, $shippingMethodName, $paymentMethodName));
     }
 
 }
