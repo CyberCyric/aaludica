@@ -12,15 +12,13 @@ use App\Models\Province;
 use App\Models\ShippingMethod;
 use App\Models\PaymentMethod;
 
-
 class PurchaseOrderController extends Controller
 {
     public function __construct()
     {
         // MercadoPago\SDK::setClientId(config('services.mercadopago.client_id'));  
         // MercadoPago\SDK::setClientSecret(config('services.mercadopago.client_secret'));   
-        // MercadoPago\SDK::setAccessToken(config('services.mercadopago.MP_ACCESS_TOKEN'));
-        MercadoPago\SDK::setAccessToken('TEST-3997504157521405-123014-abcc872a348da3fab4430578f29d7987-1048652402');
+         MercadoPago\SDK::setAccessToken(config('services.mercadopago.access_token'));  
     }
     /**
      * Store a newly created resource in storage.
@@ -67,6 +65,7 @@ class PurchaseOrderController extends Controller
     $USE_MERCADO_PAGO = true;
 
         if ($USE_MERCADO_PAGO){
+            
             // Crea un objeto de preferencia
             $preference = new MercadoPago\Preference();
             $MPitems = array();
@@ -81,7 +80,7 @@ class PurchaseOrderController extends Controller
             $preference->items = $MPitems;   
             $preference->save();
             $preference_id = $preference->id;
-
+            
             return response()->json([
                 'mercado_pago' => true,
                 'id' => $po->id,

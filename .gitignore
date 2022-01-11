@@ -30,3 +30,8 @@ vendor/
 vendor/
 composer.lock
 web/node_modules/.cache/.eslintcache
+web/node_modules/.cache/.eslintcache
+web/node_modules/react-script-tag/.npmignore
+web/node_modules/react-script-tag/CHANGELOG.md
+web/node_modules/react-script-tag/LICENSE
+web/node_modules/react-script-tag/README.md

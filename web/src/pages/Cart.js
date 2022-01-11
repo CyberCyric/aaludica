@@ -35,7 +35,6 @@ const PageCart = () => {
         cartWeight += item.weight * item.quantity;
       });
     }
-    console.log("mi zone es " + selectedZone);
     let cartShippingCost = 0;
     // eslint-disable-next-line eqeqeq
     if (selectedShippingMethod == SHIPPING_METHOD_CORREO_ARGENTINO) {
@@ -141,12 +140,17 @@ const PageCart = () => {
 
     data.items = cart.items;
 
-    const url = "http://localhost:8000/api/checkOut";
+    const url = "https://www.aaludica.com.ar/api/checkOut";
     const res = await axios.post(url, data);
     
     if (res.status === 200) {
+      console.log(res.data);
 
-      if(res.data.mercado_pago){
+      if(res.data.mercado_pago == true){
+
+        const mp = new window.MercadoPago('APP_USR-dfd69d0a-eaed-40e0-a39e-00a4f20a6336', {
+          locale: 'en-US'
+        });
 
         const checkout = mp.checkout({
           preference: {
@@ -162,7 +166,7 @@ const PageCart = () => {
           icon: "info",
           confirmButtonText: "Aceptar",
         });
-        cart.empty();
+        // cart.empty();
       }
     } else {
       Swal.fire({
@@ -202,7 +206,7 @@ const PageCart = () => {
 
   return (
     <>
-    <script src="https://sdk.mercadopago.com/js/v2"></script>
+    <scriptTag type="text/javascript" src="https://sdk.mercadopago.com/js/v2" />
     <div className="container" id="CartPage">
       <div className="row">
         <div className="section-title">
