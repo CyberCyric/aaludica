@@ -1,5 +1,4 @@
 <?php
-
 namespace App\Http\Controllers;
 
 use App\Models\PurchaseOrder;
@@ -7,18 +6,18 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Mail;
 use App\Mail\PurchaseOrderNotification;
 use App\Models\PurchaseItem;
-use MercadoPago;
 use App\Models\Province;
 use App\Models\ShippingMethod;
 use App\Models\PaymentMethod;
+use MercadoPago;
+
 
 class PurchaseOrderController extends Controller
 {
     public function __construct()
     {
-        // MercadoPago\SDK::setClientId(config('services.mercadopago.client_id'));  
-        // MercadoPago\SDK::setClientSecret(config('services.mercadopago.client_secret'));   
-         MercadoPago\SDK::setAccessToken(config('services.mercadopago.access_token'));  
+        MercadoPago\SDK::setClientId(config('services.mercadopago.client_id'));  
+        MercadoPago\SDK::setAccessToken(config('services.mercadopago.token'));          
     }
     /**
      * Store a newly created resource in storage.
@@ -28,6 +27,7 @@ class PurchaseOrderController extends Controller
      */
     public function checkOut(Request $request)
     {
+
         $USE_MERCADO_PAGO = ($request->paymentMethod == 3) ? true : false;
 
         $po = PurchaseOrder::create([
@@ -61,8 +61,6 @@ class PurchaseOrderController extends Controller
             ]);
             $items[] = $pi;
         }
-
-    $USE_MERCADO_PAGO = true;
 
         if ($USE_MERCADO_PAGO){
             

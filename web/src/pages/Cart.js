@@ -74,7 +74,7 @@ const PageCart = () => {
 
   useEffect(() => {
     (async () => {
-      const response = await fetch("https://www.aaludica.com.ar/api/provinces");
+      const response = await fetch(process.env.REACT_APP_API_URL + "/provinces");
       const results = await response.json();
       setProvinces(results);
     })();
@@ -83,7 +83,7 @@ const PageCart = () => {
   useEffect(() => {
     (async () => {
       const response = await fetch(
-        "https://www.aaludica.com.ar/api/shipping_costs"
+        process.env.REACT_APP_API_URL + "/shipping_costs"
       );
       const result = await response.json();
       setShippingCosts(result);
@@ -140,7 +140,7 @@ const PageCart = () => {
 
     data.items = cart.items;
 
-    const url = "https://www.aaludica.com.ar/api/checkOut";
+    const url = process.env.REACT_APP_API_URL + "/checkOut";
     const res = await axios.post(url, data);
     
     if (res.status === 200) {
@@ -148,7 +148,7 @@ const PageCart = () => {
 
       if(res.data.mercado_pago == true){
 
-        const mp = new window.MercadoPago('APP_USR-dfd69d0a-eaed-40e0-a39e-00a4f20a6336', {
+        const mp = new window.MercadoPago(process.env.MERCADO_PAGO_PUBLIC_KEY, {
           locale: 'en-US'
         });
 

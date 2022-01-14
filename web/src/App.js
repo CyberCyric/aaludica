@@ -39,36 +39,38 @@ function App() {
                       data-original-title=""
                       alt="logo"
                     />
+                    <div className="logo-txt">AA Lúdica</div>
+                    <div className="tagline-txt">Juegos de Mesa</div>
                   </Link>
                 </Navbar.Brand>
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
                 {
                   <Navbar.Collapse id="basic-navbar-nav">
                     <Nav className="me-auto">
-                      <Nav.Link href="/aboutus">Sobre nosotros</Nav.Link>
+                      <Nav.Link href="/manteinance">Sobre nosotros</Nav.Link>
                       <NavDropdown
                         title="Nuestros juegos"
                         id="basic-nav-dropdown"
                       >
-                        <NavDropdown.Item href="/sucesosargentinos">
+                        <NavDropdown.Item href="/manteinance">
                           Sucesos Argentinos
                         </NavDropdown.Item>
                         <NavDropdown.Divider />
-                        <NavDropdown.Item href="/arsdomino">
+                        <NavDropdown.Item href="/manteinance">
                           Ars Domino
                         </NavDropdown.Item>
                         <NavDropdown.Divider />
-                        <NavDropdown.Item href="/nomnoms">
+                        <NavDropdown.Item href="/manteinance">
                           Nom Noms
                         </NavDropdown.Item>
                       </NavDropdown>
-                      <Nav.Link href="/catalog">Catálogo</Nav.Link>
+                      <Nav.Link href="/manteinance">Catálogo</Nav.Link>
                     </Nav>
                     <Nav>
-                      <Nav.Link href="/cart">
+                      <Nav.Link href="/manteinance">
                         <HiShoppingCart />
                       </Nav.Link>
-                      <Nav.Link href="/contact">
+                      <Nav.Link href="/manteinance">
                         <HiMail />
                       </Nav.Link>
                     </Nav>
