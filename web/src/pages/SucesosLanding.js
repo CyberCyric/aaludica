@@ -1,6 +1,5 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import { BsFillPeopleFill, BsFillClockFill } from "react-icons/bs";
-import { Button } from "react-bootstrap";
 
 const SucesosLanding = () => {
   const backgroundSucesos = {

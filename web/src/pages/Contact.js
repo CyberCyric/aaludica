@@ -4,7 +4,6 @@ import axios from "axios";
 import { FaRegLaughWink } from "react-icons/fa";
 
 const PageContact = () => {
-  const d = new Date();
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [phone, setPhone] = useState("");
@@ -14,7 +13,7 @@ const PageContact = () => {
 
   useEffect(() => {
     (async () => {
-      const response = await fetch("https://www.aaludica.com.ar/api/provinces");
+      const response = await fetch(process.env.REACT_APP_API_URL +"/provinces");
       const results = await response.json();
       setProvinces(results);
     })();

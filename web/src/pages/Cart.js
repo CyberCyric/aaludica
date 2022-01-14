@@ -1,3 +1,4 @@
+/* eslint no-eval: 0 */
 import React, { useState, useEffect, useContext, useMemo } from "react";
 import { CartContext } from "../contexts/CartContext";
 import {
@@ -8,7 +9,7 @@ import {
 import Swal from "sweetalert2";
 import axios from "axios";
 
-const PAYMENT_METHOD_MERCADOPAGO = 3;
+// const PAYMENT_METHOD_MERCADOPAGO = 3;
 const SHIPPING_METHOD_CORREO_ARGENTINO = 2;
 
 const PageCart = () => {
@@ -70,7 +71,7 @@ const PageCart = () => {
       shippingCost: cartShippingCost,
       total: total,
     };
-  }, [cart.items, shippingCosts, selectedShippingMethod, selectedProvince, selectedZone]);
+  }, [cart.items, shippingCosts, selectedShippingMethod, selectedZone]);
 
   useEffect(() => {
     (async () => {
@@ -146,13 +147,13 @@ const PageCart = () => {
     if (res.status === 200) {
       console.log(res.data);
 
-      if(res.data.mercado_pago == true){
+      if(res.data.mercado_pago === true){
 
         const mp = new window.MercadoPago(process.env.REACT_APP_MERCADO_PAGO_PUBLIC_KEY, {
           locale: 'en-US'
         });
 
-        const checkout = mp.checkout({
+        mp.checkout({
           preference: {
               id: res.data.preference_id
           },
@@ -166,7 +167,7 @@ const PageCart = () => {
           icon: "info",
           confirmButtonText: "Aceptar",
         });
-        // cart.empty();
+        cart.empty();
       }
     } else {
       Swal.fire({

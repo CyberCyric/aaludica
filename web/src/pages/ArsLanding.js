@@ -1,6 +1,4 @@
-import React, { useEffect, useState } from "react";
 import { BsFillPeopleFill, BsFillClockFill } from "react-icons/bs";
-import { Button } from "react-bootstrap";
 
 const ArsLanding = () => {
   const backgroundars = { backgroundImage: `url(images/ars/bkg-domino.jpg)` };

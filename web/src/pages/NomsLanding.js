@@ -1,6 +1,4 @@
-import React, { useEffect, useState } from "react";
 import { BsFillPeopleFill, BsFillClockFill } from "react-icons/bs";
-import { Button } from "react-bootstrap";
 
 const NomsLanding = () => {
   const backgroundNoms = { backgroundImage: `url(images/noms/bkg-noms.jpg)` };

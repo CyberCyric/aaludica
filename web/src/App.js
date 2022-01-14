@@ -1,8 +1,6 @@
-import React, { useContext } from "react";
 import {
   BrowserRouter as Router,
   Link,
-  NavLink,
   Redirect,
   Route,
   Switch,
@@ -14,7 +12,6 @@ import PageDetail from "./pages/Detail";
 import PageCart from "./pages/Cart";
 import PageAdmProducts from "./pages/AdmProducts";
 import CartProvider from "./contexts/CartContext";
-import { CartContext } from "./contexts/CartContext";
 import SucesosLanding from "./pages/SucesosLanding";
 import ArsLanding from "./pages/ArsLanding";
 import NomsLanding from "./pages/NomsLanding";
@@ -23,7 +20,6 @@ import PageContact from "./pages/Contact";
 import PageManteinance from "./pages/Manteinance";
 
 function App() {
-  let cart = useContext(CartContext);
   return (
     <CartProvider>
       <Router>
@@ -31,7 +27,7 @@ function App() {
           <header> 
             <Navbar bg="dark" variant="dark" expand="lg" fixed="top">
               <Container>
-                <Navbar.Brand href="/aboutus">
+                <Navbar.Brand>
                   <Link to="/">
                     <img
                       src="/images/aa-logo-navbar.png"
@@ -39,8 +35,6 @@ function App() {
                       data-original-title=""
                       alt="logo"
                     />
-                    
-                    
                     <div className="tagline-txt"><span className="logo-txt">AA Lúdica </span>Juegos de Mesa</div>
                   </Link>
                 </Navbar.Brand>

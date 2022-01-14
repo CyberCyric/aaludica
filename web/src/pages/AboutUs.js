@@ -58,7 +58,6 @@ const PageAboutUs = () => {
                     height={500}
                   />
                   <Carousel.Caption>
-                    <h4></h4>
                   </Carousel.Caption>
                 </Carousel.Item>
                 <Carousel.Item>
@@ -70,7 +69,6 @@ const PageAboutUs = () => {
                     height={500}
                   />
                   <Carousel.Caption>
-                    <h4></h4>
                   </Carousel.Caption>
                 </Carousel.Item>
                 <Carousel.Item>
@@ -82,7 +80,6 @@ const PageAboutUs = () => {
                     height={500}
                   />
                   <Carousel.Caption>
-                    <h4></h4>
                   </Carousel.Caption>
                 </Carousel.Item>
                 <Carousel.Item>
@@ -94,7 +91,6 @@ const PageAboutUs = () => {
                     height={500}
                   />
                   <Carousel.Caption>
-                    <h4></h4>
                   </Carousel.Caption>
                 </Carousel.Item>
               </Carousel>

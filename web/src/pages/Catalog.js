@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import ProductBox from "../components/ProductBox";
-import ProductCategoryMenu from "../components/ProductCategoryMenu";
+// import ProductCategoryMenu from "../components/ProductCategoryMenu";
 
 const PageCatalog = () => {
   const [results, setResults] = useState([]);

@@ -4,15 +4,14 @@ const PageDetail = (props) => {
   const [results, setResults] = useState([]);
 
   useEffect(() => {
-    let id = props.id;
     (async (id) => {
       const response = await fetch(
-        "https://www.aaludica.com.ar/api/product/" + id
+        process.env.REACT_APP_API_URL +"product/" + id
       );
       const results = await response.json();
       setResults(results);
     })();
-  }, []);
+  }, [props.id]);
 
   return (
     <div className="container main-container">
