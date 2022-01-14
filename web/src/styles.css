@@ -611,3 +611,49 @@ img.img-mate {
   text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;
   text-align: right;
 }
+
+/* CSS Document */
+
+
+@import url('https://fonts.googleapis.com/css2?family=Fjalla+One&display=swap');
+
+
+img.navbar-logo {
+    width: 16%;
+    display: inline-flex !important;
+}
+
+.fjalla{font-family: 'Fjalla One', sans-serif;}
+
+
+.logo-txt {
+    font-family: 'Fjalla One', sans-serif;
+    font-size: x-large;
+    -webkit-font-smoothing: none;
+    color: #fff;
+    text-decoration: none;
+}
+
+a .logo-txt {
+       text-decoration: none; 
+    display: contents;
+}
+
+a {
+    text-decoration: none !important;
+}
+
+.tagline-txt {
+    font-family: "Gill Sans", "Gill Sans MT", "Myriad Pro", "DejaVu Sans Condensed", Helvetica, Arial, "sans-serif";
+    font-size: 14px;
+    -webkit-font-smoothing: none;
+    color: #fff;
+    text-transform: lowercase;
+    display: contents;
+}
+
+.navbar-dark .navbar-nav .nav-link {
+        font-family: sans-serif;
+    font-size: 14px;
+    text-transform: lowercase;
+}

@@ -39,8 +39,9 @@ function App() {
                       data-original-title=""
                       alt="logo"
                     />
-                    <div className="logo-txt">AA Lúdica</div>
-                    <div className="tagline-txt">Juegos de Mesa</div>
+                    
+                    
+                    <div className="tagline-txt"><span className="logo-txt">AA Lúdica </span>Juegos de Mesa</div>
                   </Link>
                 </Navbar.Brand>
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
