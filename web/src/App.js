@@ -42,7 +42,22 @@ function App() {
                 {
                   <Navbar.Collapse id="basic-navbar-nav">
                     <Nav className="me-auto">
-                      <Nav.Link href="/manteinance">Sobre nosotros</Nav.Link>
+                      <NavDropdown
+                        title="Sobre nosotros"
+                        id="basic-nav-dropdown2"
+                      >
+                        <NavDropdown.Item href="/manteinance">
+                          Institucional
+                        </NavDropdown.Item>
+                        <NavDropdown.Divider />
+                        <NavDropdown.Item href="/manteinance">
+                          Instagram
+                        </NavDropdown.Item>
+                        <NavDropdown.Divider />
+                        <NavDropdown.Item href="/manteinance">
+                          El Mapa de AA Lúdica
+                        </NavDropdown.Item>
+                      </NavDropdown>
                       <NavDropdown
                         title="Nuestros juegos"
                         id="basic-nav-dropdown"
@@ -65,7 +80,7 @@ function App() {
                       <Nav.Link href="/manteinance">
                         <HiShoppingCart />
                       </Nav.Link>
-                      <Nav.Link href="/manteinance">
+                      <Nav.Link href="/contact">
                         <HiMail />
                       </Nav.Link>
                     </Nav>

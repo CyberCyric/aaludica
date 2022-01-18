@@ -18,6 +18,7 @@ class DatabaseSeeder extends Seeder
             ProductCategorySeeder::class,
             ProvinceSeeder::class,
             ShippingMethodsSeeder::class,
+            ShippingCostsSeeder::class,
             PaymentMethodsSeeder::class
         ]);
     }

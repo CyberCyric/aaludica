@@ -71,7 +71,7 @@ const PageCart = () => {
       shippingCost: cartShippingCost,
       total: total,
     };
-  }, [cart.items, shippingCosts, selectedShippingMethod, selectedZone]);
+  }, [cart.items, shippingCosts, selectedShippingMethod, selectedZone, selectedProvince]);
 
   useEffect(() => {
     (async () => {
@@ -145,7 +145,6 @@ const PageCart = () => {
     const res = await axios.post(url, data);
     
     if (res.status === 200) {
-      console.log(res.data);
 
       if(res.data.mercado_pago === true){
 
@@ -207,7 +206,7 @@ const PageCart = () => {
 
   return (
     <>
-    <scriptTag type="text/javascript" src="https://sdk.mercadopago.com/js/v2" />
+
     <div className="container" id="CartPage">
       <div className="row">
         <div className="section-title">

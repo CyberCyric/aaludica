@@ -6,10 +6,6 @@ import { BsExclamationCircleFill, BsStarFill, BsTagFill } from "react-icons/bs";
 const ProductBox = (props) => {
   let cart = useContext(CartContext);
 
-  const backgroundImageStyle = {
-    backgroundImage: `url(images/products/${props.product.main_photo})`,
-  };
-
   const handleAddItem = () => {
     cart.add(
       props.product.id,
@@ -45,17 +41,20 @@ const ProductBox = (props) => {
         </div>
       )}
 
-      <div className="product_item_pic set-bg" style={backgroundImageStyle}>
-        <div className="overlay">
+      <div className="product_item_pic">
+        <div>
           <div>
-            <span>{props.product.short_description}</span>
-            <br />
-            <br />
+            <img src={`images/products/${props.product.main_photo}`} />
             <span className="stats">
               {props.product.stat_players} | {props.product.stat_age} |{" "}
               {props.product.stat_time}
             </span>
           </div>
+          <div>
+          <div>{props.product.short_description}</div>
+            <br />
+            <br />
+            </div>
         </div>
       </div>
 
