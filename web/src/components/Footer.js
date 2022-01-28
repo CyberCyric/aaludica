@@ -1,6 +1,7 @@
 import React from "react";
 
 const Footer = () => {
+  let cart = useContext(CartContext);
   return (
     <div className="container" data-original-title="">
       <div className="row footer" data-original-title="">

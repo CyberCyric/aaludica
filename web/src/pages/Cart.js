@@ -145,6 +145,7 @@ const PageCart = () => {
     const res = await axios.post(url, data);
     
     if (res.status === 200) {
+      console.log("res:", res);
 
       if(res.data.mercado_pago === true){
 
@@ -154,7 +155,8 @@ const PageCart = () => {
 
         mp.checkout({
           preference: {
-              id: res.data.preference_id
+              id: res.data.preference_id,
+              external_reference: res.data.id
           },
           autoOpen: true, // Allow the Checkout Pro to open automatically
         });
@@ -166,7 +168,7 @@ const PageCart = () => {
           icon: "info",
           confirmButtonText: "Aceptar",
         });
-        cart.empty();
+        // cart.empty();
       }
     } else {
       Swal.fire({

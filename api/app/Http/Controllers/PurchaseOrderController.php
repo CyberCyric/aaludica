@@ -63,6 +63,7 @@ class PurchaseOrderController extends Controller
         }
 
         if ($USE_MERCADO_PAGO){
+
             
             // Crea un objeto de preferencia
             $preference = new MercadoPago\Preference();
@@ -75,14 +76,22 @@ class PurchaseOrderController extends Controller
                 $MPitem->unit_price = $item["price"];
                 $MPitems[] = $MPitem;
             }
+            if ($request->shippingCost>0){
+                $MPitem = new MercadoPago\Item();
+                $MPitem->title = "Costo de Envío";
+                $MPitem->quantity = 1;
+                $MPitem->unit_price = $request->shippingCost;
+                $MPitems[] = $MPitem;
+            }
             $preference->items = $MPitems;   
+            $preference->external_reference = $po->id;
             $preference->save();
             $preference_id = $preference->id;
             
             return response()->json([
                 'mercado_pago' => true,
                 'id' => $po->id,
-                'preference_id' => $preference_id,
+                'preference_id' => $preference_id
             ]);
         } else {
             //Send Mail

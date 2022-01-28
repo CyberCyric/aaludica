@@ -262,59 +262,58 @@ ul.catalogo_categorias li {
   cursor: pointer;
 }
 
-div.product_item {
-  flex: 0 0 33%;
-  max-width: 33%;
-  height: 400px;
-  margin-bottom: 40px;
-  position: relative;
+div.template_card{
+  box-shadow: 0 8px 30px rgb(2 59 109 / 10%);
+  transition: box-shadow .3s ease-in-out;
+  height: 100%;
+  background: #fff;
+  border-radius: 5px;
+  overflow: hidden;
 }
-div.product_item .label {
-  font-size: 11px;
-  color: #ffffff;
-  font-weight: 500;
-  display: inline-block;
-  padding: 2px 8px;
-  text-transform: uppercase;
-  position: absolute;
-  left: 5px;
-  top: 15px;
-  z-index: 10;
+div.template_card .title a{
+  font-size: 16px;
+  color: #212529;
+  font-weight: bold;
 }
-div.product_item div.product_item_pic {
-  min-height: 300px;
-  background-repeat: no-repeat;
-  border: 1px solid #CCC;
-}
-div.product_item .label.new {
-  background: #36a300;
-}
-div.product_item .label.combo {
-  background: #000099;
-}
-div.product_item .label.stockout {
-  background: #990000;
-}
-div.product_item div.product_item_text {
-  text-align: center;
-  padding-top: 22px;
-  text-decoration: none;
-}
-div.product_item div.product_item_text a {
-  font-size: 18px;
-  color: #111;
-  font-weight: 400;
-  text-decoration: none;
-}
-div.product_item div.product_price {
-  color: #111;
-  font-size: 22px;
-  font-weight: 900;
-}
-div.product_item span.stats {
+div.template_card p.short_description{
   font-size: 14px;
-  color: yellow;
+  color: #555;
+  padding: 0 20px 20px 20px;
+  margin: 0;
+  overflow: hidden;
 }
+
+div.template_card span.stats{
+  font-size: 10px;
+}
+
+div.template_card div.price_row{
+  display: flex;
+  flex-direction: row;
+  justify-content:space-around; 
+}
+
+img.spinner{
+  height: 25px;
+  width: auto;
+}
+
+div.template_card .label.new {
+  background: #36a300;
+  z-index:2;
+  display: none;
+}
+div.template_card .label.combo {
+  background: #000099;
+  z-index:2;
+  display: none;
+}
+div.template_card .label.stockout {
+  background: #990000;
+  z-index:2;
+  display: none;
+}
+
 
 /*** Landing Sucesos ***/
 header.masthead {
