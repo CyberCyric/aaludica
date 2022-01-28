@@ -16,7 +16,7 @@ const PageCatalog = () => {
   return (
     <div className="container" id="CatalogPage">
       <div className="row">
-        <div className="col-lg-3 col-md-3">
+        <div className="col-lg-12 col-md-12">
           <div className="section-title">
             <h4>Catálogo de Juegos</h4>
           </div>

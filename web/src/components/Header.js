@@ -1,5 +1,5 @@
 import React,{ useContext } from "react";
-import { Navbar, Container, Nav, NavDropdown } from "react-bootstrap";
+import { Navbar, Container, Nav, NavDropdown, Button  } from "react-bootstrap";
 import { HiShoppingCart, HiMail } from "react-icons/hi";
 import { CartContext } from "../contexts/CartContext";
 import {
@@ -62,13 +62,17 @@ const Header = () => {
                       <Nav.Link href="/manteinance">Catálogo</Nav.Link>
                     </Nav>
                     <Nav>
-                      <Nav.Link href="/manteinance">
-                        <HiShoppingCart /> 
-                        {cart.items.length>0 && <span class="badge bg-danger">{cart.items.length}</span> }
-                      </Nav.Link>
-                      <Nav.Link href="/contact">
-                        <HiMail />
-                      </Nav.Link>
+                      <Button variant="secondary" className="navbar_button">
+                        <Nav.Link href="/manteinance">
+                          <HiShoppingCart /> 
+                          {cart.items.length>0 && <span className="badge bg-danger">{cart.items.length}</span> }
+                        </Nav.Link>
+                      </Button>
+                      <Button variant="secondary" className="navbar_button">
+                        <Nav.Link href="/contact">
+                          <HiMail /> 
+                        </Nav.Link>
+                      </Button>
                     </Nav>
                   </Navbar.Collapse>
                 }

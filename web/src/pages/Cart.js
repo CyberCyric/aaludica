@@ -38,6 +38,7 @@ const PageCart = () => {
     }
     let cartShippingCost = 0;
     // eslint-disable-next-line eqeqeq
+
     if (selectedShippingMethod == SHIPPING_METHOD_CORREO_ARGENTINO) {
       shippingCosts.forEach((s) => {
         if (s.from < cartWeight && s.to >= cartWeight) {
@@ -148,7 +149,6 @@ const PageCart = () => {
       console.log("res:", res);
 
       if(res.data.mercado_pago === true){
-
         const mp = new window.MercadoPago(process.env.REACT_APP_MERCADO_PAGO_PUBLIC_KEY, {
           locale: 'en-US'
         });
