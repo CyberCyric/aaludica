@@ -18,7 +18,6 @@ class CreateProductsTable extends Migration
             $table->string('name');
             $table->string('main_photo')->default('blank.png');
             $table->double('price')->default(0);
-            $table->char('is_', 1)->default('N');
             $table->char('is_new', 1)->default('N');
             $table->char('is_last_units', 1)->default('N');
             $table->char('is_combo', 1)->default('N');
@@ -29,6 +28,7 @@ class CreateProductsTable extends Migration
             $table->string('stat_age')->default("");
             $table->string('stat_time')->default("");
             $table->string('company')->default("");
+            $table->string('weight')->default(0);
             $table->timestamps();
         });
     }

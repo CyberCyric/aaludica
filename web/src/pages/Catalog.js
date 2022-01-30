@@ -7,7 +7,7 @@ const PageCatalog = () => {
 
   useEffect(() => {
     (async () => {
-      const response = await fetch("https://www.aaludica.com.ar/api/products");
+      const response = await fetch(process.env.REACT_APP_API_URL + "/products");
       const results = await response.json();
       setResults(results);
     })();
