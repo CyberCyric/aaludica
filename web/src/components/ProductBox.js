@@ -2,8 +2,10 @@ import React, { useContext, useState } from "react";
 import { Link } from "react-router-dom";
 import { CartContext } from "../contexts/CartContext";
 import { BsExclamationCircleFill, BsStarFill, BsTagFill } from "react-icons/bs";
+import { useHistory } from "react-router-dom";
 
 const ProductBox = (props) => {
+  const history = useHistory();
   const [addedMessage, setAddedMessage] = useState(false);
   let cart = useContext(CartContext);
 
@@ -21,6 +23,18 @@ const ProductBox = (props) => {
       setAddedMessage(false);
     }, 1000);
   };
+
+  const handleBuyItem = () => {
+    cart.add(
+      props.product.id,
+      1,
+      props.product.name,
+      props.product.main_photo,
+      props.product.price,
+      props.product.weight
+    );
+    history.push("/cart");
+  }
 
   return (
     <div className="col-xl-4 col-md-6 mb-5">    
