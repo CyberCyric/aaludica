@@ -46,6 +46,7 @@ const PageAboutUs = () => {
               con mecánicas de juegos de mesa modernos y clásicos.
             </div>
           </div>
+          {/*
           <div className="row mt-5">
             <div className="carousel-container">
               <Carousel fade controls={false} interval={4000} pause={false}>
@@ -96,8 +97,8 @@ const PageAboutUs = () => {
               </Carousel>
             </div>
           </div>
-          <div className="row mt-5">
-            <div className="col-md-4" align="center">
+          */}
+          <div className="row about_us_team_members">
               <div className="team-member">
                 <img
                   alt=""
@@ -106,8 +107,6 @@ const PageAboutUs = () => {
                 />
                 <p className="text-muted">Guido D. Cegarra</p>
               </div>
-            </div>
-            <div className="col-md-4" align="center">
               <div className="team-member">
                 <img
                   alt=""
@@ -116,8 +115,6 @@ const PageAboutUs = () => {
                 />
                 <p className="text-muted">Santiago Rodríguez</p>
               </div>
-            </div>
-            <div className="col-md-4" align="center">
               <div className="team-member">
                 <img
                   alt=""
@@ -126,7 +123,6 @@ const PageAboutUs = () => {
                 />
                 <p className="text-muted">Juan Manuel Domínguez</p>
               </div>
-            </div>
           </div>
           <div className="container-fluid second text-center">
             <div className="row mt-5">
@@ -164,7 +160,7 @@ const PageAboutUs = () => {
         <div className="container-fluid">
           <div className="row box-juegos">
             <div
-              className="col-md-4 gameBox"
+              className="gameBox"
               style={boxSucesosStyle}
               onClick={routeChangeSucesos}
             >
@@ -188,7 +184,7 @@ const PageAboutUs = () => {
               />
             </div>
             <div
-              className="col-md-4 gameBox"
+              className="gameBox"
               style={boxArsDominoStyle}
               onClick={routeChangeArsDomino}
             >
@@ -212,7 +208,7 @@ const PageAboutUs = () => {
             </div>
 
             <div
-              className="col-md-4 gameBox"
+              className="gameBox"
               style={boxNomNomsStyle}
               onClick={routeChangeNoms}
             >

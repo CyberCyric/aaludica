@@ -60,7 +60,7 @@ function App() {
                   <PageManteinance />
                 </Route>
 
-                <Redirect to="/manteinance" />
+                <Redirect to="/catalog" />
               </Switch>
             </main>
           </div>

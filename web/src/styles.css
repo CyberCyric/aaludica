@@ -136,22 +136,16 @@ div.highlight {
   margin-left: 20px;
   border-radius: 25px;
 }
-div.team-member {
-  text-align: center;
-}
 
 div.team-member img {
   width: 160px;
   height: 160px;
   border: 5px solid #fff;
   margin-right: 44px !important;
-  display: inline-block;
 }
 
 div.gameBox {
   padding-top: 50px;
-  margin-left: 25px;
-  margin-right: 25px;
   max-width: 30%;
   border: solid 3px #999;
 }
@@ -185,6 +179,9 @@ span.salutation {
 }
 div.box-juegos {
   border: 1px solid #fff;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
 }
 div.logo-sucesos,
 div.logo-arsdomino,
@@ -207,6 +204,11 @@ div#boxAboutArs:hover,
 div#boxAboutNoms:hover {
   cursor: pointer;
   border: 1px solid #cd2d10;
+}
+div.about_us_team_members{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
 }
 div.box-juegos div.tagline-sucesos {
   width: 80%;
@@ -346,6 +348,9 @@ div.template_card .label.stockout {
   text-align: right;
 }
 
+textarea.messageTextArea{
+  height: 250px;
+}
 
 /*** Landing Sucesos ***/
 header.masthead {

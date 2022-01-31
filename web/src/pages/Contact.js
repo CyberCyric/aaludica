@@ -159,7 +159,7 @@ const PageContact = () => {
                 <h5>Tu mensaje (*)</h5>
                 <textarea
                   id="textAreaContent"
-                  className="form-select"
+                  className="form-select messageTextArea"
                   name="content"
                   onChange={handleContentChange}
                 ></textarea>

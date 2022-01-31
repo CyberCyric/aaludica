@@ -61,11 +61,11 @@ const Header = () => {
                         </NavDropdown.Item>
                       </NavDropdown>
                       */}
-                      <Nav.Link href="/manteinance">Catálogo</Nav.Link>
+                      <Nav.Link href="/catalog">Catálogo</Nav.Link>
                     </Nav>
                     <Nav>
                       <Button variant="secondary" className="navbar_button">
-                        <Nav.Link href="/manteinance">
+                        <Nav.Link href="/cart">
                           <HiShoppingCart /> 
                           {cart.items.length>0 && <span className="badge bg-danger">{cart.items.length}</span> }
                         </Nav.Link>

@@ -30,7 +30,7 @@ class MessageNotification extends Mailable
     {
         return $this
             ->from('info@aaludica.com.ar', 'AA Lúdica Juegos de mesa')
-            ->subject('AA Lúdica - Contacto desde el sitio')
+            ->subject('AA Lúdica - Contacto desde el sitio: '.$this->msg->name)
             ->with([
                 'name' => $this->msg->name,
                 'phone' => $this->msg->phone,

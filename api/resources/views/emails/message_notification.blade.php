@@ -353,6 +353,19 @@
                 border-color: #34495e !important;
             }
         }
+        td.header_background{
+            color:#ffffff;
+            background-color: #212529;
+        }
+        td.header_background img{
+            height: 50px;
+            width: auto;
+            vertical-align: bottom;
+        }    
+        td.header_background h1{
+            color: #ffffff;
+            margin-left: 20px;
+        }
     </style>
 </head>
 
@@ -365,14 +378,16 @@
 
                     <!-- START CENTERED WHITE CONTAINER -->
                     <table role="presentation" class="main">
-
+                    <tr><td class="header_background">
+                        <img src="https://aaludica.com.ar/images/aa-logo-navbar.png" />
+                        <h1>Mensaje</h1>
+                    </td></tr>
                         <!-- START MAIN CONTENT AREA -->
                         <tr>
                             <td class="wrapper">
                                 <table role="presentation" border="0" cellpadding="0" cellspacing="0">
                                     <tr>
-                                        <td>
-                                            <h2>Mensaje recibido</h2>
+                                        <td>                                           
                                             <p><strong>Nombre: </strong>{{ $name }}</p>
                                             <p><strong>E-mail: </strong>{{ $email }}</p>
                                             <p><strong>Teléfono: </strong>{{ $phone }}</p>
