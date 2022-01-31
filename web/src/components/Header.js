@@ -27,6 +27,7 @@ const Header = () => {
                 {
                   <Navbar.Collapse id="basic-navbar-nav">
                     <Nav className="me-auto">
+                    { /* 
                       <NavDropdown
                         title="Sobre nosotros"
                         id="basic-nav-dropdown2"
@@ -59,6 +60,7 @@ const Header = () => {
                           Nom Noms
                         </NavDropdown.Item>
                       </NavDropdown>
+                      */}
                       <Nav.Link href="/manteinance">Catálogo</Nav.Link>
                     </Nav>
                     <Nav>

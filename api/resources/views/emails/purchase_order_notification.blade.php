@@ -377,6 +377,8 @@
                                             <p><strong>E-mail: </strong>{{ $email }}</p>
                                             <p><strong>Teléfono: </strong>{{ $phone }}</p>
                                             <p><strong>Dirección: </strong>{{ $address }}</p>
+                                            <p><strong>Localidad: </strong>{{ $location }}</p>
+                                            <p><strong>Código Postal: </strong>{{ $zipCode }}</p>
                                             <p><strong>Provincia: </strong>{{ $provinceName }}</p>
                                             <p><strong>Forma de Pago: </strong>{{ $paymentMethodName }}</p>
                                             <p><strong>Forma de Envío: </strong>{{ $shippingMethodName }}</p>

@@ -39,6 +39,8 @@ class PurchaseOrderNotification extends Mailable
             ->with([
                 'name' => $this->po->name,
                 'address' => $this->po->address,
+                'location' => $this->po->location,
+                'zipCode' => $this->po->zipCode,
                 'phone' => $this->po->phone,
                 'email' => $this->po->email,
                 'province' => $this->po->province,
