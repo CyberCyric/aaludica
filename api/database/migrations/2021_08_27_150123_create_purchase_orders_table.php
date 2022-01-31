@@ -19,12 +19,14 @@ class CreatePurchaseOrdersTable extends Migration
             $table->string('name');
             $table->string('email');
             $table->string('address');
+            $table->string('location')->default('');
+            $table->string('zipCode')->default('');
+            $table->string('province')->default('');
             $table->string('phone')->default('');
             $table->string('status')->default('P');
             $table->string('zone')->default('');
             $table->string('shippingMethod')->default('');
             $table->string('paymentMethod')->default('');
-            $table->string('province')->default('');
             $table->double('subtotal')->default(0);
             $table->double('shippingCost')->default(0);
             $table->double('cartWeight')->default(0);

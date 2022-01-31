@@ -10,14 +10,20 @@ import Swal from "sweetalert2";
 import axios from "axios";
 import { useHistory } from "react-router-dom";
 
-// const PAYMENT_METHOD_MERCADOPAGO = 3;
+const SHIPPING_METHOD_RETIRO_PERSONALMENTE = 1;
 const SHIPPING_METHOD_CORREO_ARGENTINO = 2;
+
+const PAYMENT_METHOD_EFECTIVO = 1;
+const PAYMENT_METHOD_MERCADOPAGO = 3;
+
 
 const PageCart = () => {
   const history = useHistory();
   let cart = useContext(CartContext);
   const [name, setName] = useState([]);
   const [address, setAddress] = useState([]);
+  const [location, setLocation] = useState([]);
+  const [zipCode, setZipCode] = useState([]);
   const [email, setEmail] = useState([]);
   const [phone, setPhone] = useState([]);
   const [provinces, setProvinces] = useState([]);
@@ -100,6 +106,12 @@ const PageCart = () => {
   const handleAddressChange = (e) => {
     setAddress(e.target.value);
   };
+  const handleLocationChange = (e) => {
+    setLocation(e.target.value);
+  };
+  const handleZipCodeChange = (e) => {
+    setZipCode(e.target.value);
+  };
   const handleEmailChange = (e) => {
     setEmail(e.target.value);
   };
@@ -130,6 +142,8 @@ const PageCart = () => {
     let data = {
       name: name,
       address: address,
+      zipCode: zipCode,
+      location: location,
       email: email,
       phone: phone,
       province: selectedProvince,
@@ -188,15 +202,30 @@ const PageCart = () => {
   };
 
   const handleFormSubmit = (e) => {
+    let validateOK = true;
+
     // eslint-disable-next-line eqeqeq
     if (name == "" || address == "" || email == "") {
+      validateOK = false;
       Swal.fire({
         title: "Error",
-        text: "Por favor, complete los datos faltantes",
+        text: "Por favor, complete los datos faltantes.",
         icon: "error",
         confirmButtonText: "Aceptar",
       });
-    } else {
+    } 
+
+    if (selectedShippingMethod !=  SHIPPING_METHOD_RETIRO_PERSONALMENTE && selectedPaymentMethod == PAYMENT_METHOD_EFECTIVO) {
+      validateOK = false;
+      Swal.fire({
+        title: "Error",
+        text: "Sólo se acepta el pago en efectivo para retiros en persona.",
+        icon: "error",
+        confirmButtonText: "Aceptar",
+      });
+    }
+    
+    if (validateOK) {
       Swal.fire({
         showDenyButton: true,
         title: "Confirmación",
@@ -317,6 +346,28 @@ const PageCart = () => {
                     value={email}
                     onChange={handleEmailChange}
                   />
+                </div>
+                <div className="row">
+                <div className="col-sm-6">
+                    <h5>Localidad</h5>
+                    <input
+                      type="text"
+                      className="form-control"
+                      name=""
+                      value={location}
+                      onChange={handleLocationChange}
+                    />
+                  </div>
+                  <div className="col-sm-6">
+                    <h5>Código Postal</h5>
+                    <input
+                      type="text"
+                      className="form-control"
+                      name=""
+                      value={zipCode}
+                      onChange={handleZipCodeChange}
+                    />
+                  </div>
                 </div>
                 <div className="row">
                   <div className="col-sm-6">

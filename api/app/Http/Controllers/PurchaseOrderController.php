@@ -34,6 +34,8 @@ class PurchaseOrderController extends Controller
             'name' => $request->name,
             'email' => $request->email,
             'address' => $request->address,
+            'zipCode' => $request->zipCode,
+            'location' => $request->location,
             'phone' => $request->phone,
             'zone' => $request->zone,
             'province' => $request->province,
