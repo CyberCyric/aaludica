@@ -3,6 +3,7 @@ import ProductBox from "../components/ProductBox";
 // import ProductCategoryMenu from "../components/ProductCategoryMenu";
 
 const PageCatalog = () => {
+  
   const [results, setResults] = useState([]);
 
   useEffect(() => {

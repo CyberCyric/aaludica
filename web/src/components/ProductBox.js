@@ -70,10 +70,16 @@ const ProductBox = (props) => {
 
         <div className="price_row">
           <div className="product_price">AR$ {props.product.price.toFixed(2)}</div>
-          <button className="btn btn-danger btn-buy" id={"btn-buy-"+props.product.id} onClick={handleAddItem}>
-            <span className="buy_label">Comprar</span>
-            <span className="buy_spinner"><img  src="images/spinner.gif" /></span>
-          </button>
+        </div>
+        
+        <div className="price_row">
+          <button className="btn btn-danger btn-buy" id={"btn-buy-"+props.product.id} onClick={handleBuyItem}>
+              <span className="buy_label">Comprar ahora</span>
+            </button>
+            &nbsp;
+            <button className="btn btn-danger btn-buy" id={"btn-buy-"+props.product.id} onClick={handleAddItem}>
+              <span className="buy_label">Agregar al carrito</span>
+            </button>
         </div>
 
         <div className="added_row">{addedMessage && <span>¡Agregado!</span> }</div>

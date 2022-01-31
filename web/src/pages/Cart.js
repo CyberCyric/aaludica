@@ -8,11 +8,13 @@ import {
 } from "react-icons/bs";
 import Swal from "sweetalert2";
 import axios from "axios";
+import { useHistory } from "react-router-dom";
 
 // const PAYMENT_METHOD_MERCADOPAGO = 3;
 const SHIPPING_METHOD_CORREO_ARGENTINO = 2;
 
 const PageCart = () => {
+  const history = useHistory();
   let cart = useContext(CartContext);
   const [name, setName] = useState([]);
   const [address, setAddress] = useState([]);
@@ -120,8 +122,8 @@ const PageCart = () => {
   };
 
   const getZone = (provinceId) => {
-    let i = eval(provinceId) -1;
-    return provinces[i].zone;
+    const province = provinces.find(p => p.id == provinceId);
+    return province.zone;
   }
 
   const sendPurchaseOrder = async () => {
@@ -167,8 +169,12 @@ const PageCart = () => {
           text: "Nos comunicaremos con vos a la brevedad.",
           icon: "info",
           confirmButtonText: "Aceptar",
-        });
-        // cart.empty();
+        }).then( () =>{
+          cart.empty();
+          history.push("/");
+        }
+      );
+        
       }
     } else {
       Swal.fire({
@@ -362,6 +368,7 @@ const PageCart = () => {
                       <option value="1">Retiro personalmente</option>
                       <option value="2">Envío por Correo Argentino</option>
                     </select>
+                    <div className="small_text">Zonas de retiro: Palermo, Floresta o Villa Urquiza (CABA)</div>
                   </div>
                 </div>
               </div>

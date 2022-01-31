@@ -28,7 +28,7 @@ class CreateProductsTable extends Migration
             $table->string('stat_age')->default("");
             $table->string('stat_time')->default("");
             $table->string('company')->default("");
-            $table->string('weight')->default(0);
+            $table->double('weight')->default(0);
             $table->timestamps();
         });
     }

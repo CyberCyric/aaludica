@@ -2,8 +2,10 @@ import React, { useState, useEffect } from "react";
 import Swal from "sweetalert2";
 import axios from "axios";
 import { FaRegLaughWink } from "react-icons/fa";
+import { useHistory } from "react-router-dom";
 
 const PageContact = () => {
+  const history = useHistory();
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [phone, setPhone] = useState("");
@@ -44,10 +46,8 @@ const PageContact = () => {
       content: content,
     };
 
-    console.log("Envio el mensaje: ", data);
-
     const res = await axios.post(
-      "https://www.aaludica.com.ar/api/message",
+      process.env.REACT_APP_API_URL +"/message",
       data
     );
     if (res.status === 200) {
@@ -56,7 +56,9 @@ const PageContact = () => {
         text: "¡Muchas gracias!",
         icon: "info",
         confirmButtonText: "Aceptar",
-      });
+      }).then( () =>
+        history.push("/")
+      );
     } else {
       Swal.fire({
         title: "Error",
@@ -66,6 +68,7 @@ const PageContact = () => {
       });
     }
   };
+
 
   const handleFormSubmit = (e) => {
     // eslint-disable-next-line eqeqeq
@@ -155,6 +158,7 @@ const PageContact = () => {
               <div className="col-sm-12">
                 <h5>Tu mensaje (*)</h5>
                 <textarea
+                  id="textAreaContent"
                   className="form-select"
                   name="content"
                   onChange={handleContentChange}

@@ -63,8 +63,7 @@ class PurchaseOrderController extends Controller
         }
 
         if ($USE_MERCADO_PAGO){
-
-            
+           
             // Crea un objeto de preferencia
             $preference = new MercadoPago\Preference();
             $MPitems = array();

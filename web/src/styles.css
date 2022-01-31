@@ -320,14 +320,6 @@ div.template_card div.added_row{
   height: 20px;
 }
 
-span.buy_spinner{
-  display: none;
-}
-span.buy_spinner img{
-  height: 25px;
-  width: auto;
-}
-
 div.template_card .label.new {
   background: #36a300;
   z-index:2;
@@ -673,4 +665,10 @@ button.navbar_button{
 
 button.navbar_button a svg{
   font-size: 25px;
+}
+/*** CART **/
+div.small_text{
+  font-size: 9px;
+  color: #666;
+  margin-left: 15px;
 }

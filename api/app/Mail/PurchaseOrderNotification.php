@@ -35,7 +35,7 @@ class PurchaseOrderNotification extends Mailable
     {
         return $this
             ->from('info@aaludica.com.ar', 'AA Lúdica Juegos de mesa')
-            ->subject('AA Lúdica - Compra desde el sitio')
+            ->subject('AA Lúdica - Nuevo Pedido: #'.$this->po->id)
             ->with([
                 'name' => $this->po->name,
                 'address' => $this->po->address,
