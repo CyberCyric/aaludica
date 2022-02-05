@@ -1,5 +1,5 @@
 import React from "react";
-import Carousel from "react-bootstrap/Carousel";
+import AboutUsCarousel from "../components/AboutUsCarousel";
 import { useHistory } from "react-router-dom";
 
 const PageAboutUs = () => {
@@ -46,58 +46,7 @@ const PageAboutUs = () => {
               con mecánicas de juegos de mesa modernos y clásicos.
             </div>
           </div>
-          {/*
-          <div className="row mt-5">
-            <div className="carousel-container">
-              <Carousel fade controls={false} interval={4000} pause={false}>
-                <Carousel.Item>
-                  <img
-                    className="d-block w-100"
-                    src="images/slider/01.jpg"
-                    alt="First slide"
-                    width={900}
-                    height={500}
-                  />
-                  <Carousel.Caption>
-                  </Carousel.Caption>
-                </Carousel.Item>
-                <Carousel.Item>
-                  <img
-                    className="d-block w-100"
-                    src="images/slider/02.jpg"
-                    alt="First slide"
-                    width={900}
-                    height={500}
-                  />
-                  <Carousel.Caption>
-                  </Carousel.Caption>
-                </Carousel.Item>
-                <Carousel.Item>
-                  <img
-                    className="d-block w-100"
-                    src="images/slider/03.jpg"
-                    alt="First slide"
-                    width={900}
-                    height={500}
-                  />
-                  <Carousel.Caption>
-                  </Carousel.Caption>
-                </Carousel.Item>
-                <Carousel.Item>
-                  <img
-                    className="d-block w-100"
-                    src="images/slider/04.jpg"
-                    alt="First slide"
-                    width={900}
-                    height={500}
-                  />
-                  <Carousel.Caption>
-                  </Carousel.Caption>
-                </Carousel.Item>
-              </Carousel>
-            </div>
-          </div>
-          */}
+          <AboutUsCarousel />
           <div className="row about_us_team_members">
               <div className="team-member">
                 <img
