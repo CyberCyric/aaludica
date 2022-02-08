@@ -35,7 +35,7 @@ const NomsLanding = () => {
           </div>
           <div>
             <img
-              src="images/noms/roedores.png"
+              src="images/noms/cartas.png"
               className="img-responsive pack"
               alt="Pack"
             />{" "}
@@ -62,7 +62,7 @@ const NomsLanding = () => {
         </div>
         <div className="d-flex justify-content-evenly landing-noms-section-como pt-5 pb-5">
           <div className="row bkg-blanco redondeado backgroundCartas">
-            <div className="col-md-12 box-text-juega">
+            <div className="col-8 box-text-juega">
               <br />
               <br />
               <h1 className="">¿Cómo se juega? </h1>
@@ -70,12 +70,6 @@ const NomsLanding = () => {
                 Construí la línea de tiempo más extensa que puedas y ganá.
               </h3>
               <br />
-              <img
-                src="images/noms/cartas.png"
-                align="absmiddle"
-                className="noms-diagrama"
-                alt="Noms Cartas"
-              />
               <p className="texto">
                 La dinámica del juego es muy simple, primero repartimos una
                 carta a cada jugador, con la cual iniciará su línea de tiempo y
@@ -94,7 +88,7 @@ const NomsLanding = () => {
               </p>{" "}
               <br />
               <br />
-              <div className="row">
+              <div className="row text-center">
                 <a href="pdf/reglamento-nom-noms.pdf" target="_blank">
                   <h5 className="">
                     <img
@@ -108,6 +102,7 @@ const NomsLanding = () => {
                 </a>{" "}
               </div>
             </div>
+            <div className="col-4"><iframe width="560" height="315" src="https://www.youtube.com/embed/k5M3_-bDgyc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
           </div>
         </div>
       </div>

@@ -135,6 +135,10 @@ const SucesosLanding = () => {
                         alt="Vol1"
                       />
                       <h4 className="fjalla">Volumen 1: Gobiernos y Conflictos </h4>
+                      <div>El preferido de los historiadores. Incluye cartas como{" "}
+                <strong>“El Cruce de los Andes”</strong>,{" "}
+                <strong>“Guerra de Malvinas”</strong> y{" "}
+                <strong>“Declaración de la Independencia”</strong>.{" "}</div>
                 </div>
                 <div className="cell-volumen">
                 <img
@@ -143,6 +147,10 @@ const SucesosLanding = () => {
                         alt="Vol1"
                       />
                       <h4 className="fjalla">Volumen 2: Economía y Sociedad </h4>
+                      <div> Los hechos que marcaron la idiosincracia popular, como{" "}
+                <strong>“El Cordobazo”</strong>,{" "}
+                <strong>“El Pacto de Olivos”</strong> y{" "}
+                <strong>“La Inauguración del Primer Ferrocarril”</strong>{" "}</div>
                 </div>
                 <div className="cell-volumen">
                 <img
@@ -151,6 +159,10 @@ const SucesosLanding = () => {
                         alt="Vol1"
                       />
                       <h4 className="fjalla">Volumen 3: Ciencia y Cultura </h4>
+                      <div>¡Esto también es historia! Incluye eventos como{" "}
+                <strong>“Fundación de la UBA”</strong>,{" "}
+                <strong>“Invención del by-pass”</strong> y{" "}
+                <strong>“Segunda Copa FIFA Argentina”</strong>.{" "}</div>
                 </div>
                 <div className="cell-volumen">
                 <img
@@ -159,66 +171,13 @@ const SucesosLanding = () => {
                         alt="Vol1"
                       />
                       <h4 className="fjalla">Volumen 4: Cambalache </h4>
+                      <div>La cultura popular que nos define. Incluye{" "}
+                <strong>“Inauguración de Pumper Nic”</strong>,{" "}
+                <strong>“Primer vuelo del Pulqui”</strong> y{" "}
+                <strong>“Primera ascención al Aconcagua”</strong>.{" "}</div>
                 </div>
           </div>
 
-          <table className="tabla-sucesos-volumenes">
-            <tr>
-              <td>
-                
-              </td>
-              <td>
-                
-              </td>
-              <td>
-                
-              </td>
-              <td>
-                
-              </td>
-            </tr>
-            <tr>
-              <td>
-                
-              </td>
-              <td>
-                
-              </td>
-              <td>
-                
-              </td>
-              <td>
-                
-              </td>
-            </tr>
-            <tr>
-              <td>
-                El preferido de los historiadores. Incluye cartas como{" "}
-                <strong>“El Cruce de los Andes”</strong>,{" "}
-                <strong>“Guerra de Malvinas”</strong> y{" "}
-                <strong>“Declaración de la Independencia”</strong>.{" "}
-              </td>
-              <td>
-                Los hechos que marcaron la idiosincracia popular, como{" "}
-                <strong>“El Cordobazo”</strong>,{" "}
-                <strong>“El Pacto de Olivos”</strong> y{" "}
-                <strong>“La Inauguración del Primer Ferrocarril”</strong>{" "}
-              </td>
-              <td>
-                ¡Esto también es historia! Incluye eventos como{" "}
-                <strong>“Fundación de la UBA”</strong>,{" "}
-                <strong>“Invención del by-pass”</strong> y{" "}
-                <strong>“Segunda Copa FIFA Argentina”</strong>.{" "}
-              </td>
-              <td>
-                {" "}
-                La cultura popular que nos define. Incluye{" "}
-                <strong>“Inauguración de Pumper Nic”</strong>,{" "}
-                <strong>“Primer vuelo del Pulqui”</strong> y{" "}
-                <strong>“Primera ascención al Aconcagua”</strong>.{" "}
-              </td>
-            </tr>
-          </table>
           <div className="d-flex justify-content-center pt-5">
             <div>
               Podés combinar dos o más Volúmenes para agregar variedad al juego

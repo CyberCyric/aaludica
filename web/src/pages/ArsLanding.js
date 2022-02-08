@@ -20,7 +20,7 @@ const ArsLanding = () => {
           </div>
           <div>
             <img
-              src="images/ars/caja-arsdomino.png"
+              src="images/ars/fichas.png"
               className="img-responsive pack"
               alt="Pack"
             />{" "}
@@ -47,40 +47,25 @@ const ArsLanding = () => {
         </div>
         <div className="d-flex justify-content-evenly landing-ars-section-como pt-5 pb-5">
           <div className="row bkg-blanco redondeado backgroundCartas">
-            <div className="col-md-12 box-text-juega">
+            <div className="row box-text-juega">
               <br />
               <br />
+              <div className="col-8">
               <h1 className="">¿Cómo se juega? </h1>
               <h3 className="copete">
                 Uní las fichas con obras de arte del mismo período.
-              </h3>
-              <br />
-              <img
-                src="images/ars/fichas.png"
-                align="absmiddle"
-                className="ars-fichas"
-                alt="ars Cartas"
-              />
-              <p className="texto">
-                La dinámica del juego es muy simple, primero repartimos una
-                carta a cada jugador, con la cual iniciará su línea de tiempo y
-                luego en el pozo sumaremos las misma cantidad de cartas que de
-                jugadores, adicionando una extra o sea que si son 4 jugadores,
-                en el pozo pondremos 5 cartas. La carta sobrante al finalizar la
-                ronda se descarta.{" "}
+                </h3>
+                <p className="texto">
+                Ars Domino es un juego para 2 a 4 jugadores, que busca acercar a sus jugadores al mundo del arte mediante las mecánicas de un juego popular: el dominó. Las fichas en este juego representan 7 periodos del arte occidental.{" "}
               </p>
               <p className="texto">
-                El jugador que inicia elige una de las cartas del pozo, y la
-                ubica a la izquierda o a la derecha de su carta inicial, según
-                la cronología de los sucesos, y así sucesivamente cada jugador
-                va construyendo su línea de tiempo, hasta que se completan 5
-                cartas en orden correcto, si más de un jugador lo logra, ellos
-                desempatan hasta que sólo quede un ganador.{" "}
+              El juego incluye hojas de referencia que pueden ser consultadas durante la partida. Allí vas a encontrar encuentra el periodo correspondiente a cada obra, su nombre y su autor. {" "}
               </p>{" "}
-              <br />
-              <br />
-              <br />
-              <br />
+                </div>
+                <div className="col-4">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/yiZBNZm1v24" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+              <div className="mt-5 mb-5"></div>
               <div className="row">
                 <h3 className="copete">
                   Períodos artísticos de la versión "Historia del Arte":
@@ -144,7 +129,7 @@ const ArsLanding = () => {
                   </div>
                 </div>
               </div>
-              <div className="row">
+              <div className="row text-center">
                 <a href="pdf/reglamento-ars-domino.pdf" target="_blank">
                   <h5 className="">
                     <img

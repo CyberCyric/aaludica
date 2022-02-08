@@ -406,6 +406,10 @@ div.landing-sucesos-section-volumenes div.row-volumenes div.cell-volumen{
   display: flex;
   flex-direction: column;
 }
+div.landing-sucesos-section-volumenes div.row-volumenes div.cell-volumen img{
+  height: 500px;
+  width: auto;
+}
 
 div.landing-sucesos-section-docentes {
   background-color: #d4d4d4;
