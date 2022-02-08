@@ -3,7 +3,7 @@ import { BsFillPeopleFill, BsFillClockFill } from "react-icons/bs";
 
 const SucesosLanding = () => {
   const backgroundSucesos = {
-    backgroundImage: `url(images/sucesos/bkg-sucesos.jpg)`,
+    backgroundImage: `url(images/sucesos/bkg.jpg)`,
   };
   const backgroundCartas = {
     backgroundImage: `url(images/sucesos/cartas1.jpg)`,
@@ -41,15 +41,12 @@ const SucesosLanding = () => {
             </h1>
             <br />{" "}
             <h5 className="copete">
-              Un juego donde se pone a prueba tu conocimiento, compitiendo con
-              tus amigos por ser el primero en armar en el orden correcto una
-              cadena con cartas que describen varios de los hitos de la historia
-              de nuestro país.{" "}
+            ¡Poné a prueba tu conocimiento! Competí con tus amigos por ser el primero en armar en el orden correcto la mayor línea de tiempo de hitos de la historia de nuestro país.{" "}
             </h5>
           </div>
           <div>
             <img
-              src="images/sucesos/combo-123.png"
+              src="images/sucesos/cartas1.png"
               className="img-responsive pack"
               alt="Pack"
             />{" "}
@@ -81,9 +78,8 @@ const SucesosLanding = () => {
         <div className="d-flex justify-content-evenly landing-sucesos-section-como pt-5 pb-5">
           <div
             className="row bkg-blanco redondeado backgroundCartas"
-            style={backgroundCartas}
           >
-            <div className="col-md-9 box-text-juega">
+            <div className="col-8 box-text-juega">
               <br />
               <br />
               <h1 className="fjalla">¿Cómo se juega? </h1>
@@ -93,20 +89,10 @@ const SucesosLanding = () => {
               <br />
               <br />
               <p className="texto">
-                La dinámica del juego es muy simple, primero repartimos una
-                carta a cada jugador, con la cual iniciará su línea de tiempo y
-                luego en el pozo sumaremos las misma cantidad de cartas que de
-                jugadores, adicionando una extra o sea que si son 4 jugadores,
-                en el pozo pondremos 5 cartas. La carta sobrante al finalizar la
-                ronda se descarta.{" "}
+              La dinámica del juego es muy simple: primero repartimos una carta a cada jugador que iniciará su línea de tiempo y luego en el centro de la mesa colocaremos la misma cantidad de cartas que de jugadores, adicionando una extra. {" "}
               </p>
               <p className="texto">
-                El jugador que inicia elige una de las cartas del pozo, y la
-                ubica a la izquierda o a la derecha de su carta inicial, según
-                la cronología de los sucesos, y así sucesivamente cada jugador
-                va construyendo su línea de tiempo, hasta que se completan 5
-                cartas en orden correcto, si más de un jugador lo logra, ellos
-                desempatan hasta que sólo quede un ganador.{" "}
+              El jugador que inicia elige una de las cartas del pozo, y la ubica a la izquierda o a la derecha de su carta inicial, según la cronología de los sucesos. El jugador que logre armar la línea de tiempo más larga sin equivocarse, será el ganador. {" "}
               </p>{" "}
               <br />
               <br />
@@ -129,6 +115,9 @@ const SucesosLanding = () => {
                 </div>
               </div>
             </div>
+            <div className="col-4 pt-5">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/ZlgT-927rlQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
           </div>
         </div>
         <div className="landing-sucesos-section-volumenes pt-5 pb-5">
@@ -137,49 +126,69 @@ const SucesosLanding = () => {
             Cada Volumen de Sucesos Argentinos trae 75 cartas organizadas
             temáticamente:{" "}
           </p>
+
+          <div className="row-volumenes">
+            <div className="cell-volumen">
+                <img
+                        src="images/sucesos/vol01.jpg"
+                        className="img-responsive"
+                        alt="Vol1"
+                      />
+                      <h4 className="fjalla">Volumen 1: Gobiernos y Conflictos </h4>
+                </div>
+                <div className="cell-volumen">
+                <img
+                        src="images/sucesos/vol02.jpg"
+                        className="img-responsive"
+                        alt="Vol1"
+                      />
+                      <h4 className="fjalla">Volumen 2: Economía y Sociedad </h4>
+                </div>
+                <div className="cell-volumen">
+                <img
+                        src="images/sucesos/vol03.jpg"
+                        className="img-responsive"
+                        alt="Vol1"
+                      />
+                      <h4 className="fjalla">Volumen 3: Ciencia y Cultura </h4>
+                </div>
+                <div className="cell-volumen">
+                <img
+                        src="images/sucesos/vol04.jpg"
+                        className="img-responsive"
+                        alt="Vol1"
+                      />
+                      <h4 className="fjalla">Volumen 4: Cambalache </h4>
+                </div>
+          </div>
+
           <table className="tabla-sucesos-volumenes">
             <tr>
               <td>
-                <img
-                  src="images/sucesos/vol01.jpg"
-                  className="img-responsive"
-                  alt="Vol1"
-                />
+                
               </td>
               <td>
-                <img
-                  src="images/sucesos/vol02.jpg"
-                  className="img-responsive"
-                  alt="Vol2"
-                />
+                
               </td>
               <td>
-                <img
-                  src="images/sucesos/vol03.jpg"
-                  className="img-responsive"
-                  alt="Vol3"
-                />
+                
               </td>
               <td>
-                <img
-                  src="images/sucesos/vol04.jpg"
-                  className="img-responsive"
-                  alt="Vol4"
-                />
+                
               </td>
             </tr>
             <tr>
               <td>
-                <h4 className="fjalla">Volumen 1: Gobiernos y Conflictos </h4>
+                
               </td>
               <td>
-                <h4 className="fjalla">Volumen 2: Economía y Sociedad </h4>
+                
               </td>
               <td>
-                <h4 className="fjalla">Volumen 3: Ciencia y Cultura </h4>
+                
               </td>
               <td>
-                <h4 className="fjalla">Volumen 4: Cambalache </h4>
+                
               </td>
             </tr>
             <tr>
@@ -229,7 +238,7 @@ const SucesosLanding = () => {
           <br />
           <p className="">
             <img
-              src="images/sucesos/mate.png"
+              src="images/sucesos/combo-123.png"
               className="img-mate"
               alt="Mate"
             />

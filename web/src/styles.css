@@ -398,10 +398,15 @@ div.landing-sucesos-section-como .texto {
 div.landing-sucesos-section-volumenes {
   padding: 100px;
 }
-table.tabla-sucesos-volumenes img {
-  width: 200px;
-  height: auto;
+div.landing-sucesos-section-volumenes div.row-volumenes{
+  display: flex;
 }
+div.landing-sucesos-section-volumenes div.row-volumenes div.cell-volumen{
+  margin:10px;
+  display: flex;
+  flex-direction: column;
+}
+
 div.landing-sucesos-section-docentes {
   background-color: #d4d4d4;
   padding: 100px;
