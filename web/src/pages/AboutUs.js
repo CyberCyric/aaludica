@@ -5,7 +5,7 @@ import { useHistory } from "react-router-dom";
 const PageAboutUs = () => {
   const history = useHistory();
   const boxSucesosStyle = {
-    backgroundImage: `url(images/sucesos/bkg-sucesos.jpg)`,
+    backgroundImage: `url(images/sucesos/bkg.jpg)`,
   };
   const boxArsDominoStyle = {
     backgroundImage: `url(images/ars/bkg-domino.jpg)`,
@@ -33,68 +33,34 @@ const PageAboutUs = () => {
     <>
       <div id="AboutUsPage">
         <div className="container-fluid second text-center">
-          <div className="row mt-5  text-center">
+          <div className="row mb-4 text-center">
             <div className="main-txt">
-              <span className="salutation">¡Hola!</span> Somos AA L&uacute;dica,
+              <strong>¡Bienvenidos!</strong> Somos AA L&uacute;dica,
               una editorial argentina de juegos dedicada a crear experiencias
               l&uacute;dicas que generen aprendizajes significativos y amenos.{" "}
-              <br />
-              <br /> Nacimos como el proyecto de un grupo de amigos que buscaba
-              utilizar su hobbie para generar nuevas herramientas educativas.
-              <br /> <br /> Nuestros juegos son diseñados y testeados por
-              profesionales de la educación, integrando el contenido educativo
-              con mecánicas de juegos de mesa modernos y clásicos.
             </div>
           </div>
-          <AboutUsCarousel />
-          <div className="row about_us_team_members">
-              <div className="team-member">
-                <img
-                  alt=""
-                  className="mx-auto rounded-circle"
-                  src="images/aa-guido.jpg"
-                />
-                <p className="text-muted">Guido D. Cegarra</p>
-              </div>
-              <div className="team-member">
-                <img
-                  alt=""
-                  className="mx-auto rounded-circle"
-                  src="images/aa-santiago.jpg"
-                />
-                <p className="text-muted">Santiago Rodríguez</p>
-              </div>
-              <div className="team-member">
-                <img
-                  alt=""
-                  className="mx-auto rounded-circle"
-                  src="images/aa-juan.jpg"
-                />
-                <p className="text-muted">Juan Manuel Domínguez</p>
-              </div>
+          <div className="carousel-container">
+            <AboutUsCarousel />
           </div>
-          <div className="container-fluid second text-center">
-            <div className="row mt-5">
-              <div className="highlight">
-                Creemos en el balance entre la diversión y el aprendizaje, para
-                que los juegos "dejen algo", pero que además sean desafiantes y
-                divertidos.{" "}
-              </div>
-              <div className="highlight  hidden-xs">
-                Buscamos que los jugadores tomen decisiones relevantes y se
-                sientan involucrados durante la partida, haciendo que la
-                estrategia y el conocimiento sean igual de importantes.{" "}
-              </div>
-              <div className="highlight  hidden-xs">
-                Nos esforzamos para crear juegos que sean a la vez llamativos y
-                ricos en contenido, para que los jugadores, además de pasarla
-                bien, adquieran conocimientos, o refuercen los conocimientos
-                previos.{" "}
-              </div>
-              <div className="highlight  hidden-xs">
-                Porque... ¡jugar preexiste a la cultura!{" "}
-              </div>
-            </div>
+          <div className="row mt-5">
+            <div className="about_us_team_members">
+                <img
+                  alt=""
+                  className="mx-auto"
+                  src="images/integrantes/guido.png"
+                />
+                <img
+                  alt=""
+                  className="mx-auto"
+                  src="images/integrantes/santiago.png"
+                />
+                <img
+                  alt=""
+                  className="mx-auto"
+                  src="images/integrantes/juan.png"
+                />
+                </div>
           </div>
         </div>
       </div>
@@ -106,83 +72,32 @@ const PageAboutUs = () => {
             </div>
           </div>
         </div>
-        <div className="container-fluid">
-          <div className="row box-juegos">
-            <div
-              className="gameBox"
-              style={boxSucesosStyle}
-              onClick={routeChangeSucesos}
-            >
-              <div className="logo-sucesos" align="center">
+        <div className="container-fluid p-5">
+          <div className="row gameBox " style={boxSucesosStyle} onClick={routeChangeSucesos}>
                 <img
                   alt=""
-                  src="images/sucesos/logo-sucesos-negro.png"
+                  src="images/sucesos/logo-small-sucesos.png"
                   className="img-responsive"
                 />
-              </div>
-              <div className="tagline-sucesos">
-                <h3 className="fjalla">
-                  Deslumbrá a tus amigos con tu memoria y aprendé historia
-                  argentina jugando.{" "}
-                </h3>
-              </div>
-              <img
-                alt=""
-                src="images/sucesos/caja-sucesos.png"
-                className="img-responsive about-game"
-              />
-            </div>
-            <div
-              className="gameBox"
-              style={boxArsDominoStyle}
-              onClick={routeChangeArsDomino}
-            >
-              <div className="logo-arsdomino" align="center">
-                <img
-                  alt=""
-                  src="images/ars/logo-arsdomino.png"
-                  className="img-responsive"
-                />
-              </div>
-              <div className="tagline-arsdomino">
-                <h3 className="fjalla">
-                  ¡Una colección de arte que cabe en una caja!
-                </h3>
-              </div>
-              <img
-                alt=""
-                src="images/ars/caja-arsdomino.png"
-                className="img-responsive about-game"
-              />
             </div>
 
-            <div
-              className="gameBox"
-              style={boxNomNomsStyle}
-              onClick={routeChangeNoms}
-            >
-              <div className="logo-nomnoms" align="center">
+            <div className="row gameBox" style={boxArsDominoStyle} onClick={routeChangeArsDomino}>
                 <img
                   alt=""
-                  src="images/noms/logo-nomnoms.png"
+                  src="images/ars/logo-small.png"
                   className="img-responsive"
                 />
-              </div>
-              <div className="tagline-nomnoms">
-                <h3 className="verdegorditos">
-                  Un juego de riesgos en el que tratás de convertirte en el
-                  roedor más gordito de todos sin empacharte.{" "}
-                </h3>
-              </div>
-              <img
-                alt=""
-                src="images/noms/caja-nomnoms.png"
-                className="img-responsive about-game"
-              />
+             </div>
+
+            <div className="row gameBox" style={boxNomNomsStyle} onClick={routeChangeNoms}>
+                <img
+                  alt=""
+                  src="images/noms/logo-small.png"
+                  className="img-responsive "
+                />
             </div>
           </div>
         </div>
-      </div>
     </>
   );
 };

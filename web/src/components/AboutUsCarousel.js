@@ -1,32 +1,27 @@
 import React from "react";
-import Carousel from "react-responsive-carousel";
+import "react-responsive-carousel/lib/styles/carousel.min.css";
+import {Carousel} from "react-responsive-carousel";
 
 const AboutUsCarousel = () => {
     return (
-        <Carousel showArrows={true}>
+        <Carousel showArrows={false} autoPlay={true} infiniteLoop={true} showStatus={false} stopOnHover={true} interval={4000} showThumbs={false}>
                 <div>
-                    <img src="assets/1.jpeg" />
-                    <p className="legend">Legend 1</p>
+                    <img className="carouselImage" src="images/carousel/1.jpg" />
                 </div>
                 <div>
-                    <img src="assets/2.jpeg" />
-                    <p className="legend">Legend 2</p>
+                    <img className="carouselImage" src="images/carousel/2.jpg" />
                 </div>
                 <div>
-                    <img src="assets/3.jpeg" />
-                    <p className="legend">Legend 3</p>
+                    <img className="carouselImage" src="images/carousel/3.jpg" />
                 </div>
                 <div>
-                    <img src="assets/4.jpeg" />
-                    <p className="legend">Legend 4</p>
+                    <img className="carouselImage" src="images/carousel/4.jpg" />
                 </div>
                 <div>
-                    <img src="assets/5.jpeg" />
-                    <p className="legend">Legend 5</p>
+                    <img className="carouselImage" src="images/carousel/5.jpg" />
                 </div>
                 <div>
-                    <img src="assets/6.jpeg" />
-                    <p className="legend">Legend 6</p>
+                    <img className="carouselImage" src="images/carousel/6.jpg" />
                 </div>
         </Carousel>
     );

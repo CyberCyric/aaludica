@@ -137,17 +137,14 @@ div.highlight {
   border-radius: 25px;
 }
 
-div.team-member img {
-  width: 160px;
-  height: 160px;
-  border: 5px solid #fff;
-  margin-right: 44px !important;
-}
 
 div.gameBox {
-  padding-top: 50px;
-  max-width: 30%;
   border: solid 3px #999;
+  margin-bottom: 15px;
+  background-position: right;
+  display: flex;
+  justify-content: center;
+  padding: 20px;
 }
 div.gameBox:hover {
   cursor: pointer;
@@ -156,40 +153,53 @@ div.gameBox:hover {
   box-shadow: 0 0 20px #ff0000;
   border: solid 3px #ff0000;
 }
-
-img.about-game {
-  position: relative;
-  height: auto;
-  max-width: 100%;
-  max-height: 100%;
-  display: block;
-  /* bottom: -100px; */
+div.gameBox img{
+  height: 100%;
+  width: auto;
 }
+
 img.rounded-circle {
   border-radius: 50% !important;
 }
 /***** Page AboutUs *****/
 div#AboutUsPage {
   font-size: 20px;
-}
-span.salutation {
-  font-size: 30px;
-  font-weight: bolder;
-  font-family: "Montserrat", sans-serif;
-}
-div.box-juegos {
-  border: 1px solid #fff;
+  width: 100%;
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
+  justify-content: space-around;  
+}
+div#AboutUsPage div.main-txt{
+  font-family:Georgia,serif;
+  color:#666666;
+  font-size:26px;
+  line-height:1em;
+  text-align: justify;
+}
+div#AboutUsPage strong{
+  color:#A80C1E;
+  display:block;
+  font-size:72px;
+  font-weight:normal;
+  letter-spacing:-3.5px;
+  line-height:1em;
+  }
+div#AboutUsPage .carouselImage{
+  padding: 1.5rem 1.5rem;
+  display: inline-block;
+  border: 3px solid #333333;
+  font-size: 2.5rem;
+  border-radius: 2% 6% 5% 4% / 1% 1% 2% 4%;
+  text-transform: uppercase;
+  letter-spacing: 0.3ch;
+  background: #ffffff;
+  position: relative;
 }
 div.logo-sucesos,
 div.logo-arsdomino,
 div.logo-nomnoms {
-  width: 74%;
-  margin-left: 10%;
-  margin-top: 20px;
-  margin-bottom: 20px;
+  height: auto;
+  width: 100%;
 }
 div.logo-sucesos img,
 div.logo-arsdomino img,
@@ -208,41 +218,14 @@ div#boxAboutNoms:hover {
 div.about_us_team_members{
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
-}
-div.box-juegos div.tagline-sucesos {
-  width: 80%;
-  margin-left: 30px;
-  margin-top: 25px;
-  color: #352f31;
-  text-align: center;
-  font-weight: bold;
-}
-div.box-juegos div.tagline-arsdomino {
-  width: 80%;
-  margin-left: 30px;
-  margin-top: 25px;
-  color: #fff;
-  text-align: center;
-  font-weight: bold;
-}
-div.box-juegos div.tagline-nomnoms {
-  width: 80%;
-  margin-left: 30px;
-  margin-top: 25px;
-  color: #f0f453;
-  text-align: center;
-  font-weight: bold;
-}
-div.box-juegos img.logo-juego {
-  width: 100%;
+  justify-content: space-evenly;
 }
 .title-txt {
-  margin-top: 70px;
+  margin-top: 30px;
   font-size: 60px;
   letter-spacing: 5px;
   font-kerning: normal;
-  margin-bottom: 50px;
+  margin-bottom: 30px;
   color: #333;
   font-family: "Anton", sans-serif;
 }
@@ -599,23 +582,15 @@ img.img-mate {
   height: auto;
   float: right;
 }
-
-.carousel{
-  width:900px;
-  height:500px;
+.carousel-container{
+  width:55%;
+  height: auto;
   margin: auto;
 }
-.carousel-container{
-  display: flex;
-  justify-content: center;
-}
-.carousel-item img{
-  border-radius: 25px;
-}
-.carousel-caption{
-  color: white;
-  text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;
-  text-align: right;
+.carousel li.dot {
+  width: 15px !important;
+  height: 15px !important;
+  background-color: #000 !important;
 }
 
 /* CSS Document */
@@ -654,14 +629,12 @@ a {
     font-size: 18px;
     -webkit-font-smoothing: none;
     color: #fff;
-    text-transform: lowercase;
     display: contents;
 }
 
 .navbar-dark .navbar-nav .nav-link {
     font-family: sans-serif;
     font-size: 16px;
-    text-transform: lowercase;
 }
 button.navbar_button{
   padding: 0px;
