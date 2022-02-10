@@ -41,7 +41,7 @@ const SucesosLanding = () => {
             </h1>
             <br />{" "}
             <h5 className="copete">
-            ¡Poné a prueba tu conocimiento! Competí con tus amigos por ser el primero en armar en el orden correcto la mayor línea de tiempo de hitos de la historia de nuestro país.{" "}
+            ¡Poné a prueba tu conocimiento! Competí con tus amigos por ser el primero en armar la mayor línea de tiempo  de sucesos políticos, económicos y populares de nuestro país.{" "}
             </h5>
           </div>
           <div>
