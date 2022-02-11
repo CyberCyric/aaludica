@@ -172,14 +172,14 @@ div#AboutUsPage {
 div#AboutUsPage div.main-txt{
   font-family:Georgia,serif;
   color:#666666;
-  font-size:26px;
+  font-size: 1em;
   line-height:1em;
   text-align: justify;
 }
 div#AboutUsPage strong{
   color:#A80C1E;
   display:block;
-  font-size:72px;
+  font-size: 3em;
   font-weight:normal;
   letter-spacing:-3.5px;
   line-height:1em;
@@ -222,7 +222,7 @@ div.about_us_team_members{
 }
 .title-txt {
   margin-top: 30px;
-  font-size: 60px;
+  font-size: 5vw;
   letter-spacing: 5px;
   font-kerning: normal;
   margin-bottom: 30px;
@@ -592,7 +592,6 @@ img.img-mate {
   float: right;
 }
 .carousel-container{
-  width:55%;
   height: auto;
   margin: auto;
 }

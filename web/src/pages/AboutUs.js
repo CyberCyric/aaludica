@@ -34,7 +34,7 @@ const PageAboutUs = () => {
       <div id="AboutUsPage">
         <div className="container-fluid second text-center">
           <div className="row mb-4 text-center">
-            <div className="main-txt">
+            <div className="main-txt p-4">
               <strong>¡Bienvenidos!</strong> Somos AA L&uacute;dica,
               una editorial argentina de juegos dedicada a crear experiencias
               l&uacute;dicas que generen aprendizajes significativos y amenos.{" "}
@@ -47,17 +47,17 @@ const PageAboutUs = () => {
             <div className="about_us_team_members">
                 <img
                   alt=""
-                  className="mx-auto"
+                  className="mx-auto img-fluid"
                   src="images/integrantes/guido.png"
                 />
                 <img
                   alt=""
-                  className="mx-auto"
+                  className="mx-auto img-fluid"
                   src="images/integrantes/santiago.png"
                 />
                 <img
                   alt=""
-                  className="mx-auto"
+                  className="mx-auto img-fluid"
                   src="images/integrantes/juan.png"
                 />
                 </div>
