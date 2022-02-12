@@ -35,7 +35,7 @@ div#CartPage{
   margin-bottom: 50px;
 }
 div#LandingPage {
-  margin-top: 88px;
+  margin-top: 75px;
 }
 img.cartThumbnail {
   max-height: 80px;
@@ -396,10 +396,7 @@ div.landing-sucesos-section-como .texto {
   font-weight: 400;
 }
 div.landing-sucesos-section-volumenes {
-  padding: 100px;
-}
-div.landing-sucesos-section-volumenes div.row-volumenes{
-  display: flex;
+  padding: 5px;
 }
 div.landing-sucesos-section-volumenes div.row-volumenes div.cell-volumen{
   margin:10px;
@@ -407,13 +404,13 @@ div.landing-sucesos-section-volumenes div.row-volumenes div.cell-volumen{
   flex-direction: column;
 }
 div.landing-sucesos-section-volumenes div.row-volumenes div.cell-volumen img{
-  height: 500px;
+  max-height: 500px;
   width: auto;
 }
 
 div.landing-sucesos-section-docentes {
   background-color: #d4d4d4;
-  padding: 100px;
+  padding: 20px;
 }
 div.landing-sucesos-section-docentes p {
   font-size: 20px;
@@ -538,15 +535,28 @@ img.pack {
 div.frase h1 {
   padding-top: 50px;
   color: #212529;
-  font-size: 55px;
+  font-size: 2vm;
 }
 .copete {
   font-family: Montserrat, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
     "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
     "Segoe UI Symbol", "Noto Color Emoji";
-  font-size: 24px;
+  font-size: 2vm;
   color: #212529;
   line-height: 30px;
+}
+.iframe-container{
+  position: relative;
+  width: 100%;
+  padding-bottom: 56.25%; 
+  height: 0;
+}
+.iframe-container iframe{
+  position: absolute;
+  top:0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 }
 
 .copyico {
