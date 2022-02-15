@@ -367,8 +367,7 @@ div.landing-sucesos-section-header {
 }
 div.landing-sucesos-section-header img {
   position: relative;
-  top: 5px;
-  height: 130%;
+  top: 20%;
   width: auto;
 }
 div.landing-sucesos-section-stats {
@@ -490,10 +489,9 @@ div.landing-ars-section-main{
 div.landing-ars-section-stats{
   background-color: #333;
 }
-h5.texto-header-ars{
+h3.texto-header-ars{
   font-family: 'Abril Fatface', cursive;
   color: white;
-  font-size: 32px;
 }
 div.landing-ars-section-stats div.stat-text-age{
   color: white;
@@ -529,7 +527,6 @@ div.landing-ars-section-como div.ars-periodos div.periodo-box{
 img.pack {
   position: relative;
   top: 5px;
-  height: 600px;
   width: auto;
 }
 div.frase h1 {
@@ -647,7 +644,7 @@ a {
     font-size: 18px;
     -webkit-font-smoothing: none;
     color: #fff;
-    display: contents;
+
 }
 
 .navbar-dark .navbar-nav .nav-link {

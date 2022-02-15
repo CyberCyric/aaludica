@@ -5,9 +5,6 @@ const SucesosLanding = () => {
   const backgroundSucesos = {
     backgroundImage: `url(images/sucesos/bkg.jpg)`,
   };
-  const backgroundCartas = {
-    backgroundImage: `url(images/sucesos/cartas1.jpg)`,
-  };
   const backgroundPoncho = {
     backgroundImage: `url(images/sucesos/bkg_poncho.jpg)`,
   };
@@ -44,7 +41,7 @@ const SucesosLanding = () => {
           <div>
             <img
               src="images/sucesos/cartas1.png"
-              className="img-responsive pack"
+              className="img-responsive "
               alt="Pack"
             />{" "}
           </div>
@@ -83,7 +80,7 @@ const SucesosLanding = () => {
               </h3>
               <div className="text-center mt-4 iframe-container">
                 <iframe
-                  src="https://www.youtube.com/embed/ZlgT-927rlQ"
+                  src="https://www.youtube.com/embed/8WPA2OZRm9M"
                   title="YouTube video player"
                   frameborder="0"
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
@@ -126,6 +123,7 @@ const SucesosLanding = () => {
             </div>
           </div>
         </div>
+        
         <div className="landing-sucesos-section-volumenes pt-5 pb-5">
           <h1 className="fjalla">Contenido de los volúmenes </h1>
           <p className="">
@@ -133,8 +131,8 @@ const SucesosLanding = () => {
             temáticamente:{" "}
           </p>
 
-          <div className="row">
-
+          <div className="container">
+            <div className="row">
             <div class="col-3">
               <img
                 src="images/sucesos/vol01.jpg"
@@ -193,7 +191,7 @@ const SucesosLanding = () => {
                 <i>“Primera ascención al Aconcagua”</i>.{" "}</div>
                 </div>
 
-
+                </div>
           </div>
 
           <div className="d-flex justify-content-center pt-5">

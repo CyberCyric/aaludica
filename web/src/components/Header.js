@@ -27,14 +27,14 @@ const Header = () => {
                 {
                   <Navbar.Collapse id="basic-navbar-nav">
                     <Nav className="me-auto">
-                    { /* 
                       <NavDropdown
                         title="Sobre nosotros"
                         id="basic-nav-dropdown2"
                       >
-                        <NavDropdown.Item href="/manteinance">
+                        <NavDropdown.Item href="/aboutus">
                           Institucional
                         </NavDropdown.Item>
+                        {/* 
                         <NavDropdown.Divider />
                         <NavDropdown.Item href="/manteinance">
                           Instagram
@@ -43,24 +43,24 @@ const Header = () => {
                         <NavDropdown.Item href="/manteinance">
                           El Mapa de AA Lúdica
                         </NavDropdown.Item>
+                        */}
                       </NavDropdown>
                       <NavDropdown
                         title="Nuestros juegos"
                         id="basic-nav-dropdown"
                       >
-                        <NavDropdown.Item href="/manteinance">
+                        <NavDropdown.Item href="/sucesosargentinos">
                           Sucesos Argentinos
                         </NavDropdown.Item>
                         <NavDropdown.Divider />
-                        <NavDropdown.Item href="/manteinance">
+                        <NavDropdown.Item href="/arsdomino">
                           Ars Domino
                         </NavDropdown.Item>
                         <NavDropdown.Divider />
-                        <NavDropdown.Item href="/manteinance">
+                        <NavDropdown.Item href="/nomnoms">
                           Nom Noms
                         </NavDropdown.Item>
                       </NavDropdown>
-                      */}
                       <Nav.Link href="/catalog">Catálogo</Nav.Link>
                     </Nav>
                     <Nav>
