@@ -27,6 +27,7 @@ const Header = () => {
                 {
                   <Navbar.Collapse id="basic-navbar-nav">
                     <Nav className="me-auto">
+                      {/* 
                       <NavDropdown
                         title="Sobre nosotros"
                         id="basic-nav-dropdown2"
@@ -34,7 +35,7 @@ const Header = () => {
                         <NavDropdown.Item href="/aboutus">
                           Institucional
                         </NavDropdown.Item>
-                        {/* 
+                        
                         <NavDropdown.Divider />
                         <NavDropdown.Item href="/manteinance">
                           Instagram
@@ -43,7 +44,7 @@ const Header = () => {
                         <NavDropdown.Item href="/manteinance">
                           El Mapa de AA Lúdica
                         </NavDropdown.Item>
-                        */}
+                        
                       </NavDropdown>
                       <NavDropdown
                         title="Nuestros juegos"
@@ -61,6 +62,7 @@ const Header = () => {
                           Nom Noms
                         </NavDropdown.Item>
                       </NavDropdown>
+                      */}
                       <Nav.Link href="/catalog">Catálogo</Nav.Link>
                     </Nav>
                     <Nav>
