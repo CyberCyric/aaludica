@@ -96,7 +96,8 @@ const NomsLanding = () => {
               Nom Noms es un juego muy sencillo para disfrutar en familia. Ideal para jugar con los peques..
               </p>
               <p className="texto">
-              blabalabla
+              Se trata de un juego de arriesgar, al estilo Black Jack o 7 y medio, pero con simpáticos roedores que se alimentan.
+Cada jugador asume el papel de un roedor que elige entre las cartas disponibles (con maravillosas ilustraciones de Camila Reymundo). Luego se mezcla el mazo de cartas de comida y se lo coloca mirando hacia arriba. La ronda comienza cuando se saca la carta de abajo; una vez sobre la mesa cada jugador decide si continua comiendo o si se planta. Si se planta, apoya su roedor sobre la carta de comida. Si sigue, y la comida se repite… ¡queda indigestado!, y pierde la ronda.
               </p>{" "}
               <br />
               
