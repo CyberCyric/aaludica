@@ -102,9 +102,16 @@ nav.fixed-top {
 }
 
 img.navbar-logo {
-  display: block;
-  height: auto;
-  margin: 5px 5px 5px 25px;
+    display: block;
+    height: auto;
+    margin: 5px 5px 5px 25px;
+    position: relative;
+    top: -19px;
+}
+
+.tagline {
+    padding-left: 6px;
+    font-size: 11px;
 }
 
 a.category_link {
@@ -165,6 +172,31 @@ img.about-game {
   display: block;
   /* bottom: -100px; */
 }
+
+
+.navbar {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 0.5rem;
+     padding-bottom: 0rem!important; 
+}
+
+.navbar-expand-lg .navbar-nav {
+    flex-direction: row !important;
+    /* background-color: blue; */
+    position: relative!important;
+    top: -15px!important;
+}
+
+.btn-secondary {
+    color: #fff;
+    background-color: #212529 !important;
+    border-color: #212529 !important;
+}
+
 img.rounded-circle {
   border-radius: 50% !important;
 }
@@ -638,6 +670,7 @@ img.navbar-logo {
     -webkit-font-smoothing: none;
     color: #fff;
     text-decoration: none;
+    text-transform: uppercase;
 }
 
 a .logo-txt {
@@ -656,12 +689,18 @@ a {
     color: #fff;
     text-transform: lowercase;
     display: contents;
+    font: small-caption;
+    position: relative;
+    /* background-color: aquamarine; */
+    display: inline-block;
+    left: 8px;
 }
 
 .navbar-dark .navbar-nav .nav-link {
     font-family: sans-serif;
-    font-size: 16px;
+    font-size: 15px;
     text-transform: lowercase;
+    font: small-caption;
 }
 button.navbar_button{
   padding: 0px;

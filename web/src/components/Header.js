@@ -20,14 +20,15 @@ const Header = () => {
                       data-original-title=""
                       alt="logo"
                     />
-                    <div className="tagline-txt"><span className="logo-txt">AA Lúdica </span>Juegos de Mesa</div>
+                    <div className="tagline-txt"><div className="logo-txt">AA Lúdica </div> 
+                    <div className="tagline"> Juegos de Mesa</div></div>
                   </Link>
                 </Navbar.Brand>
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
                 {
                   <Navbar.Collapse id="basic-navbar-nav">
                     <Nav className="me-auto">
-                    { /* 
+            
                       <NavDropdown
                         title="Sobre nosotros"
                         id="basic-nav-dropdown2"
@@ -60,7 +61,7 @@ const Header = () => {
                           Nom Noms
                         </NavDropdown.Item>
                       </NavDropdown>
-                      */}
+           
                       <Nav.Link href="/catalog">Catálogo</Nav.Link>
                     </Nav>
                     <Nav>
