@@ -11,3 +11,4 @@ web/node_modules/
 web/.env
 *.bkp
 web/package-lock.json
+web/package-lock.json
