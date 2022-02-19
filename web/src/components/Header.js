@@ -37,7 +37,6 @@ const Header = () => {
                           Institucional
                         </NavDropdown.Item>                       
                         <NavDropdown.Divider />
-                        <NavDropdown.Divider />
                         <NavDropdown.Item href="/manteinance">
                           El Mapa de AA Lúdica
                         </NavDropdown.Item>

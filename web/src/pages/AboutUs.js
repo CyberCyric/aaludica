@@ -31,7 +31,7 @@ const PageAboutUs = () => {
 
   return (
     <>
-      <div id="AboutUsPage">
+      <div id="AboutUsPage" className="container">
         <div className="container-fluid second text-center">
           <div className="row mb-4 text-center">
             <div className="main-txt p-4">
