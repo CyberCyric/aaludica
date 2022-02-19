@@ -685,10 +685,9 @@ a {
 
 .navbar-dark .navbar-nav .nav-link {
     font-family: sans-serif;
-    font-size: 15px;
-    text-transform: lowercase;
+       text-transform: lowercase;
     font: small-caption;
-    font-size: 16px;
+    font-size: 14px;
 }
 button.navbar_button{
   padding: 0px;

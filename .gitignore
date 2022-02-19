@@ -9,3 +9,5 @@ web/build/
 web/.env.local
 web/node_modules/
 web/.env
+*.bkp
+web/package-lock.json
