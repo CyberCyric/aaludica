@@ -35,12 +35,8 @@ const Header = () => {
                       >
                         <NavDropdown.Item href="/aboutus">
                           Institucional
-                        </NavDropdown.Item>
-                        
+                        </NavDropdown.Item>                       
                         <NavDropdown.Divider />
-                        <NavDropdown.Item href="/manteinance">
-                          Instagram
-                        </NavDropdown.Item>
                         <NavDropdown.Divider />
                         <NavDropdown.Item href="/manteinance">
                           El Mapa de AA Lúdica
