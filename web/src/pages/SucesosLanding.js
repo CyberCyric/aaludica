@@ -3,10 +3,7 @@ import { BsFillPeopleFill, BsFillClockFill } from "react-icons/bs";
 
 const SucesosLanding = () => {
   const backgroundSucesos = {
-    backgroundImage: `url(images/sucesos/bkg-sucesos.jpg)`,
-  };
-  const backgroundCartas = {
-    backgroundImage: `url(images/sucesos/cartas1.jpg)`,
+    backgroundImage: `url(images/sucesos/bkg.jpg)`,
   };
   const backgroundPoncho = {
     backgroundImage: `url(images/sucesos/bkg_poncho.jpg)`,
@@ -24,11 +21,6 @@ const SucesosLanding = () => {
               alt="Logo"
             />
           </div>
-          <div className="">
-            <h5 className="fjalla mt-5">
-              La historia la aprenden los que juegan{" "}
-            </h5>
-          </div>
         </div>
         <div
           className="d-flex landing-sucesos-section-main align-items-center p-5"
@@ -41,16 +33,15 @@ const SucesosLanding = () => {
             </h1>
             <br />{" "}
             <h5 className="copete">
-              Un juego donde se pone a prueba tu conocimiento, compitiendo con
-              tus amigos por ser el primero en armar en el orden correcto una
-              cadena con cartas que describen varios de los hitos de la historia
-              de nuestro país.{" "}
+              ¡Poné a prueba tu conocimiento! Competí con tus amigos por ser el
+              primero en armar la mayor línea de tiempo de sucesos políticos,
+              económicos y populares de nuestro país.{" "}
             </h5>
           </div>
           <div>
             <img
-              src="images/sucesos/combo-123.png"
-              className="img-responsive pack"
+              src="images/sucesos/cartas1.png"
+              className="img-responsive "
               alt="Pack"
             />{" "}
           </div>
@@ -79,34 +70,35 @@ const SucesosLanding = () => {
           </div>
         </div>
         <div className="d-flex justify-content-evenly landing-sucesos-section-como pt-5 pb-5">
-          <div
-            className="row bkg-blanco redondeado backgroundCartas"
-            style={backgroundCartas}
-          >
-            <div className="col-md-9 box-text-juega">
+          <div className="row bkg-blanco redondeado">
+            <div className="box-text-juega">
               <br />
               <br />
               <h1 className="fjalla">¿Cómo se juega? </h1>
               <h3 className="copete">
                 Construí la línea de tiempo más extensa que puedas y ganá.
               </h3>
-              <br />
+              <div className="text-center mt-4 iframe-container">
+                <iframe
+                  src="https://www.youtube.com/embed/8WPA2OZRm9M"
+                  title="YouTube video player"
+                  frameborder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowfullscreen
+                ></iframe>
+              </div>
               <br />
               <p className="texto">
-                La dinámica del juego es muy simple, primero repartimos una
-                carta a cada jugador, con la cual iniciará su línea de tiempo y
-                luego en el pozo sumaremos las misma cantidad de cartas que de
-                jugadores, adicionando una extra o sea que si son 4 jugadores,
-                en el pozo pondremos 5 cartas. La carta sobrante al finalizar la
-                ronda se descarta.{" "}
+                La dinámica del juego es muy simple: primero repartimos una
+                carta a cada jugador que iniciará su línea de tiempo y luego en
+                el centro de la mesa colocaremos la misma cantidad de cartas que
+                de jugadores, adicionando una extra.{" "}
               </p>
               <p className="texto">
                 El jugador que inicia elige una de las cartas del pozo, y la
                 ubica a la izquierda o a la derecha de su carta inicial, según
-                la cronología de los sucesos, y así sucesivamente cada jugador
-                va construyendo su línea de tiempo, hasta que se completan 5
-                cartas en orden correcto, si más de un jugador lo logra, ellos
-                desempatan hasta que sólo quede un ganador.{" "}
+                la cronología de los sucesos. El jugador que logre armar la
+                línea de tiempo más larga sin equivocarse, será el ganador.{" "}
               </p>{" "}
               <br />
               <br />
@@ -131,85 +123,77 @@ const SucesosLanding = () => {
             </div>
           </div>
         </div>
+        
         <div className="landing-sucesos-section-volumenes pt-5 pb-5">
           <h1 className="fjalla">Contenido de los volúmenes </h1>
           <p className="">
             Cada Volumen de Sucesos Argentinos trae 75 cartas organizadas
             temáticamente:{" "}
           </p>
-          <table className="tabla-sucesos-volumenes">
-            <tr>
-              <td>
-                <img
-                  src="images/sucesos/vol01.jpg"
-                  className="img-responsive"
-                  alt="Vol1"
-                />
-              </td>
-              <td>
-                <img
-                  src="images/sucesos/vol02.jpg"
-                  className="img-responsive"
-                  alt="Vol2"
-                />
-              </td>
-              <td>
-                <img
-                  src="images/sucesos/vol03.jpg"
-                  className="img-responsive"
-                  alt="Vol3"
-                />
-              </td>
-              <td>
-                <img
-                  src="images/sucesos/vol04.jpg"
-                  className="img-responsive"
-                  alt="Vol4"
-                />
-              </td>
-            </tr>
-            <tr>
-              <td>
-                <h4 className="fjalla">Volumen 1: Gobiernos y Conflictos </h4>
-              </td>
-              <td>
-                <h4 className="fjalla">Volumen 2: Economía y Sociedad </h4>
-              </td>
-              <td>
-                <h4 className="fjalla">Volumen 3: Ciencia y Cultura </h4>
-              </td>
-              <td>
-                <h4 className="fjalla">Volumen 4: Cambalache </h4>
-              </td>
-            </tr>
-            <tr>
-              <td>
-                El preferido de los historiadores. Incluye cartas como{" "}
-                <strong>“El Cruce de los Andes”</strong>,{" "}
-                <strong>“Guerra de Malvinas”</strong> y{" "}
-                <strong>“Declaración de la Independencia”</strong>.{" "}
-              </td>
-              <td>
-                Los hechos que marcaron la idiosincracia popular, como{" "}
-                <strong>“El Cordobazo”</strong>,{" "}
-                <strong>“El Pacto de Olivos”</strong> y{" "}
-                <strong>“La Inauguración del Primer Ferrocarril”</strong>{" "}
-              </td>
-              <td>
-                ¡Esto también es historia! Incluye eventos como{" "}
-                <strong>“Fundación de la UBA”</strong>,{" "}
-                <strong>“Invención del by-pass”</strong> y{" "}
-                <strong>“Segunda Copa FIFA Argentina”</strong>.{" "}
-              </td>
-              <td>
+
+          <div className="container">
+            <div className="row">
+            <div class="col-3">
+              <img
+                src="images/sucesos/vol01.jpg"
+                className="img-fluid"
+                alt="Vol1"
+              />
+              <h4 className="fjalla">Volumen 1: Gobiernos y Conflictos </h4>
+              <div>
                 {" "}
-                La cultura popular que nos define. Incluye{" "}
-                <strong>“Inauguración de Pumper Nic”</strong>,{" "}
-                <strong>“Primer vuelo del Pulqui”</strong> y{" "}
-                <strong>“Primera ascención al Aconcagua”</strong>.{" "}
-              </td>
-            </tr>
-          </table>
+                El preferido de los historiadores. Incluye cartas como{" "}
+                <i>“El Cruce de los Andes”</i>,{" "}
+                <i>“Guerra de Malvinas”</i> y{" "}
+                <i>“Declaración de la Independencia”</i>{" "}
+              </div>
+            </div>
+
+            <div class="col-3">
+              <img
+                src="images/sucesos/vol02.jpg"
+                className="img-fluid"
+                alt="Vol2"
+              />
+              <h4 className="fjalla">Volumen 2: Economía y Sociedad </h4>
+              <div>
+                {" "}
+                Los hechos que marcaron la idiosincracia popular, como{" "}
+                <i>“El Cordobazo”</i>,{" "}
+                <i>“El Pacto de Olivos”</i> y{" "}
+                <i>“La Inauguración del Primer Ferrocarril”</i>{" "}
+              </div>
+            </div>
+
+            <div className="col-3">
+                <img
+                        src="images/sucesos/vol03.jpg"
+                        className="img-fluid"
+                        alt="Vo3"
+                      />
+                      <h4 className="fjalla">Volumen 3: Ciencia y Cultura </h4>
+                      <div>¡Esto también es historia! Incluye eventos como{" "}
+                <i>“Fundación de la UBA”</i>,{" "}
+                <i>“Invención del by-pass”</i> y{" "}
+                <i>“Segunda Copa FIFA Argentina”</i>.{" "}</div>
+                </div>
+
+                <div className="col-3">
+                <img
+                        src="images/sucesos/vol04.jpg"
+                        className="img-fluid"
+                        alt="Vol4"
+                      />
+                      <h4 className="fjalla">Volumen 4: Cambalache </h4>
+                      <div>La cultura popular que nos define. Incluye{" "}
+                <i>“Inauguración de Pumper Nic”</i>,{" "}
+                <i>“Primer vuelo del Pulqui”</i> y{" "}
+                <i>“Primera ascención al Aconcagua”</i>.{" "}</div>
+                </div>
+
+                </div>
+          </div>
+
           <div className="d-flex justify-content-center pt-5">
             <div>
               Podés combinar dos o más Volúmenes para agregar variedad al juego
@@ -229,7 +213,7 @@ const SucesosLanding = () => {
           <br />
           <p className="">
             <img
-              src="images/sucesos/mate.png"
+              src="images/sucesos/combo-123.png"
               className="img-mate"
               alt="Mate"
             />
@@ -248,7 +232,7 @@ const SucesosLanding = () => {
           className="landing-sucesos-section-poncho pt-4 pb-1 d-flex justify-content-center"
           style={backgroundPoncho}
         >
-          <img src="images/sucesos/poncho.jpg" alt="poncho" />
+          <img src="images/sucesos/poncho.jpg" alt="poncho" className="img-fluid"/>
         </div>
         <div
           className="landing-sucesos-section-app pt-1 pb-1 d-flex justify-content-center"

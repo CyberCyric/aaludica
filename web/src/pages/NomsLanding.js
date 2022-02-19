@@ -4,108 +4,119 @@ const NomsLanding = () => {
   const backgroundNoms = { backgroundImage: `url(images/noms/bkg-noms.jpg)` };
   return (
     <>
-      <div id="LandingPage">
-        <div className="d-flex justify-content-evenly landing-noms-section-header">
-          <div className="">
-            <img
-              src="images/noms/logo-nomnoms.png"
-              hspace="5"
-              className="logo-noms"
-              alt="Logo"
-            />
-          </div>
-          <div className="">
-            <h5 className="texto-header-noms mt-5">¡Gorditos y bonitos! </h5>
-          </div>
-        </div>
+       <div id="LandingPage" style={backgroundNoms}>
         <div
           className="d-flex landing-noms-section-main align-items-center p-5"
-          style={backgroundNoms}
+          
         >
           <div className="frase">
-            <h1 className="">
-              Roedores hambrientos comen zanahorias, uvas, maíz y bananas....{" "}
-            </h1>
-            <br />{" "}
-            <h5 className="copete">
-              Pero atención, que no coman de más o ¡¡podrían empacharse!! Nom
-              Noms es un juego muy sencillo para disfrutar en familia. Ideal
-              para jugar con los peques..{" "}
-            </h5>
+            <img
+              src="images/noms/logo-small.png"
+              className="img-responsive "
+              alt="Pack"
+            />
+            <h3 className="texto-header-ars mt-5">
+            ¡Gorditos y bonitos!{" "}
+            </h3>
           </div>
           <div>
             <img
               src="images/noms/roedores.png"
-              className="img-responsive pack"
+              className="img-responsive "
               alt="Pack"
             />{" "}
           </div>
         </div>
-        <div className="d-flex justify-content-evenly landing-noms-section-stats pt-5 pb-5">
-          <div className="" align="center">
-            <span className="stat-icon">
-              <BsFillPeopleFill />
+        <div class="d-flex justify-content-evenly landing-noms-section-stats pt-5 pb-5">
+          <div class="" align="center">
+            <span class="stat-icon">
+              <svg
+                stroke="currentColor"
+                fill="currentColor"
+                stroke-width="0"
+                viewBox="0 0 16 16"
+                height="1em"
+                width="1em"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M7 14s-1 0-1-1 1-4 5-4 5 3 5 4-1 1-1 1H7zm4-6a3 3 0 100-6 3 3 0 000 6zm-5.784 6A2.238 2.238 0 015 13c0-1.355.68-2.75 1.936-3.72A6.325 6.325 0 005 9c-4 0-5 3-5 4s1 1 1 1h4.216zM4.5 8a2.5 2.5 0 100-5 2.5 2.5 0 000 5z"
+                  clip-rule="evenodd"
+                ></path>
+              </svg>
             </span>
-            <h4 className="  copyico">de 2 a 5 jugadores</h4>{" "}
+            <h4 class="stat-text  copyico">de 2 a 5 jugadores</h4>{" "}
           </div>
-
-          <div className="" align="center">
-            <span className="stat-icon">
-              <BsFillClockFill />
+          <div class="" align="center">
+            <span class="stat-icon">
+              <svg
+                stroke="currentColor"
+                fill="currentColor"
+                stroke-width="0"
+                viewBox="0 0 16 16"
+                height="1em"
+                width="1em"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M16 8A8 8 0 110 8a8 8 0 0116 0zM8 3.5a.5.5 0 00-1 0V9a.5.5 0 00.252.434l3.5 2a.5.5 0 00.496-.868L8 8.71V3.5z"
+                  clip-rule="evenodd"
+                ></path>
+              </svg>
             </span>
-            <h4 className="  copyico">10 minutos </h4>{" "}
+            <h4 class="stat-text copyico">10 minutos </h4>{" "}
           </div>
           <div align="center">
-            <div className="stat-text">6+</div>
-            <h4 className="  stat-subtext">años </h4>
+            <div class="stat-text-age">6+</div>
+            <h4 class="stat-text copyico">años </h4>
           </div>
         </div>
-        <div className="d-flex justify-content-evenly landing-noms-section-como pt-5 pb-5">
-          <div className="row bkg-blanco redondeado backgroundCartas">
-            <div className="col-md-12 box-text-juega">
+        <div className="d-flex justify-content-evenly landing-ars-section-como pt-5 pb-5" >
+          <div className="row bkg-blanco redondeado">
+            <div className="box-text-juega">
               <br />
               <br />
-              <h1 className="">¿Cómo se juega? </h1>
+              <h1 className="fjalla">¿Cómo se juega? </h1>
               <h3 className="copete">
-                Construí la línea de tiempo más extensa que puedas y ganá.
+              Roedores hambrientos comen zanahorias, uvas, maíz y bananas....Pero atención, que no coman de más o ¡¡podrían empacharse!! 
               </h3>
+              <div className="text-center mt-4 iframe-container">
+                <iframe
+                  src="https://www.youtube.com/embed/k5M3_-bDgyc"
+                  title="YouTube video player"
+                  frameborder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowfullscreen
+                ></iframe>
+              </div>
               <br />
-              <img
-                src="images/noms/cartas.png"
-                align="absmiddle"
-                className="noms-diagrama"
-                alt="Noms Cartas"
-              />
               <p className="texto">
-                La dinámica del juego es muy simple, primero repartimos una
-                carta a cada jugador, con la cual iniciará su línea de tiempo y
-                luego en el pozo sumaremos las misma cantidad de cartas que de
-                jugadores, adicionando una extra o sea que si son 4 jugadores,
-                en el pozo pondremos 5 cartas. La carta sobrante al finalizar la
-                ronda se descarta.{" "}
+              Nom Noms es un juego muy sencillo para disfrutar en familia. Ideal para jugar con los peques..
               </p>
               <p className="texto">
-                El jugador que inicia elige una de las cartas del pozo, y la
-                ubica a la izquierda o a la derecha de su carta inicial, según
-                la cronología de los sucesos, y así sucesivamente cada jugador
-                va construyendo su línea de tiempo, hasta que se completan 5
-                cartas en orden correcto, si más de un jugador lo logra, ellos
-                desempatan hasta que sólo quede un ganador.{" "}
+              blabalabla
               </p>{" "}
               <br />
-              <br />
+              
               <div className="row">
-                <a href="pdf/reglamento-nom-noms.pdf" target="_blank">
-                  <h5 className="">
-                    <img
-                      src="images/pdf.jpg"
-                      align="absmiddle"
-                      className=""
-                      alt="PDF"
-                    />
-                    <br /> Descargá el reglamento{" "}
-                  </h5>
-                </a>{" "}
+                <div className="col-md-12 cursor" align="center">
+                  <a
+                    href="pdf/reglamento-nom-noms.pdf"
+                    target="_blank"
+                  >
+                    <h5 className="">
+                      <img
+                        src="images/pdf.jpg"
+                        align="absmiddle"
+                        className=""
+                        alt="PDF"
+                      />
+                      <br /> Descargá el reglamento{" "}
+                    </h5>
+                  </a>{" "}
+                </div>
               </div>
             </div>
           </div>
