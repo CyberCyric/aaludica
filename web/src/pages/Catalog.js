@@ -1,18 +1,20 @@
 import React, { useEffect, useState } from "react";
+import { useParams } from 'react-router-dom';
 import ProductBox from "../components/ProductBox";
-// import ProductCategoryMenu from "../components/ProductCategoryMenu";
+import ProductCategoryMenu from "../components/ProductCategoryMenu";
 
 const PageCatalog = () => {
-  
+  const {categoryId} = useParams();
   const [results, setResults] = useState([]);
 
   useEffect(() => {
     (async () => {
-      const response = await fetch(process.env.REACT_APP_API_URL + "/products");
+      const url = (categoryId == null) ?  process.env.REACT_APP_API_URL + "/products/" : process.env.REACT_APP_API_URL + "/products/"+categoryId
+      const response = await fetch(url);
       const results = await response.json();
       setResults(results);
     })();
-  }, []);
+  }, [categoryId]);
 
   return (
     <div className="container" id="CatalogPage">
@@ -22,7 +24,7 @@ const PageCatalog = () => {
             <h4>Catálogo de Juegos</h4>
           </div>
         </div>
-        <div className="col-lg-9 col-md-9">{/* <ProductCategoryMenu /> */}</div>
+        <ProductCategoryMenu /> 
       </div>
       <div className="row">
         {results.length > 0 ? (

@@ -61,7 +61,7 @@ const ProductBox = (props) => {
         </div>
       )}
         <div className="product_box_image">
-          <img src={`images/products/${props.product.main_photo}`} />
+          <img src={`/images/products/${props.product.main_photo}`} />
         </div>
 
         <div>

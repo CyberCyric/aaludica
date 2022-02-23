@@ -32,6 +32,9 @@ function App() {
                 <Route exact path="/aboutus">
                   <PageAboutUs />
                 </Route>
+                <Route exact path="/catalog/:categoryId">
+                  <PageCatalog />
+                </Route>
                 <Route exact path="/catalog">
                   <PageCatalog />
                 </Route>
