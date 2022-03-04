@@ -41,23 +41,17 @@ const ProductBox = (props) => {
       <div className="template_card d-flex flex-column">
       {props.product.is_new === "Y" && (
         <div className="label new">
-          <BsStarFill />
-          &nbsp; ¡Recién llegado! &nbsp;
-          <BsStarFill />
+          Recién llegado 
         </div>
       )}
       {props.product.is_last_units === "Y" && (
         <div className="label stockout">
-          <BsExclamationCircleFill />
-          &nbsp; Quedan poquitos... &nbsp;
-          <BsExclamationCircleFill />
+          Quedan poquitos...
         </div>
       )}
       {props.product.is_combo === "Y" && (
         <div className="label combo">
-          <BsTagFill />
-          &nbsp; Combo &nbsp;
-          <BsTagFill />
+          Combo
         </div>
       )}
         <div className="product_box_image">

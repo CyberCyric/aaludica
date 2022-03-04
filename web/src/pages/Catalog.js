@@ -17,7 +17,7 @@ const PageCatalog = () => {
   }, [categoryId]);
 
   return (
-    <div className="container" id="CatalogPage">
+    <div className="container-fluid" id="CatalogPage">
       <div className="row">
         <div className="col-lg-12 col-md-12">
           <div className="section-title">

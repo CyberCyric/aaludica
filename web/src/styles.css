@@ -276,7 +276,7 @@ ul.catalogo_categorias li {
 }
 
 div.template_card{
-  box-shadow: 0 8px 30px rgb(2 59 109 / 10%);
+  /*box-shadow: 0 8px 30px rgb(2 59 109 / 10%);*/
   transition: box-shadow .3s ease-in-out;
   height: 100%;
   background: #fff;
@@ -703,3 +703,15 @@ div.small_text{
   color: #666;
   margin-left: 15px;
 }
+
+#CatalogPage{
+    background-color: #EEE;
+        margin-top: 120px;
+    margin-bottom: 50px;
+    padding-left: 7%;
+    padding-right: 7%;
+    padding-top: 5%;
+    padding-bottom: 3%;
+}
+
+
