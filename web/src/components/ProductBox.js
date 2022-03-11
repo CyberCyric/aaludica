@@ -58,10 +58,10 @@ const ProductBox = (props) => {
           <img src={`/images/products/${props.product.main_photo}`} />
         </div>
 
-        <div>
-          <h5 className="text-center title">
+        
+          <div className="titleproducts" align="center">
             {props.product.name}
-          </h5>
+          
         </div>
 
         <div className="stats_box text-center">
