@@ -10,9 +10,9 @@ class ProductController extends Controller
     public function index($id = null)
     {
         if (isset($id) == false)
-            $products = Product::orderBy('name')->get();
+            $products = Product::where('is_active','=','Y')->orderBy('name')->get();
         else {
-            $products = Product::whereHas('categories', function ($q) use($id){
+            $products = Product::where('is_active','=','Y')->whereHas('categories', function ($q) use($id){
                     $q->where('category_id', '=', $id);
             })->get();
         }
