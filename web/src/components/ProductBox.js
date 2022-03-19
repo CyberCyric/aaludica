@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { CartContext } from "../contexts/CartContext";
 import { BsExclamationCircleFill, BsStarFill, BsTagFill } from "react-icons/bs";
 import { useHistory } from "react-router-dom";
+import { HiShoppingCart } from "react-icons/hi";
 
 const ProductBox = (props) => {
   const history = useHistory();
@@ -77,16 +78,20 @@ const ProductBox = (props) => {
         </div>
 
         <div className="price_row">
-          <div className="product_price">AR$ {props.product.price.toFixed(2)}</div>
+          <div className="product_price">$ {props.product.price}</div>
         </div>
         
         <div className="price_row">
-          <button className="btn btn-danger btn-buy" id={"btn-buy-"+props.product.id} onClick={handleBuyItem}>
+       {/*   <button className="btn btn-danger btn-buy" id={"btn-buy-"+props.product.id} onClick={handleBuyItem}>
               <span className="buy_label">Comprar ahora</span>
             </button>
-            &nbsp;
+            &nbsp;*/}
+
+
+
+
             <button className="btn btn-danger btn-buy" id={"btn-buy-"+props.product.id} onClick={handleAddItem}>
-              <span className="buy_label">Agregar al carrito</span>
+              <span className="buy_label">Agregar al <span className="icocart"> <HiShoppingCart /></span></span>
             </button>
         </div>
 

@@ -352,10 +352,54 @@ div.template_card div.price_row{
   justify-content:center; 
 }
 
-div.template_card div.price_row .product_price{
-  font-size: 24px;
-  line-height: 36px;
-  margin-right: 10px;
+div.template_card div.price_row .product_price {
+    font-size: 24px;
+    line-height: 36px;
+    margin-right: 10px;
+    background-color: #34495e;
+    color: #fff;
+    padding: 5px;
+    border-radius: 6px;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    margin-bottom: 12px;
+}
+
+span.buy_label {
+    font-size: 10px;
+    font-family: system-ui;
+    FONT: menu;
+}
+
+.btn.btn-danger {
+    display: inline-block;
+    /* font-weight: 400; */
+     line-height: 0.5; 
+    color: #FFF;
+    text-align: center;
+    text-decoration: none;
+    vertical-align: middle;
+    cursor: pointer;
+    -webkit-user-select: none;
+    user-select: none;
+    background-color: transparent;
+    /* border: 1px solid transparent; */
+    /* font-size: 1rem; */
+    border-radius: 4px;
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+    color: #fff;
+    background-color: #dc3545;
+    padding-top: 0px;
+    padding-bottom: 3px;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+span.icocart {
+    display: list-item;
+}
+
+span.icocart {
+    font-size: 23px;
 }
 
 div.template_card div.added_row{
