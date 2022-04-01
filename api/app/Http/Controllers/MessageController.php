@@ -20,6 +20,7 @@ class MessageController extends Controller
             'name' => $request->name,
             'phone' => $request->phone,
             'province' => $provinceName,
+            'knowMethod' => $knowMethod,
             'content' => $request->content
         ]);
 
