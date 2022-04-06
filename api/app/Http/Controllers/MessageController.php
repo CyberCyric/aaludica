@@ -10,6 +10,7 @@ use App\Models\Province;
 
 class MessageController extends Controller
 {
+
     //
     public function store(Request $request)
     {
@@ -20,6 +21,7 @@ class MessageController extends Controller
             'name' => $request->name,
             'phone' => $request->phone,
             'province' => $provinceName,
+            'knowMethod' => $request->knowMethod,
             'content' => $request->content
         ]);
 

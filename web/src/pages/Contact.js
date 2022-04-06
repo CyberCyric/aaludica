@@ -10,7 +10,7 @@ const PageContact = () => {
   const [email, setEmail] = useState("");
   const [phone, setPhone] = useState("");
   const [selectedProvince, setSelectedProvince] = useState(1);
-  const [selectedKnowMethod, setSelectedKnowMethod] = useState([]);
+  const [selectedKnowMethod, setSelectedKnowMethod] = useState("REDES_SOCIALES");
   const [provinces, setProvinces] = useState([]);
   const [content, setContent] = useState("");
 
@@ -162,9 +162,9 @@ const PageContact = () => {
                 <h5>¿Cómo nos conociste?</h5>
                 <select className="form-select" onChange={handleKnowMethodChange}>
                         <option value="REDES_SOCIALES" key="1">Por Redes Sociales</option>
-                        <option value="RECOMENDACION" key="2">Por recomendación de un amigo</option>
-                        <option value="EVENTO_O_CLUB" key="3">En un evento o club de juegos</option>
-                        <option value="OTROS" key="4">Otro</option>
+                        <option value="RECOMENDACION_AMIGO" key="2">Por recomendación de un amigo</option>
+                        <option value="EVENTO_O_CLUB_SOCIAL" key="3">En un evento o club de juegos</option>
+                        <option value="OTRO" key="4">Otro</option>
                  </select>
               </div>
             </div>

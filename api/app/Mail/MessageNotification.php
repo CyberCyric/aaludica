@@ -36,6 +36,7 @@ class MessageNotification extends Mailable
                 'phone' => $this->msg->phone,
                 'email' => $this->msg->email,
                 'province' => $this->msg->province,
+                'knowMethod' => $this->msg->knowMethod,
                 'content' => $this->msg->content,
             ])
             ->view('emails.message_notification');
