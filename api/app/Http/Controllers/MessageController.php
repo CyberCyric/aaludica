@@ -10,6 +10,7 @@ use App\Models\Province;
 
 class MessageController extends Controller
 {
+
     //
     public function store(Request $request)
     {

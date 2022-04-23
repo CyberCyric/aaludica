@@ -12,3 +12,4 @@ web/.env
 *.bkp
 web/package-lock.json
 web/package-lock.json
+vendor/

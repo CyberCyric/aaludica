@@ -304,10 +304,11 @@ div.template_card span.stats {
     font-size: 28px;
     padding-bottom: 10px;
     padding-top: 25px;
-    padding-left: 20%;
+    padding-left: 15%;
     padding-right: 15%;
     /* background-color: aqua; */
     min-height: 100px;
+    margin-bottom: 30px;
 }
 
 div.template_card .title{
@@ -340,6 +341,7 @@ div.template_card p.short_description {
     padding-left: 12%;
     padding-right: 12%;
     line-height: 22px;
+    min-height: 90px;
 }
 
 div.template_card span.stats{
@@ -353,16 +355,17 @@ div.template_card div.price_row{
 }
 
 div.template_card div.price_row .product_price {
-    font-size: 24px;
+    font-size: 30px;
     line-height: 36px;
     margin-right: 10px;
-    background-color: #34495e;
-    color: #fff;
+    /* background-color: #34495e; */
+    color: #34495e;
     padding: 5px;
     border-radius: 6px;
     padding-top: 2px;
     padding-bottom: 2px;
     margin-bottom: 12px;
+    font-weight: bolder;
 }
 
 span.buy_label {
@@ -382,21 +385,51 @@ span.buy_label {
     cursor: pointer;
     -webkit-user-select: none;
     user-select: none;
-    background-color: transparent;
-    /* border: 1px solid transparent; */
-    /* font-size: 1rem; */
     border-radius: 4px;
-    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
-    color: #fff;
-    background-color: #dc3545;
+    background-color: #34495e;
+    border-color: #34495e !important;
     padding-top: 0px;
     padding-bottom: 3px;
     padding-left: 5px;
     padding-right: 5px;
+    margin-bottom: 20px;
 }
 span.icocart {
     display: list-item;
 }
+
+.badge {
+    display: inline-block;
+    padding: 0.15em 0.25em!important;
+    font-size: .75em;
+    font-weight: 700;
+    line-height: 1;
+    color: #fff;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: baseline;
+    border-radius: 0.25rem;
+}
+
+div.template_card div.added_row {
+    display: block;
+    background-color: crimson;
+    color: #fff!important;
+    font: message-box;
+    padding-top: 5px;
+    padding-bottom: 10px;
+    height: 20px;
+    text-align: center;
+    font-family: 'Montserrat';
+    /* color: #990000; */
+    height: 20px;
+    font-size: 12px;
+}
+
+.btn-danger:focus, .btn-danger:focus, .btn-danger.active:focus, .btn-danger:active:focus {
+    box-shadow: none!important;
+}
+
 
 span.icocart {
     font-size: 23px;
@@ -408,7 +441,7 @@ div.template_card div.added_row{
   font-size: 12px;
   font-weight: bold;
   color: #990000;
-  height: 20px;
+  height: 25px;
 }
 
 div.template_card .label.new {
@@ -443,6 +476,19 @@ div.template_card .label.stockout {
 textarea.messageTextArea{
   height: 250px;
 }
+
+.col-md-6.columnader {
+    float: right;
+    width: 35%;
+    /* background-color: aqua; */
+    padding-top: 20px;
+}
+
+.col-md-6.columnaizq {
+    /*background-color: burlywood;*/
+    width: 65%;
+}
+
 
 /*** Landing Sucesos ***/
 header.masthead {
