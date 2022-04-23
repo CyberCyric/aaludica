@@ -10,7 +10,7 @@ const PageContact = () => {
   const [email, setEmail] = useState("");
   const [phone, setPhone] = useState("");
   const [selectedProvince, setSelectedProvince] = useState(1);
-  const [selectedKnowMethod, setSelectedKnowMethod] = useState([]);
+  const [selectedKnowMethod, setSelectedKnowMethod] = useState("");
   const [provinces, setProvinces] = useState([]);
   const [content, setContent] = useState("");
 

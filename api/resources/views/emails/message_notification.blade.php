@@ -392,7 +392,7 @@
                                             <p><strong>E-mail: </strong>{{ $email }}</p>
                                             <p><strong>Teléfono: </strong>{{ $phone }}</p>
                                             <p><strong>Provincia: </strong>{{ $province }}</p>
-                                            <p><strong>Cómo nos conoció: </strong>{{ $knowMethod }}</p>
+                                            <!-- <p><strong>Cómo nos conoció: </strong>{{ $knowMethod }}</p> -->
                                             <p><strong>Mensaje: </strong></p>
                                             <p>{{ $content }}</p>
                                         </td>

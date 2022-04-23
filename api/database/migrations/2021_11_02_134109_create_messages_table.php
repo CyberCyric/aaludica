@@ -20,6 +20,7 @@ class CreateMessagesTable extends Migration
             $table->string('phone')->nullable()->default('');
             $table->string('province')->nullable()->default('');
             $table->longText('content')->nullable()->default('');
+            $table->longText('knowMethod')->nullable()->default('');
             $table->timestamps();
         });
     }
