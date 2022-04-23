@@ -10,11 +10,7 @@ const PageContact = () => {
   const [email, setEmail] = useState("");
   const [phone, setPhone] = useState("");
   const [selectedProvince, setSelectedProvince] = useState(1);
-<<<<<<< HEAD
-  const [selectedKnowMethod, setSelectedKnowMethod] = useState("");
-=======
   const [selectedKnowMethod, setSelectedKnowMethod] = useState("REDES_SOCIALES");
->>>>>>> 05eb04460cbdb25416e5749f7600b162b500b8eb
   const [provinces, setProvinces] = useState([]);
   const [content, setContent] = useState("");
 
