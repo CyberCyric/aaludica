@@ -160,19 +160,19 @@ const PageCart = () => {
 
     const url = process.env.REACT_APP_API_URL + "/checkOut";
     const res = await axios.post(url, data);
-    
+
     if (res.status === 200) {
       console.log("res:", res);
 
-      if(res.data.mercado_pago === true){
+      if (res.data.mercado_pago === true) {
         const mp = new window.MercadoPago(process.env.REACT_APP_MERCADO_PAGO_PUBLIC_KEY, {
           locale: 'en-US'
         });
 
         mp.checkout({
           preference: {
-              id: res.data.preference_id,
-              external_reference: res.data.id
+            id: res.data.preference_id,
+            external_reference: res.data.id
           },
           autoOpen: true, // Allow the Checkout Pro to open automatically
         });
@@ -183,12 +183,12 @@ const PageCart = () => {
           text: "Nos comunicaremos con vos a la brevedad.",
           icon: "info",
           confirmButtonText: "Aceptar",
-        }).then( () =>{
+        }).then(() => {
           cart.empty();
           history.push("/");
         }
-      );
-        
+        );
+
       }
     } else {
       Swal.fire({
@@ -198,7 +198,7 @@ const PageCart = () => {
         confirmButtonText: "Aceptar",
       });
     }
-    
+
   };
 
   const handleFormSubmit = (e) => {
@@ -213,9 +213,9 @@ const PageCart = () => {
         icon: "error",
         confirmButtonText: "Aceptar",
       });
-    } 
+    }
 
-    if (selectedShippingMethod !=  SHIPPING_METHOD_RETIRO_PERSONALMENTE && selectedPaymentMethod == PAYMENT_METHOD_EFECTIVO) {
+    if (selectedShippingMethod != SHIPPING_METHOD_RETIRO_PERSONALMENTE && selectedPaymentMethod == PAYMENT_METHOD_EFECTIVO) {
       validateOK = false;
       Swal.fire({
         title: "Error",
@@ -224,7 +224,7 @@ const PageCart = () => {
         confirmButtonText: "Aceptar",
       });
     }
-    
+
     if (validateOK) {
       Swal.fire({
         showDenyButton: true,
@@ -244,217 +244,219 @@ const PageCart = () => {
   return (
     <>
 
-    <div className="container" id="CartPage">
-      <div className="row">
-        <div className="section-title">
-          <h4>Tu carrito de compras</h4>
+      <div className="container" id="CartPage">
+        <div className="row">
+          <div className="section-title">
+            <h4>Tu carrito de compras</h4>
+          </div>
         </div>
-      </div>
-      <div className="row">
-        {cart.items.length > 0 ? (
-          <>
-            <table className="table">
-              <thead>
-                <tr>
-                  <th>Producto</th>
-                  <th></th>
-                  <th>Cantidad</th>
-                  <th>Precio</th>
-                  <th></th>
-                </tr>
-              </thead>
-              <tbody>
-                {cart.items.map((item) => {
-                  const handleRemoveItem = () => {
-                    cart.remove(item.id, item.quantity);
-                  };
-                  const handleReduceItem = () => {
-                    cart.remove(item.id, 1);
-                  };
-                  const handleAddItem = () => {
-                    cart.add(item.id, 1);
-                  };
+        <div className="row">
+          {cart.items.length > 0 ? (
+            <>
+              <table className="table">
+                <thead>
+                  <tr>
+                    <th>Producto</th>
+                    <th></th>
+                    <th>Cantidad</th>
+                    <th>Precio</th>
+                    <th></th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {cart.items.map((item) => {
+                    const handleRemoveItem = () => {
+                      cart.remove(item.id, item.quantity);
+                    };
+                    const handleReduceItem = () => {
+                      cart.remove(item.id, 1);
+                    };
+                    const handleAddItem = () => {
+                      cart.add(item.id, 1);
+                    };
 
-                  return (
-                    <tr className="cartRows" key={item.id}>
-                      <td>
-                        <img
-                          src={"images/products/" + item.main_photo + ""}
-                          alt=""
-                          className="cartThumbnail"
-                        />
-                      </td>
-                      <td>{item.name}</td>
-                      <td>
-                        <button
-                          className="btn btn-default"
-                          onClick={handleReduceItem}
-                        >
-                          <BsFillDashCircleFill />
-                        </button>
-                        {item.quantity}
-                        <button
-                          className="btn btn-default"
-                          onClick={handleAddItem}
-                        >
-                          <BsFillPlusCircleFill />
-                        </button>
-                      </td>
-                      <td>$ {(item.price * item.quantity).toFixed(2)}</td>
-                      <td>
-                        {" "}
-                        <button
-                          className="btn btn-danger"
-                          onClick={handleRemoveItem}
-                        >
-                          <BsFillTrashFill />
-                        </button>
-                      </td>
-                    </tr>
-                  );
-                })}
-              </tbody>
-            </table>
-            <div className="row" id="formDatosEnvio">
-              <div className="col-sm-8">
-                <div>
-                  <h5>Nombre y apellido</h5>
-                  <input
-                    type="text"
-                    className="form-control"
-                    name=""
-                    value={name}
-                    onChange={handleNameChange}
-                  />
-                </div>
-                <div>
-                  <h5>Dirección</h5>
-                  <input
-                    type="text"
-                    className="form-control"
-                    name=""
-                    value={address}
-                    onChange={handleAddressChange}
-                  />
-                </div>
-                <div>
-                  <h5>E-Mail</h5>
-                  <input
-                    type="text"
-                    className="form-control"
-                    name=""
-                    value={email}
-                    onChange={handleEmailChange}
-                  />
-                </div>
-                <div className="row">
-                <div className="col-sm-6">
-                    <h5>Localidad</h5>
+                    return (
+                      <tr className="cartRows" key={item.id}>
+                        <td>
+                          <img
+                            src={"images/products/" + item.main_photo + ""}
+                            alt=""
+                            className="cartThumbnail"
+                          />
+                        </td>
+                        <td>{item.name}</td>
+                        <td>
+                          <button
+                            className="btn btn-default"
+                            onClick={handleReduceItem}
+                          >
+                            <BsFillDashCircleFill />
+                          </button>
+                          {item.quantity}
+                          <button
+                            className="btn btn-default"
+                            onClick={handleAddItem}
+                          >
+                            <BsFillPlusCircleFill />
+                          </button>
+                        </td>
+                        <td>$ {(item.price * item.quantity).toFixed(2)}</td>
+                        <td>
+                          {" "}
+                          <button
+                            className="btn btn-danger"
+                            onClick={handleRemoveItem}
+                          >
+                            <BsFillTrashFill />
+                          </button>
+                        </td>
+                      </tr>
+                    );
+                  })}
+                </tbody>
+              </table>
+              <div className="row" id="formDatosEnvio">
+                <div className="col-sm-8">
+                  <div>
+                    <h5>Nombre y apellido</h5>
                     <input
                       type="text"
                       className="form-control"
                       name=""
-                      value={location}
-                      onChange={handleLocationChange}
+                      value={name}
+                      onChange={handleNameChange}
                     />
                   </div>
-                  <div className="col-sm-6">
-                    <h5>Código Postal</h5>
+                  <div>
+                    <h5>Dirección</h5>
                     <input
                       type="text"
                       className="form-control"
                       name=""
-                      value={zipCode}
-                      onChange={handleZipCodeChange}
+                      value={address}
+                      onChange={handleAddressChange}
                     />
                   </div>
-                </div>
-                <div className="row">
-                  <div className="col-sm-6">
-                    <h5>Teléfono (opcional)</h5>
+                  <div>
+                    <h5>E-Mail</h5>
                     <input
                       type="text"
                       className="form-control"
                       name=""
-                      value={phone}
-                      onChange={handlePhoneChange}
+                      value={email}
+                      onChange={handleEmailChange}
                     />
                   </div>
-                  <div className="col-sm-6">
-                    <h5>Provincia</h5>
-                    <select
-                      className="form-select"
-                      onChange={handleProvinceChange}
-                    >
-                      {provinces.length > 0
-                        ? provinces.map((province) => (
+                  <div className="row">
+                    <div className="col-sm-6">
+                      <h5>Teléfono</h5>
+                      <input
+                        type="text"
+                        className="form-control"
+                        name=""
+                        value={phone}
+                        onChange={handlePhoneChange}
+                      />
+                    </div>
+                    <div className="col-sm-6">
+                      <h5>Localidad o Barrio</h5>
+                      <input
+                        type="text"
+                        className="form-control"
+                        name=""
+                        value={location}
+                        onChange={handleLocationChange}
+                      />
+                    </div>
+
+                  </div>
+                  <div className="row">
+                    <div className="col-sm-6">
+                      <h5>Forma de envío</h5>
+                      <select
+                        className="form-select"
+                        value={selectedShippingMethod}
+                        onChange={handleShippingMethodChange}
+                      >
+                        <option value="1">Retiro personalmente</option>
+                        <option value="2">Envío por Correo Argentino</option>
+                      </select>
+                      <div className="small_text">Zonas de retiro: Palermo, Floresta o Villa Urquiza (CABA)</div>
+                    </div>
+                    <div className="col-sm-6">
+                      <h5>Provincia</h5>
+                      <select
+                        className="form-select"
+                        onChange={handleProvinceChange}
+                      >
+                        {provinces.length > 0
+                          ? provinces.map((province) => (
                             <option value={province.id} key={province.id}>
                               {province.name}
                             </option>
                           ))
-                        : ""}
-                    </select>
+                          : ""}
+                      </select>
+                    </div>
+                  </div>
+                  <div className="row">
+                    <div className="col-sm-6">
+                      <h5>Código Postal</h5>
+                      <input
+                        type="text"
+                        className="form-control"
+                        name=""
+                        value={zipCode}
+                        onChange={handleZipCodeChange}
+                      />
+                      <div className="small_text">Averiguá  <a href="https://www.correoargentino.com.ar/formularios/cpa">tu Código Postal aquí</a></div>
+                    </div>
+                    <div className="col-sm-6">
+                      <h5>Forma de pago</h5>
+                      <select
+                        className="form-select"
+                        value={selectedPaymentMethod}
+                        onChange={handlePaymentMethodChange}
+                      >
+                        <option value="1">Efectivo</option>
+                        <option value="2">Transferencia bancaria</option>
+                        <option value="3">Mercado Pago</option>
+                      </select>
+                    </div>
                   </div>
                 </div>
-                <div className="row">
-                  <div className="col-sm-6">
-                    <h5>Forma de pago</h5>
-                    <select
-                      className="form-select"
-                      value={selectedPaymentMethod}
-                      onChange={handlePaymentMethodChange}
-                    >
-                      <option value="1">Efectivo</option>
-                      <option value="2">Transferencia bancaria</option>
-                      <option value="3">Mercado Pago</option>
-                    </select>
+                <div className="col-sm-4 backgroundResumenPedido">
+                  <h4>RESUMEN</h4>
+                  <div className="clearfix">
+                    <div className="float-start">Subtotal</div>
+                    <div className="float-end">$ {currencyFormat(checkoutInfo.subtotal)}</div>
                   </div>
-                  <div className="col-sm-6">
-                    <h5>Forma de envío</h5>
-                    <select
-                      className="form-select"
-                      value={selectedShippingMethod}
-                      onChange={handleShippingMethodChange}
-                    >
-                      <option value="1">Retiro personalmente</option>
-                      <option value="2">Envío por Correo Argentino</option>
-                    </select>
-                    <div className="small_text">Zonas de retiro: Palermo, Floresta o Villa Urquiza (CABA)</div>
-                  </div>
-                </div>
-              </div>
-              <div className="col-sm-4 backgroundResumenPedido">
-                <h4>RESUMEN</h4>
-                <div className="clearfix">
-                  <div className="float-start">Subtotal</div>
-                  <div className="float-end">$ {currencyFormat(checkoutInfo.subtotal)}</div>
-                </div>
-                <hr />
+                  <hr />
 
-                <div className="clearfix">
-                  <div className="float-start">Costo de Envío</div>
-                  <div className="float-end">$ {currencyFormat(checkoutInfo.shippingCost)}</div>
+                  <div className="clearfix">
+                    <div className="float-start">Costo de Envío</div>
+                    <div className="float-end">$ {currencyFormat(checkoutInfo.shippingCost)}</div>
+                  </div>
+                  <hr />
+                  <div className="clearfix">
+                    <div className="float-start">Total</div>
+                    <div className="float-end">$ {currencyFormat(checkoutInfo.total)}</div>
+                  </div>
+                  <hr />
+                  <button
+                    className="btn btn-dark btn-lg w-100"
+                    onClick={handleFormSubmit}
+                  >
+                    ENVIAR PEDIDO
+                  </button>
                 </div>
-                <hr />
-                <div className="clearfix">
-                  <div className="float-start">Total</div>
-                  <div className="float-end">$ {currencyFormat(checkoutInfo.total)}</div>
-                </div>
-                <hr />
-                <button
-                  className="btn btn-dark btn-lg w-100"
-                  onClick={handleFormSubmit}
-                >
-                  ENVIAR PEDIDO
-                </button>
               </div>
-            </div>
-          </>
-        ) : (
-          <div>Tu carrito está vacío.</div>
-        )}
+            </>
+          ) : (
+            <div>Tu carrito está vacío.</div>
+          )}
+        </div>
       </div>
-    </div>
     </>
   );
 };
