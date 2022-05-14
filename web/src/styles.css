@@ -341,7 +341,7 @@ div.template_card p.short_description {
     padding-left: 12%;
     padding-right: 12%;
     line-height: 22px;
-    min-height: 90px;
+    min-height: 110px;
 }
 
 div.template_card span.stats{
@@ -411,17 +411,16 @@ span.icocart {
     border-radius: 0.25rem;
 }
 
-div.template_card div.added_row div{
+div.template_card div.added_row div {
     display: block;
     background-color: crimson;
     color: #fff!important;
     font: message-box;
     padding-top: 5px;
     padding-bottom: 10px;
-    height: 20px;
+    height: 27px;
     text-align: center;
     font-family: 'Montserrat';
-    height: 20px;
     font-size: 12px;
     width: 100%;
 }
@@ -441,7 +440,7 @@ div.template_card div.added_row{
   font-size: 12px;
   font-weight: bold;
   color: #990000;
-  height: 25px;
+  /*height: 25px;*/
 }
 
 div.template_card .label.new {

@@ -20,9 +20,9 @@ const ProductBox = (props) => {
       props.product.weight
     );
     setAddedMessage(true);
-    setTimeout(() => {
+    /*setTimeout(() => {
       setAddedMessage(false);
-    }, 5000);
+    }, 5000);*/
   };
 
   const handleBuyItem = () => {
