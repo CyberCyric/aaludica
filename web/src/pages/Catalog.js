@@ -9,8 +9,14 @@ const PageCatalog = () => {
 
   useEffect(() => {
     (async () => {
-      const url = (categoryId == null) ?  process.env.REACT_APP_API_URL + "/products/" : process.env.REACT_APP_API_URL + "/products/"+categoryId
+      /* 
+      const url = (categoryId == null) ?  process.env.REACT_APP_API_URL + "/products" : process.env.REACT_APP_API_URL + "/products/"+categoryId
+      const url = (categoryId == null) ?  process.env.REACT_APP_API_URL + "/products" : process.env.REACT_APP_API_URL + "/products/"+categoryId
       const response = await fetch(url);
+      */
+      const response = await fetch(
+        process.env.REACT_APP_API_URL +"/products"
+      );
       const results = await response.json();
       setResults(results);
     })();

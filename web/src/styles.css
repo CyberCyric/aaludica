@@ -411,7 +411,7 @@ span.icocart {
     border-radius: 0.25rem;
 }
 
-div.template_card div.added_row {
+div.template_card div.added_row div{
     display: block;
     background-color: crimson;
     color: #fff!important;
@@ -421,9 +421,9 @@ div.template_card div.added_row {
     height: 20px;
     text-align: center;
     font-family: 'Montserrat';
-    /* color: #990000; */
     height: 20px;
     font-size: 12px;
+    width: 100%;
 }
 
 .btn-danger:focus, .btn-danger:focus, .btn-danger.active:focus, .btn-danger:active:focus {
