@@ -839,4 +839,119 @@ div.small_text{
     padding-bottom: 3%;
 }
 
+@media (min-width:300px) and (max-width:500px) and (orientation: portrait){
+   
+         .navbar-toggler{
+    padding: 0.25rem 0.75rem;
+    font-size: 1.25rem;
+    line-height: 1;
+    background-color: transparent;
+    border: 1px solid transparent;
+    border-radius: 0.25rem;
+    transition: box-shadow .15s ease-in-out;
+    position: absolute;
+    margin-left: 242px!important;
+    margin-top: -18px!important;
+}
+    
+    
+    .navbar-nav {
+    display: flex;
+    flex-direction: column;
+    padding-left: 77px !important;
+    margin-bottom: 0;
+    list-style: none;
+    padding-top: 5px!important;
+}
+    
+    .product_box_image img {
+    width: 265px !important;
+    height: 196px !important;
+}
+
+.stats_box.text-center {
+    position: relative;
+    top: -75px;
+    width: 250px;
+    padding-left: 25px;
+}
+    
+    div.template_card span.stats {
+    font-size: 11px !important;
+    /* font: menu; */
+    font-weight: 500;
+    padding-bottom: 15px;
+    /* background-color: aqua; */
+    display: inline-table;
+    font-style: normal;
+    text-rendering: optimizeLegibility;
+    font-feature-settings: auto;
+    font-kerning: auto;
+    font-family: system-ui;
+}
+    
+    
+    div.template_card p.short_description {
+    font-size: 11px !important;
+    /* font: menu; */
+    font-weight: 500;
+    padding-bottom: 15px;
+    /* background-color: aqua; */
+    display: inline-table;
+    font-style: normal;
+    text-rendering: optimizeLegibility;
+    font-feature-settings: auto;
+    font-kerning: auto;
+    font-family: system-ui;
+    padding-left: 12%;
+    padding-right: 12%;
+    line-height: 20px;
+    min-height: 110px;
+    position: relative;
+    top: -75px;
+}
+    
+    div.template_card div.price_row .product_price {
+
+    color: #34495e;
+    padding: 5px;
+    border-radius: 6px;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    margin-bottom: 12px;
+    font-weight: bolder;
+    letter-spacing: -2.5px;
+    display: contents;
+    
+}
+  .price_row {
+    position: relative;
+    top: -50px;
+    right: 24px;
+}
+    
+    span.buy_label {
+    font: menu;
+    font-size: 10px;
+    font-optical-sizing: auto;
+    padding-left: 1px;
+}
+    
+    
+}
+
+
+
+
+
+@media (min-width:300px) and (max-width:500px) and (orientation: landscape){}
+
+@media (min-width:600px) and (max-width:780px) and (orientation: portrait) {}
+
+@media (min-width:790px) and (max-width:1050px) and (orientation: landscape){} 
+
+@media (min-width:750px) and (max-width:1024px) and (orientation: portrait){}
+
+@media (min-width:1024px) and (max-width:1300px) and (orientation:landscape){}
+
 
