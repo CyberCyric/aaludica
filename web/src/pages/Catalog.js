@@ -30,7 +30,7 @@ const PageCatalog = () => {
             <h4>Catálogo de Juegos</h4>
           </div>
         </div>
-        <ProductCategoryMenu /> 
+       {/* <ProductCategoryMenu /> */} 
       </div>
       <div className="row">
         {results.length > 0 ? (

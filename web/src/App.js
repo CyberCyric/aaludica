@@ -63,7 +63,7 @@ function App() {
                   <PageManteinance />
                 </Route>
 
-                <Redirect to="/aboutus" />
+                <Redirect to="/catalog" />
               </Switch>
             </main>
           </div>
