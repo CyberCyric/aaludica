@@ -57,6 +57,14 @@ div.section-title h4 {
   position: relative;
   display: inline-block;
 }
+
+.subtitleproducts {
+    position: relative;
+    top: -70px;
+    font-size: 21px;
+}
+
+
 div#formDatosEnvio {
   font-size: 22px;
 }
@@ -852,6 +860,29 @@ div.small_text{
     position: absolute;
     margin-left: 242px!important;
     margin-top: -18px!important;
+}
+    
+  
+    .navbar-toggler:focus {
+    text-decoration: none;
+    outline: 0;
+    box-shadow: none !important;
+}
+    .titleproducts {
+    font-size: 20px;
+    padding-bottom: 10px;
+    padding-top: 25px;
+    padding-left: 15%;
+    padding-right: 15%;
+    /* background-color: aqua; */
+    min-height: 100px;
+    margin-bottom: 30px;
+}
+    
+    .subtitleproducts {
+    position: relative;
+    top: -70px;
+    font-size: 15px;
 }
     
     
